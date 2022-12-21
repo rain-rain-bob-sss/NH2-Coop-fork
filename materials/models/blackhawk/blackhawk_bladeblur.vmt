@@ -1,0 +1,14 @@
+"VertexLitGeneric"
+{
+	// Original shader: VertexLitTranslucentTexture
+	"$translucent" 1
+	"$nocull" 1
+	"$basetexture" "models/blackHawk/blackhawk_bladeblur"
+	"$nodecal" 1
+	"Proxies"
+	{
+		"HeliBlade"
+		{
+		}
+	}
+}

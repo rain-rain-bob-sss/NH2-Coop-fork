@@ -1,0 +1,124 @@
+// Choreo version 1
+actor "SWAT3"
+{
+  channel "Voice"
+  {
+    event speak "3_wouldntitkillthem"
+    {
+      time 0.086667 3.920046
+      param "3_wouldntitkillthem"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 0.026667 0.257506
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 3.826667 4.057506
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "hg_puncuate_down"
+    {
+      time 0.006667 1.453333
+      param "hg_puncuate_down"
+      absolutetags playback_time
+      {
+        "apex" 0.247312
+        "extreme" 0.482527
+        "loop" 0.494758
+        "end" 0.506048
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.333333
+        "extreme" 0.541667
+        "loop" 0.562500
+        "end" 0.562500
+      }
+      sequenceduration 1.633333
+    }
+    event gesture "hg_puncuate_down"
+    {
+      time 1.153334 4.026667
+      param "hg_puncuate_down"
+      event_ramp
+      {
+        0.0100 0.3228
+        2.8067 0.3861
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.124517
+        "extreme" 0.234785
+        "loop" 0.244785
+        "end" 0.254785
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.333333
+        "extreme" 0.541667
+        "loop" 0.562500
+        "end" 0.562500
+      }
+      sequenceduration 1.633333
+    }
+    event gesture "hg_puncuate_down"
+    {
+      time 1.700001 4.573333
+      param "hg_puncuate_down"
+      event_ramp
+      {
+        0.0100 0.3228
+        2.8067 0.3861
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.124517
+        "extreme" 0.234785
+        "loop" 0.244785
+        "end" 0.254785
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.333333
+        "extreme" 0.541667
+        "loop" 0.562500
+        "end" 0.562500
+      }
+      sequenceduration 1.633333
+    }
+    event interrupt "interrupt"
+    {
+      time 0.033334 4.522223
+      param ""
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "100"
+  "GestureTool" "100"
+  "RampTool" "100"
+  "ExpressionTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,77 @@
+// Choreo version 1
+actor "SWAT3"
+{
+  channel "voice"
+  {
+    event speak "3_holyshit"
+    {
+      time 0.153333 1.399864
+      param "3_holyshit"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 0.086667 0.336191
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 1.266667 1.516191
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+  channel "look at"
+  {
+    event gesture "hg_puncuate_down"
+    {
+      time 0.026667 1.660000
+      param "hg_puncuate_down"
+      absolutetags playback_time
+      {
+        "apex" 0.333333
+        "extreme" 0.541667
+        "loop" 0.552500
+        "end" 0.562500
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.333333
+        "extreme" 0.541667
+        "loop" 0.562500
+        "end" 0.562500
+      }
+      sequenceduration 1.633333
+    }
+  }
+  channel "gestures"
+  {
+    event lookat "Look at forklift_move"
+    {
+      time 0.000000 2.193333
+      param "forklift_move"
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "100"
+  "RampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

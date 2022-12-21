@@ -1,0 +1,4 @@
+VertexLitGeneric
+{
+	$basetexture "models/humans/nh2/patient_sheet_player"
+}

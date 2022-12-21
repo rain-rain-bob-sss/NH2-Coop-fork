@@ -1,0 +1,129 @@
+// Choreo version 1
+actor "Romero"
+{
+  channel "Gestures"
+  {
+    event gesture "G_shrug"
+    {
+      time -0.092593 1.607407
+      param "G_shrug"
+      absolutetags playback_time
+      {
+        "apex" 0.160000
+        "accent" 0.240000
+        "loop" 0.320000
+        "end" 0.440000
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.160000
+        "accent" 0.240000
+        "loop" 0.320000
+        "end" 0.440000
+      }
+      sequenceduration 1.700000
+    }
+    event gesture "G_medurgent_mid"
+    {
+      time 0.654321 3.320988
+      param "G_medurgent_mid"
+      absolutetags playback_time
+      {
+        "apex" 0.114375
+        "accent" 0.190625
+        "loop" 0.305000
+        "end" 0.406667
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.150000
+        "accent" 0.250000
+        "loop" 0.400000
+        "end" 0.533333
+      }
+      sequenceduration 2.033333
+    }
+    event gesture "A_bg_hroll"
+    {
+      time 0.154321 3.187654
+      param "A_bg_hroll"
+      absolutetags playback_time
+      {
+        "apex" 0.111111
+        "extreme" 0.400000
+        "loop" 0.577778
+        "end" 0.688889
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.111111
+        "extreme" 0.400000
+        "loop" 0.577778
+        "end" 0.688889
+      }
+      sequenceduration 3.033333
+    }
+    event flexanimation "Facial Animation"
+    {
+      time 0.000000 3.000000
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "corner_puller" combo 
+        {
+          0.4860 0.3500
+        }
+        {
+          0.7680 0.7500
+          1.8440 0.7500
+        }
+      }
+    }
+  }
+  channel "Face/Look"
+  {
+    event face "Face !player"
+    {
+      time 0.057471 3.320988
+      param "!player"
+      event_ramp
+      {
+        0.2560 0.7721
+        2.6235 0.8291
+        2.8335 0.8319
+        3.0575 0.7320
+      }
+      lockbodyfacing
+    }
+    event lookat "Look at !player"
+    {
+      time 0.063458 3.260792
+      param "!player"
+    }
+  }
+  channel "Voice"
+  {
+    event speak "romero_goodnight"
+    {
+      time 0.287356 3.242095
+      param "romero_goodnight"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+}
+
+mapname "C:\Program Files (x86)\Steam\steamapps\SourceMods\NH2\maps\nh2c7.bsp"
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "RampTool" "100"
+  "CChoreoView" "108"
+}
+fps 60
+snap off
+ignorePhonemes off

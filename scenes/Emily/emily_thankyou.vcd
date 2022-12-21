@@ -1,0 +1,144 @@
+// Choreo version 1
+event section "pause"
+{
+  time 8.546667 -1.000000
+  param "automate Resume 10.000000"
+}
+actor "woman_end"
+{
+  channel "All"
+  {
+    event speak "emily_thankyou"
+    {
+      time 3.053334 6.423584
+      param "emily_thankyou"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event face "Face !player"
+    {
+      time 0.133333 10.946666
+      param "!player"
+    }
+    event lookat "Look at !player"
+    {
+      time 0.120000 9.573334
+      param "!player"
+      event_ramp
+      {
+        1.7440 1.0000
+        9.4533 1.0000
+      }
+    }
+    event gesture "b_accent_fwd_UpperBody"
+    {
+      time 1.953333 10.153332
+      param "b_accent_fwd_UpperBody"
+      absolutetags playback_time
+      {
+        "apex" 0.063415
+        "extreme" 0.262602
+        "loop" 0.950366
+        "end" 0.979660
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.098765
+        "extreme" 0.296296
+        "loop" 0.518519
+        "end" 0.654321
+      }
+      sequenceduration 2.733333
+    }
+    event flexanimation "Facial Animation"
+    {
+      time 3.593333 9.240001
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "inner_raiser" combo 
+        {
+          0.3060 0.1400
+          2.4980 0.0700
+          5.5780 0.1000
+          5.6180 0.1000
+        }
+        {
+          1.0287 0.5000
+        }
+        "upper_raiser" combo 
+        {
+        }
+        {
+        }
+        "corner_puller" combo 
+        {
+          0.2620 0.1000
+          1.0387 0.1300
+          2.8200 0.1300
+          5.4280 0.1000
+          5.6260 0.0800
+        }
+        {
+          1.0287 0.5000
+        }
+        "smile" 
+        {
+          1.0287 0.1400
+          2.2120 0.1500
+          5.5120 0.1300
+          5.6200 0.1300
+        }
+      }
+    }
+    event gesture "Crouch_idleD"
+    {
+      time 1.986666 11.173332
+      param "Crouch_idleD"
+      event_ramp
+      {
+        0.2580 0.0000
+        1.3660 0.0773
+        2.6040 0.1989
+        4.6640 0.2017
+        7.4260 0.2017
+        9.1867 0.1934
+      }
+      sequenceduration 2.000000
+    }
+    event gesture "g_right_openhand"
+    {
+      time 2.260000 10.266667
+      param "g_right_openhand"
+      absolutetags playback_time
+      {
+        "apex" 0.186511
+        "accent" 0.390942
+        "loop" 0.570159
+        "end" 0.921601
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.291667
+        "accent" 0.416667
+        "loop" 0.520833
+        "end" 0.625000
+      }
+      sequenceduration 1.633333
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "100"
+  "ExpressionTool" "100"
+  "RampTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

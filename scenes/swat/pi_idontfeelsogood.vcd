@@ -1,0 +1,152 @@
+// Choreo version 1
+actor "SWATL"
+{
+  channel "Voice/Gestures"
+  {
+    event speak "pi_idontfeelsogood"
+    {
+      time 0.133333 8.489705
+      param "pi_idontfeelsogood"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+      cc_noattenuate
+    }
+    event gesture "g_head_back"
+    {
+      time 0.113334 8.426667
+      param "g_head_back"
+      absolutetags playback_time
+      {
+        "apex" 0.088212
+        "accent" 0.943232
+        "loop" 0.953232
+        "end" 0.963232
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.188679
+        "accent" 0.792453
+        "loop" 0.811321
+        "end" 0.830189
+      }
+      sequenceduration 1.800000
+    }
+    event gesture "g_head_back"
+    {
+      time 0.113334 8.426667
+      param "g_head_back"
+      absolutetags playback_time
+      {
+        "apex" 0.088212
+        "accent" 0.943232
+        "loop" 0.953232
+        "end" 0.963232
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.188679
+        "accent" 0.792453
+        "loop" 0.811321
+        "end" 0.830189
+      }
+      sequenceduration 1.800000
+    }
+    event gesture "p_ready"
+    {
+      time 4.913333 9.028809
+      param "p_ready"
+      event_ramp
+      {
+        0.1140 0.6703
+        4.0028 0.2486
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.081781
+        "loop" 0.327126
+        "end" 0.765557
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.097087
+        "loop" 0.388350
+        "end" 0.776699
+      }
+      sequenceduration 3.466667
+    }
+    event gesture "bg_accentUp"
+    {
+      time 5.226666 7.659999
+      param "bg_accentUp"
+      absolutetags playback_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+    event gesture "hg_nod_no"
+    {
+      time 6.146667 8.040001
+      param "hg_nod_no"
+      absolutetags playback_time
+      {
+        "apex" 0.089304
+        "extreme" 0.157999
+        "loop" 0.368665
+        "end" 0.623239
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.072464
+        "extreme" 0.159420
+        "loop" 0.420290
+        "end" 0.913043
+      }
+      sequenceduration 2.333333
+    }
+    event speak "l_shit"
+    {
+      time 6.145833 9.037261
+      param "l_ohnorunbackinsidenow"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Face/Look"
+  {
+    event face "Face helicopter"
+    {
+      time 0.000000 6.569196
+      param "helicopter"
+    }
+    event lookat "Look at helicopter"
+    {
+      time 0.006667 6.569195
+      param "helicopter"
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "112"
+  "RampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

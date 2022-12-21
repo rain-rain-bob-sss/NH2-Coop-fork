@@ -1,0 +1,35 @@
+// Choreo version 1
+actor "SWAT2"
+{
+  channel "voice"
+  {
+  }
+  channel "gestures"
+  {
+  }
+  channel "lookto/faceat/moveto"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.030788 3.033252
+      param "swat2_face_player"
+    }
+    event face "Face swat2_face_player"
+    {
+      time 0.035714 3.027504
+      param "swat2_face_player"
+    }
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "RampTool" "6"
+  "GestureTool" "100"
+  "ExpressionTool" "2"
+  "CChoreoView" "116"
+}
+fps 60
+snap off
+ignorePhonemes off

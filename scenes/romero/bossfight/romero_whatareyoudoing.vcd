@@ -1,0 +1,111 @@
+// Choreo version 1
+actor "Romero"
+{
+  channel "Voice"
+  {
+    event speak "romero_whatareyoudoing"
+    {
+      time 0.206667 2.468889
+      param "romero_whatareyoudoing"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+  channel "Flex Animation"
+  {
+    event flexanimation "Facial Animation"
+    {
+      time 0.046667 2.606667
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "inner_raiser" combo 
+        {
+          0.1940 0.8300
+          2.0260 0.9500
+        }
+        {
+        }
+        "part" combo 
+        {
+          0.0500 0.3500
+          0.7300 0.4300
+        }
+        {
+        }
+      }
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "A_bg_acctdwn_chinout"
+    {
+      time 0.093334 2.760000
+      param "A_bg_acctdwn_chinout"
+      absolutetags playback_time
+      {
+        "apex" 0.126838
+        "extreme" 0.253677
+        "loop" 0.443934
+        "end" 0.507353
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.147059
+        "extreme" 0.294118
+        "loop" 0.514706
+        "end" 0.588235
+      }
+      sequenceduration 2.300000
+    }
+  }
+  channel "Face/Look"
+  {
+    event face "Face core"
+    {
+      time 0.940000 2.573333
+      param "core"
+      event_ramp
+      {
+        0.3960 0.6496
+        1.1240 0.6667
+      }
+      lockbodyfacing
+    }
+    event lookat "Look at core"
+    {
+      time 1.166667 2.346667
+      param "core"
+    }
+    event lookat "Look at !player"
+    {
+      time 0.080000 1.320000
+      param "!player"
+    }
+    event face "Face !player"
+    {
+      time -0.006667 1.626666
+      param "!player"
+      event_ramp
+      {
+        0.3960 0.6496
+        1.1240 0.6667
+      }
+      lockbodyfacing
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "100"
+  "RampTool" "100"
+  "SceneRampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

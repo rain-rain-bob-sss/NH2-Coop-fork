@@ -1,0 +1,240 @@
+// Choreo version 1
+actor "Romero"
+{
+  channel "Gestures"
+  {
+    event gesture "K_hg_roll"
+    {
+      time 0.130952 2.627380
+      param "K_hg_roll"
+      absolutetags playback_time
+      {
+        "apex" 0.081496
+        "extreme" 0.203739
+        "loop" 0.545028
+        "end" 0.714011
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.103448
+        "extreme" 0.258621
+        "loop" 0.603448
+        "end" 0.689655
+      }
+      sequenceduration 1.966667
+    }
+    event gesture "A_bg_embarassed"
+    {
+      time 0.166667 3.133333
+      param "A_bg_embarassed"
+      absolutetags playback_time
+      {
+        "apex" 0.136364
+        "extreme" 0.329545
+        "loop" 0.454545
+        "end" 0.568182
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.136364
+        "extreme" 0.329545
+        "loop" 0.454545
+        "end" 0.568182
+      }
+      sequenceduration 2.966667
+    }
+    event flexanimation "Facial Animation"
+    {
+      time 2.684524 5.172619
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "inner_raiser" combo 
+        {
+          0.1500 0.9200
+          0.9600 0.9600
+          1.2120 0.1500
+        }
+        {
+        }
+        "cheek_raiser" combo 
+        {
+          0.1721 0.7800
+        }
+        {
+        }
+        "jaw_drop" 
+        {
+          0.0540 0.2000
+          0.5780 0.2400
+          1.3360 0.1400
+          1.6960 0.4200
+        }
+        "mouth_drop" combo 
+        {
+          0.0620 0.3300
+          0.6320 0.4200
+        }
+        {
+        }
+        "smile" 
+        {
+          0.0531 0.3100
+          0.1694 0.3800
+          0.9224 0.3800
+          1.3143 0.5100
+          1.7020 0.3900
+          2.2816 0.3400
+        }
+      }
+    }
+    event gesture "GestureButton"
+    {
+      time 1.666667 3.800000
+      param "GestureButton"
+      event_ramp
+      {
+        0.2080 0.9489
+        0.9020 1.0000
+        1.2520 0.1563
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.222222
+        "accent" 0.904762
+        "loop" 0.920635
+        "end" 0.936508
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.222222
+        "accent" 0.904762
+        "loop" 0.920635
+        "end" 0.936508
+      }
+      sequenceduration 2.133333
+    }
+    event gesture "vort_operate_wake_up_ges_rhand"
+    {
+      time 2.702381 6.335715
+      param "vort_operate_wake_up_ges_rhand"
+      event_ramp
+      {
+        0.1320 0.1477
+        0.2160 0.4062
+        0.3140 0.2273
+        0.5080 0.4034
+        0.6680 0.1307
+        1.0680 0.0341
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.092593
+        "accent" 0.277778
+        "loop" 0.555556
+        "end" 0.740741
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.092593
+        "accent" 0.277778
+        "loop" 0.555556
+        "end" 0.740741
+      }
+      sequenceduration 3.633333
+    }
+    event gesture "bodyaccentup"
+    {
+      time 2.928571 5.228571
+      param "bodyaccentup"
+      absolutetags playback_time
+      {
+        "apex" 0.073529
+        "extreme" 0.132353
+        "loop" 0.470588
+        "end" 0.661765
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.073529
+        "extreme" 0.132353
+        "loop" 0.470588
+        "end" 0.661765
+      }
+    }
+    event flexanimation "Facial Animation"
+    {
+      time 0.065476 2.690476
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "inner_raiser" combo 
+        {
+          0.0920 0.4800
+          0.6880 0.5500
+        }
+        {
+        }
+        "corner_puller" combo 
+        {
+          0.1940 0.3100
+          1.9480 0.3700
+          2.2720 0.6800
+        }
+        {
+        }
+      }
+    }
+  }
+  channel "Face/Look"
+  {
+    event face "Face !player"
+    {
+      time 0.051298 5.365519
+      param "!player"
+      event_ramp
+      {
+        0.2560 0.7721
+        4.6742 0.8291
+        4.8842 0.8319
+        5.1082 0.7320
+      }
+      lockbodyfacing
+    }
+    event lookat "Look at !player"
+    {
+      time 0.063458 5.278869
+      param "!player"
+    }
+    event interrupt "Interrupt"
+    {
+      time 0.086198 5.302956
+      param ""
+    }
+  }
+  channel "Voice"
+  {
+    event speak "romero_woops"
+    {
+      time 0.287356 5.458149
+      param "romero_woops"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+}
+
+mapname "C:\Program Files (x86)\Steam\steamapps\SourceMods\NH2\maps\nh2c7.bsp"
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "RampTool" "100"
+  "CChoreoView" "112"
+}
+fps 60
+snap off
+ignorePhonemes off

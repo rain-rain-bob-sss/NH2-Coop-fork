@@ -1,0 +1,100 @@
+// Choreo version 1
+actor "SWAT2"
+{
+  channel "Voice"
+  {
+    event speak "2_flaminghobo"
+    {
+      time 0.253333 5.747302
+      param "2_flaminghobo"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 5.666667 5.897506
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 0.193333 0.424172
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "hg_nod_no"
+    {
+      time 0.233333 5.746667
+      param "hg_nod_no"
+      absolutetags playback_time
+      {
+        "apex" 0.030668
+        "extreme" 0.047101
+        "loop" 0.172914
+        "end" 0.268440
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.072464
+        "extreme" 0.159420
+        "loop" 0.420290
+        "end" 0.913043
+      }
+      sequenceduration 2.333333
+    }
+    event gesture "gesture_shoot_smg1"
+    {
+      time 1.693334 3.140001
+      param "gesture_shoot_smg1"
+      event_ramp
+      {
+        0.0220 0.4665
+        1.4340 0.3841
+      }
+      sequenceduration 0.280000
+    }
+    event gesture "gesture_shoot_smg1"
+    {
+      time 0.313334 1.760000
+      param "gesture_shoot_smg1"
+      sequenceduration 0.280000
+    }
+    event gesture "Startle_behind"
+    {
+      time 2.506667 5.686667
+      param "Startle_behind"
+      event_ramp
+      {
+        0.6280 0.0976
+        2.4513 0.2409
+      }
+      sequenceduration 1.666667
+    }
+  }
+  channel "Look to"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "100"
+  "RampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

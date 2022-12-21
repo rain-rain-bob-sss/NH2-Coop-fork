@@ -1,0 +1,67 @@
+// Choreo version 1
+actor "swat2_holder"
+{
+  channel "Voice"
+  {
+    event speak "l_thereisnotimealmostevac2"
+    {
+      time 0.173333 5.574966
+      param "2_nogetitoffme_terror"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 0.066667 0.297506
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "novaprospekt.radiostatic_9"
+    {
+      time 5.266667 6.195873
+      param "novaprospekt.radiostatic_9"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "novaprospekt.radiostatic_13"
+    {
+      time 5.286667 6.494422
+      param "novaprospekt.radiostatic_1"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "novaprospekt.radiostatic_13"
+    {
+      time 5.286667 6.865805
+      param "novaprospekt.radiostatic_15"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+  channel "Gestures"
+  {
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "RampTool" "100"
+  "CChoreoView" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

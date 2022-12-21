@@ -1,0 +1,121 @@
+// Choreo version 1
+actor "Romero"
+{
+  channel "Gestures"
+  {
+    event gesture "kgesture01p"
+    {
+      time 0.209876 2.576543
+      param "kgesture01p"
+      absolutetags playback_time
+      {
+        "apex" 0.114286
+        "accent" 0.214286
+        "loop" 0.400000
+        "end" 0.600000
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.114286
+        "accent" 0.214286
+        "loop" 0.400000
+        "end" 0.600000
+      }
+      sequenceduration 2.366667
+    }
+    event gesture "A_g_rthd_selfpoint"
+    {
+      time 1.074074 4.040740
+      param "A_g_rthd_selfpoint"
+      event_ramp
+      {
+        0.2760 0.7471
+        2.7400 0.7972
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.159091
+        "accent" 0.363636
+        "loop" 0.545455
+        "end" 0.681818
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.159091
+        "accent" 0.363636
+        "loop" 0.545455
+        "end" 0.681818
+      }
+    }
+    event gesture "a_bg_hdaccleft"
+    {
+      time 0.018519 2.318518
+      param "a_bg_hdaccleft"
+      absolutetags playback_time
+      {
+        "apex" 0.117647
+        "extreme" 0.338235
+        "loop" 0.514706
+        "end" 0.588235
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.117647
+        "extreme" 0.338235
+        "loop" 0.514706
+        "end" 0.588235
+      }
+    }
+  }
+  channel "Face/Look"
+  {
+    event face "Face !player"
+    {
+      time 0.051298 3.944442
+      param "!player"
+      event_ramp
+      {
+        0.2560 0.7721
+        3.2532 0.8291
+        3.4632 0.8319
+        3.6872 0.7320
+      }
+      lockbodyfacing
+    }
+    event lookat "Look at !player"
+    {
+      time 0.063458 4.063260
+      param "!player"
+    }
+    event interrupt "Interrupt"
+    {
+      time 0.041224 4.532673
+      param ""
+    }
+  }
+  channel "Voice"
+  {
+    event speak "romero_shesusingyoutogettome"
+    {
+      time 0.287356 4.442458
+      param "romero_shesusingyoutogettome"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+}
+
+mapname "C:\Program Files (x86)\Steam\steamapps\SourceMods\NH2\maps\nh2c7.bsp"
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "RampTool" "64"
+  "CChoreoView" "108"
+}
+fps 60
+snap off
+ignorePhonemes off

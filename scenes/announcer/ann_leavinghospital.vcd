@@ -1,0 +1,45 @@
+// Choreo version 1
+actor "announcer"
+{
+  channel "Voice"
+  {
+    event speak "ann_dontgoout"
+    {
+      time 8.506664 11.969250
+      param "ann_dontgoout"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "ann_leavinghospital"
+    {
+      time 0.062222 9.858140
+      param "ann_leavinghospital"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+  channel "Gestures"
+  {
+    event interrupt "interrupt"
+    {
+      time 0.069444 11.715279
+      param ""
+    }
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "RampTool" "100"
+  "CChoreoView" "96"
+}
+fps 60
+snap off
+ignorePhonemes off

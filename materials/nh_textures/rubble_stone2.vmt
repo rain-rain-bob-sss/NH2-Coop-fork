@@ -1,0 +1,8 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "nh_textures/rubble_stone2"
+	"$surfaceprop" "rock"
+	"%keywords" "nh"
+	"$detail" "detail/plaster_detail_01"
+	"$detailscale" 5
+}

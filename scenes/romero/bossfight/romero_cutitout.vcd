@@ -1,0 +1,234 @@
+// Choreo version 1
+actor "Romero"
+{
+  channel "Voice"
+  {
+    event speak "romero_cutitout"
+    {
+      time 1.140000 2.617370
+      param "romero_cutitout"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+  channel "Flex Animation"
+  {
+    event flexanimation "Facial Animation"
+    {
+      time 1.093333 3.220000
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "inner_raiser" combo 
+        {
+          0.0936 1.0000
+        }
+        {
+        }
+        "outer_raiser" combo 
+        {
+          0.0449 0.5000
+        }
+        {
+        }
+        "lowerer" combo 
+        {
+          0.3013 0.1100
+          0.3628 0.6600
+        }
+        {
+        }
+        "wrinkler" 
+        {
+          0.1000 0.4600
+          0.4192 0.6000
+        }
+        "corner_depressor" combo 
+        {
+          0.1026 0.2800
+          0.7436 0.4900
+        }
+        {
+        }
+        "part" combo 
+        {
+          0.0205 0.2200
+          0.0692 0.2300
+          0.2808 0.1000
+          0.9962 0.2800
+        }
+        {
+        }
+      }
+    }
+    event flexanimation "Facial Animation"
+    {
+      time 0.200000 1.006667
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "inner_raiser" combo 
+        {
+          0.0654 1.0000
+        }
+        {
+        }
+        "outer_raiser" combo 
+        {
+        }
+        {
+        }
+        "lowerer" combo 
+        {
+        }
+        {
+        }
+        "wrinkler" 
+        {
+          0.1000 0.4600
+          0.4192 0.6000
+        }
+        "corner_depressor" combo 
+        {
+          0.0603 0.3100
+        }
+        {
+        }
+        "part" combo 
+        {
+          0.0205 0.2200
+          0.0654 0.7200
+          0.2885 0.6200
+          0.4833 0.5700
+          0.6628 0.2600
+        }
+        {
+        }
+      }
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "A_bg_yell"
+    {
+      time 1.066667 3.466667
+      param "A_bg_yell"
+      event_ramp
+      {
+        0.8040 0.6639
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.074716
+        "extreme" 0.198184
+        "loop" 0.437322
+        "end" 0.606125
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.134146
+        "extreme" 0.304878
+        "loop" 0.585366
+        "end" 0.658537
+      }
+      sequenceduration 2.766667
+    }
+    event gesture "a_bg_hdaccleft"
+    {
+      time 1.000000 3.300000
+      param "a_bg_hdaccleft"
+      absolutetags playback_time
+      {
+        "apex" 0.117647
+        "extreme" 0.338235
+        "loop" 0.514706
+        "end" 0.588235
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.117647
+        "extreme" 0.338235
+        "loop" 0.514706
+        "end" 0.588235
+      }
+      sequenceduration 2.300000
+    }
+    event gesture "A_g_rthandtomouth"
+    {
+      time -0.033334 2.933333
+      param "A_g_rthandtomouth"
+      event_ramp
+      {
+        0.1280 0.7218
+        0.7560 0.7218
+        0.7880 0.6997
+        1.0740 0.1818
+      }
+      absolutetags playback_time
+      {
+        "in" 0.141892
+        "loop" 0.340909
+        "end" 0.625000
+        "out" 0.784091
+      }
+      absolutetags shifted_time
+      {
+        "in" 0.181818
+        "loop" 0.340909
+        "end" 0.625000
+        "out" 0.784091
+      }
+      sequenceduration 2.966667
+    }
+  }
+  channel "Look/Face"
+  {
+    event lookat "Look at core"
+    {
+      time 0.000000 1.073333
+      param "core"
+    }
+    event lookat "Look at !player"
+    {
+      time 0.960000 3.486667
+      param "!player"
+    }
+    event face "Face core"
+    {
+      time 0.020000 1.093333
+      param "core"
+      event_ramp
+      {
+        0.0800 0.6749
+        0.9780 0.6722
+      }
+    }
+    event face "Face !player"
+    {
+      time 1.006667 3.466666
+      param "!player"
+      event_ramp
+      {
+        0.0800 0.6749
+        2.3647 0.6722
+      }
+    }
+  }
+  channel "Face/Look"
+  {
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+  "ExpressionTool" "156"
+  "RampTool" "100"
+  "CChoreoView" "112"
+}
+fps 60
+snap off
+ignorePhonemes off

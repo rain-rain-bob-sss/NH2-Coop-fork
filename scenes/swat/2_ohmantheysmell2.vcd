@@ -1,0 +1,138 @@
+// Choreo version 1
+actor "SWAT2"
+{
+  channel "All"
+  {
+    event speak "2_ohmantheysmell2"
+    {
+      time 0.140000 1.986712
+      param "2_ohmantheysmell2"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 0.060000 0.290839
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 1.806667 2.037506
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event gesture "hg_nod_yes"
+    {
+      time 0.033334 2.333334
+      param "hg_nod_no"
+      event_ramp
+      {
+        0.3280 0.9685
+        0.8460 0.8424
+        1.0280 0.2951
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.072464
+        "extreme" 0.159420
+        "loop" 0.420290
+        "end" 0.913043
+      }
+      sequenceduration 2.333333
+    }
+    event gesture "hg_puncuate_down"
+    {
+      time 0.480000 2.113334
+      param "hg_puncuate_down"
+      absolutetags playback_time
+      {
+        "apex" 0.333333
+        "extreme" 0.541667
+        "loop" 0.552500
+        "end" 0.562500
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.333333
+        "extreme" 0.541667
+        "loop" 0.562500
+        "end" 0.562500
+      }
+      sequenceduration 1.633333
+    }
+    event gesture "bg_down"
+    {
+      time 0.426667 2.886667
+      param "bg_down"
+      absolutetags playback_time
+      {
+        "apex" 0.269461
+        "extreme" 0.393515
+        "loop" 0.586487
+        "end" 0.738109
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.086207
+        "extreme" 0.241379
+        "loop" 0.482759
+        "end" 0.672414
+      }
+      sequenceduration 1.966667
+    }
+    event gesture "hg_nod_yes"
+    {
+      time 0.733334 3.033334
+      param "hg_nod_no"
+      event_ramp
+      {
+        0.3280 0.9685
+        0.8460 0.8424
+        1.0280 0.2951
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.072464
+        "extreme" 0.159420
+        "loop" 0.420290
+        "end" 0.913043
+      }
+      sequenceduration 2.333333
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "100"
+  "RampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

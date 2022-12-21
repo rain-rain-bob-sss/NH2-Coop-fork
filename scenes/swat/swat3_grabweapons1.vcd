@@ -1,0 +1,78 @@
+// Choreo version 1
+actor "SWAT3"
+{
+  channel "Gestures"
+  {
+    event gesture "hg_nod_left"
+    {
+      time 0.380000 1.680000
+      param "hg_nod_left"
+      absolutetags playback_time
+      {
+        "apex" 0.236842
+        "extreme" 0.473684
+        "loop" 0.568947
+        "end" 0.578947
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.236842
+        "extreme" 0.473684
+        "loop" 0.578947
+        "end" 0.578947
+      }
+    }
+  }
+  channel "Voice"
+  {
+    event speak "3_getweapons1"
+    {
+      time 0.193333 2.139274
+      param "3_getweapons1"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 2.033333 2.264172
+      param "blip"
+      param2 "0.65"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 0.120000 0.350839
+      param "blip"
+      param2 "0.65"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+  channel "look to"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.000000 2.880000
+      param "!player"
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "100"
+  "RampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

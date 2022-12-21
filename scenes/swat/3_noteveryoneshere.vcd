@@ -1,0 +1,110 @@
+// Choreo version 1
+actor "SWAT3"
+{
+  channel "voice and gestures"
+  {
+    event speak "3_noteveryoneshere"
+    {
+      time 0.126667 2.742722
+      param "3_noteveryoneshere"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 0.060000 0.290839
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 2.626667 2.857506
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event gesture "g_palm_out_l"
+    {
+      time 1.086667 3.853334
+      param "g_palm_out_l"
+      absolutetags playback_time
+      {
+        "apex" 0.121951
+        "accent" 0.231707
+        "loop" 0.390244
+        "end" 0.780488
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.121951
+        "accent" 0.231707
+        "loop" 0.390244
+        "end" 0.780488
+      }
+      sequenceduration 2.766667
+    }
+    event gesture "hg_nod_yes"
+    {
+      time 0.193333 2.493333
+      param "hg_nod_yes"
+      event_ramp
+      {
+        0.2080 0.3295
+        1.3580 0.0716
+        1.5720 0.3095
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+      sequenceduration 2.300000
+    }
+  }
+  channel "Face/Look"
+  {
+    event face "Face !player"
+    {
+      time 0.066667 3.900000
+      param "!player"
+      event_ramp
+      {
+        0.8140 0.9971
+        2.8473 0.9885
+      }
+    }
+    event lookat "Look at !player"
+    {
+      time 0.000000 3.446667
+      param "!player"
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "100"
+  "RampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

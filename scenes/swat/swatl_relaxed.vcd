@@ -1,0 +1,25 @@
+// Choreo version 1
+actor "SWATL"
+{
+  channel "gesture"
+  {
+    event gesture "Idle_Relaxed_Shotgun_7"
+    {
+      time 0.000000 29.457407
+      param "Idle_Relaxed_Shotgun_7"
+      sequenceduration 4.966667
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "36"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "RampTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,69 @@
+// Choreo version 1
+event section "look_pause"
+{
+  time 3.872308 -1.000000
+  param "automate Resume 99999.000000"
+}
+actor "SWAT3"
+{
+  channel "Idle"
+  {
+    event lookat "Look at !player"
+    {
+      time -0.000000 4.315873
+      param "!player"
+      event_ramp
+      {
+        0.2940 1.0000
+        3.9110 1.0000
+      }
+    }
+    event gesture "g_thumbsup"
+    {
+      time 0.166667 3.022222
+      param "g_thumbsup"
+      event_ramp
+      {
+        0.2980 0.9589
+        2.7109 0.9795
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.213739
+        "accent" 0.403730
+        "loop" 0.556957
+        "end" 0.682697
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.310345
+        "accent" 0.586207
+        "loop" 0.603448
+        "end" 0.689655
+      }
+      sequenceduration 1.966667
+    }
+    event face "Face player"
+    {
+      time -0.007936 4.317461
+      param "!player"
+      event_ramp
+      {
+        0.3200 1.0000
+        3.9792 1.0000
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "112"
+  "ExpressionTool" "100"
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "RampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

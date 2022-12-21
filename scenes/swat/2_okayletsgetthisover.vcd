@@ -1,0 +1,127 @@
+// Choreo version 1
+actor "SWAT2"
+{
+  channel "Voice"
+  {
+    event speak "2_okayletsgetthisover"
+    {
+      time 0.266667 2.561451
+      param "2_okayletsgetthisover"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 0.193333 0.424172
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 2.493333 2.724172
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "hg_nod_yes"
+    {
+      time 0.980000 3.280000
+      param "hg_nod_yes"
+      event_ramp
+      {
+        0.0640 0.2822
+        0.8740 0.2970
+        1.3960 0.0000
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+    }
+    event gesture "hg_nod_right"
+    {
+      time 1.033333 2.333333
+      param "hg_nod_right"
+      event_ramp
+      {
+        0.0660 0.7327
+        1.0360 0.5990
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.236842
+        "extreme" 0.473684
+        "loop" 0.568947
+        "end" 0.578947
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.236842
+        "extreme" 0.473684
+        "loop" 0.578947
+        "end" 0.578947
+      }
+      sequenceduration 1.300000
+    }
+    event gesture "bg_down"
+    {
+      time 0.393334 2.360000
+      param "bg_down"
+      event_ramp
+      {
+        0.0940 0.4208
+        1.9000 0.3119
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.086207
+        "extreme" 0.241379
+        "loop" 0.482759
+        "end" 0.672414
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.086207
+        "extreme" 0.241379
+        "loop" 0.482759
+        "end" 0.672414
+      }
+      sequenceduration 1.966667
+    }
+  }
+  channel "Face/Look"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "100"
+  "SceneRampTool" "100"
+  "RampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

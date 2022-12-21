@@ -1,0 +1,134 @@
+// Choreo version 1
+actor "SWATL"
+{
+  channel "Voice"
+  {
+    event speak "l_wegottogetthehelloutofhere"
+    {
+      time 0.160000 4.336508
+      param "l_wegottogetthehelloutofhere"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+      cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 4.321212 4.552051
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+      cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 0.086667 0.317506
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+      cc_noattenuate
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "hg_puncuate_down"
+    {
+      time 1.040000 2.673333
+      param "hg_puncuate_down"
+      absolutetags playback_time
+      {
+        "apex" 0.333333
+        "extreme" 0.541667
+        "loop" 0.552500
+        "end" 0.562500
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.333333
+        "extreme" 0.541667
+        "loop" 0.562500
+        "end" 0.562500
+      }
+      sequenceduration 1.633333
+    }
+    event gesture "bg_up_l"
+    {
+      time 0.186666 1.786666
+      param "bg_up_l"
+      absolutetags playback_time
+      {
+        "apex" 0.085106
+        "extreme" 0.276596
+        "loop" 0.425532
+        "end" 0.638298
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.085106
+        "extreme" 0.276596
+        "loop" 0.425532
+        "end" 0.638298
+      }
+      sequenceduration 1.600000
+    }
+    event gesture "hg_nod_yes"
+    {
+      time 2.666667 5.180001
+      param "hg_nod_yes"
+      event_ramp
+      {
+        0.0800 0.6182
+        0.7960 0.1738
+        2.4193 0.1966
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.138712
+        "extreme" 0.232915
+        "loop" 0.461695
+        "end" 0.784678
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+      sequenceduration 2.300000
+    }
+  }
+  channel "Face/Look"
+  {
+    event face "Face swat2_holder"
+    {
+      time 0.046667 1.160000
+      param "swat2_holder"
+      event_ramp
+      {
+        0.1180 0.7322
+        1.0040 0.7578
+      }
+      lockbodyfacing
+    }
+    event lookat "Look at swat2_holder"
+    {
+      time 0.126667 1.126667
+      param "swat2_holder"
+    }
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "RampTool" "100"
+  "CChoreoView" "88"
+}
+fps 60
+snap off
+ignorePhonemes off

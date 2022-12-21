@@ -1,0 +1,88 @@
+// Choreo version 1
+actor "SWAT3"
+{
+  channel "Voice"
+  {
+    event speak "3_itsdarkhere"
+    {
+      time 0.106667 3.800091
+      param "3_itsdarkhere"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 3.693333 3.942857
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 0.040000 0.289524
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+  channel "Gestures"
+  {
+    event flexanimation "Facial Animation"
+    {
+      time 0.073333 2.986666
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_rightleft" range 30.0 -30.0 
+        {
+          0.3688 0.3900
+          1.3438 0.8600
+          1.8563 0.5400
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.2375 0.2800
+          1.3875 0.7300
+        }
+      }
+    }
+    event gesture "hg_nod_no"
+    {
+      time 1.633333 3.966667
+      param "hg_nod_no"
+      absolutetags playback_time
+      {
+        "apex" 0.072464
+        "extreme" 0.159420
+        "loop" 0.420290
+        "end" 0.913043
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.072464
+        "extreme" 0.159420
+        "loop" 0.420290
+        "end" 0.913043
+      }
+      sequenceduration 2.333333
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "100"
+  "RampTool" "100"
+  "ExpressionTool" "32"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,46 @@
+// Choreo version 1
+actor "SWATL"
+{
+  channel "All"
+  {
+    event speak "blip"
+    {
+      time 0.053030 0.283869
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 1.280303 1.511142
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "l_anotheronedown"
+    {
+      time 0.143939 1.436637
+      param "l_anotheronedown"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "88"
+  "RampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

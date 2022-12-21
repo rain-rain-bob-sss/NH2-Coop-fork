@@ -1,0 +1,94 @@
+// Choreo version 1
+actor "ass_act"
+{
+  channel "Voice"
+  {
+    event speak "helpme"
+    {
+      time 0.144054 0.894054
+      param "108"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "helpme"
+    {
+      time 1.320525 2.070525
+      param "108"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "helpme"
+    {
+      time 1.629348 2.379348
+      param "108"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "helpme"
+    {
+      time 1.947976 2.697976
+      param "108"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "helpme"
+    {
+      time 2.099936 2.849936
+      param "108"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "helpme"
+    {
+      time 2.340133 3.090133
+      param "108"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "helpme"
+    {
+      time 2.536211 3.286211
+      param "108"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "helpme"
+    {
+      time 2.746995 3.496995
+      param "108"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+  channel "Gestures"
+  {
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "RampTool" "100"
+  "CChoreoView" "136"
+}
+fps 60
+snap off
+ignorePhonemes off

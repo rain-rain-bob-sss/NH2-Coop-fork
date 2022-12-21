@@ -1,0 +1,40 @@
+// Choreo version 1
+actor "announcer"
+{
+  channel "Voice"
+  {
+    event speak "ann_contactanurse"
+    {
+      time 1.687222 18.584637
+      param "ann_contactanurse"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "ann_dingdong"
+    {
+      time 0.056134 2.549195
+      param "ann_dingdong"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+  channel "Gestures"
+  {
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "RampTool" "100"
+  "CChoreoView" "96"
+}
+fps 60
+snap off
+ignorePhonemes off

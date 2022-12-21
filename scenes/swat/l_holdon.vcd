@@ -1,0 +1,215 @@
+// Choreo version 1
+actor "SWATL"
+{
+  channel "Gestures"
+  {
+    event gesture "p_ready"
+    {
+      time 0.180000 3.673333
+      param "p_ready"
+      event_ramp
+      {
+        0.0260 0.9886
+        0.8900 0.7094
+        1.4200 0.0513
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.096346
+        "loop" 0.385385
+        "end" 0.770770
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.097087
+        "loop" 0.388350
+        "end" 0.776699
+      }
+      sequenceduration 3.466667
+    }
+    event gesture "g_Lhandease"
+    {
+      time 0.188798 2.827878
+      param "g_Lhandease"
+      event_ramp
+      {
+        0.1860 1.0000
+        0.7420 0.8803
+        0.8900 0.4387
+        0.9280 0.1282
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.295097
+        "accent" 0.423261
+        "loop" 0.653957
+        "end" 0.666773
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.191176
+        "accent" 0.338235
+        "loop" 0.602941
+        "end" 0.617647
+      }
+      sequenceduration 2.300000
+    }
+    event gesture "g_armsup"
+    {
+      time 0.071556 3.389479
+      param "g_armsup"
+      event_ramp
+      {
+        0.1440 0.2963
+        1.2200 0.6207
+        2.6786 0.5655
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.245086
+        "accent" 0.418351
+        "loop" 0.459120
+        "end" 0.642576
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.188406
+        "accent" 0.434783
+        "loop" 0.492754
+        "end" 0.753623
+      }
+      sequenceduration 2.333333
+    }
+    event gesture "CrouchShootToCrouchD"
+    {
+      time 0.056561 4.086217
+      param "CrouchShootToCrouchD"
+      event_ramp
+      {
+        1.0540 0.1311
+        1.3460 0.9430
+        3.2049 0.9931
+      }
+      sequenceduration 0.666667
+    }
+    event gesture "bg_up_l"
+    {
+      time 2.816092 4.034483
+      param "bg_up_l"
+      absolutetags playback_time
+      {
+        "apex" 0.111762
+        "extreme" 0.363228
+        "loop" 0.558811
+        "end" 0.838217
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.085106
+        "extreme" 0.276596
+        "loop" 0.425532
+        "end" 0.638298
+      }
+      sequenceduration 1.600000
+    }
+    event gesture "g_armsup"
+    {
+      time 2.845287 4.034942
+      param "g_armsup"
+      event_ramp
+      {
+        0.1440 0.2963
+        0.4540 0.3097
+        0.8520 0.0000
+        0.8637 0.0057
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.369531
+        "accent" 0.574879
+        "loop" 0.739130
+        "end" 1.000000
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.188406
+        "accent" 0.434783
+        "loop" 0.492754
+        "end" 0.753623
+      }
+      sequenceduration 2.333333
+    }
+  }
+  channel "Face/Look"
+  {
+    event face "Face swat2_holder"
+    {
+      time 0.000000 4.070365
+      param "swat2_holder"
+      event_ramp
+      {
+        0.3700 0.8661
+        3.4304 0.8291
+        3.6404 0.8319
+        3.8644 0.7320
+      }
+      lockbodyfacing
+    }
+    event lookat "Look at swat2_holder"
+    {
+      time 0.034722 4.061893
+      param "swat2_holder"
+    }
+  }
+  channel "Voice"
+  {
+    event speak "l_nooo"
+    {
+      time 2.801904 3.773060
+      param "l_nooo"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 0.046667 0.277506
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 3.683491 3.914330
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "l_holdon"
+    {
+      time 0.119048 2.826894
+      param "l_holdon"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "RampTool" "100"
+  "CChoreoView" "116"
+}
+fps 60
+snap off
+ignorePhonemes off

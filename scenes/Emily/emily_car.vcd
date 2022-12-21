@@ -1,0 +1,422 @@
+// Choreo version 1
+actor "woman_car"
+{
+  channel "Gestures"
+  {
+    event gesture "g_d2_coast03_PostBattle_Idle02"
+    {
+      time 0.011494 2.472413
+      param "g_d2_coast03_PostBattle_Idle02"
+      event_ramp
+      {
+        0.0740 0.3608
+        0.6160 0.2330
+        1.0340 0.4403
+        1.4620 0.3352
+        1.9260 0.0994
+        2.0669 0.0000
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.137443
+        "accent" 0.398584
+        "loop" 0.412328
+        "end" 0.771028
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.147059
+        "accent" 0.426471
+        "loop" 0.441176
+        "end" 0.588235
+      }
+      sequenceduration 2.300000
+    }
+    event gesture "g_d2_coast03_PostBattle_Idle02"
+    {
+      time 0.011494 2.472413
+      param "g_d2_coast03_PostBattle_Idle02"
+      event_ramp
+      {
+        0.0740 0.3608
+        2.0669 0.3608
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.137443
+        "accent" 0.398584
+        "loop" 0.412328
+        "end" 0.771028
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.147059
+        "accent" 0.426471
+        "loop" 0.441176
+        "end" 0.588235
+      }
+      sequenceduration 2.300000
+    }
+    event gesture "urgenthandsweepcrouch"
+    {
+      time 0.189655 2.616092
+      param "urgenthandsweepcrouch"
+      absolutetags playback_time
+      {
+        "apex" 0.140570
+        "accent" 0.224913
+        "loop" 0.281141
+        "end" 0.708930
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.232558
+        "accent" 0.372093
+        "loop" 0.465116
+        "end" 0.581395
+      }
+      sequenceduration 1.466667
+    }
+    event gesture "g_d2_coast03_PostBattle_Idle02"
+    {
+      time 0.011494 2.472413
+      param "g_d2_coast03_PostBattle_Idle02"
+      event_ramp
+      {
+        0.0740 0.3608
+        2.0669 0.3608
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.137443
+        "accent" 0.398584
+        "loop" 0.412328
+        "end" 0.771028
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.147059
+        "accent" 0.426471
+        "loop" 0.441176
+        "end" 0.588235
+      }
+      sequenceduration 2.300000
+    }
+    event gesture "gesture_shoot_smg1"
+    {
+      time 0.752873 0.992873
+      param "gesture_shoot_smg1"
+      sequenceduration 0.240000
+    }
+    event gesture "gesture_shoot_smg1"
+    {
+      time 0.350574 0.590574
+      param "gesture_shoot_smg1"
+      sequenceduration 0.240000
+    }
+    event gesture "gesture_shoot_smg1"
+    {
+      time 0.557471 0.797471
+      param "gesture_shoot_smg1"
+      sequenceduration 0.240000
+    }
+    event gesture "gesture_shoot_smg1"
+    {
+      time 1.367815 1.607816
+      param "gesture_shoot_smg1"
+      sequenceduration 0.240000
+    }
+    event gesture "gesture_shoot_smg1"
+    {
+      time 0.965517 1.205517
+      param "gesture_shoot_smg1"
+      sequenceduration 0.240000
+    }
+    event gesture "gesture_shoot_smg1"
+    {
+      time 1.172414 1.412414
+      param "gesture_shoot_smg1"
+      sequenceduration 0.240000
+    }
+    event gesture "gesture_shoot_smg1"
+    {
+      time 1.597701 1.837701
+      param "gesture_shoot_smg1"
+      sequenceduration 0.240000
+    }
+    event gesture "gesture_shoot_smg1"
+    {
+      time 1.804598 2.044598
+      param "gesture_shoot_smg1"
+      sequenceduration 0.240000
+    }
+  }
+  channel "Face/Look"
+  {
+    event lookat "Look at !self"
+    {
+      time 0.000000 3.000000
+      param "!self"
+    }
+    event face "Face !self"
+    {
+      time 0.000000 3.000000
+      param "!self"
+    }
+  }
+  channel "Voice"
+  {
+  }
+  channel "Flex Animation"
+  {
+    event flexanimation "Facial Animation"
+    {
+      time 0.120690 1.890805
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "half_closed" 
+        {
+          0.1280 0.3333
+        }
+        "blink" 
+        {
+          0.0340 0.9900
+          0.0720 0.0200
+          0.1300 0.9700
+          0.1580 0.1000
+          0.1900 0.9600
+          0.2300 0.0100
+          0.2620 0.9500
+          0.2840 0.1000
+          0.3060 0.9200
+          0.3360 0.0900
+          0.3500 0.9500
+          0.3720 0.1600
+          0.3860 0.8300
+          0.4160 0.8600
+          0.4180 0.1000
+          0.4420 0.7900
+          0.4680 0.8900
+          0.4680 0.1700
+          0.5100 0.8800
+          0.5300 0.1400
+          0.5620 0.9200
+          0.5800 0.1300
+          0.6060 0.4300
+          0.6320 0.8900
+          0.6600 0.4300
+          0.6600 0.1900
+          0.7140 0.9200
+          0.7160 0.3200
+          0.7500 0.8200
+          0.7540 0.6300
+          0.7660 0.1600
+          0.7780 0.7000
+          0.8060 0.2700
+          0.8060 0.7000
+          0.8320 0.9600
+          0.8340 0.2000
+          0.8720 0.7500
+          0.8760 0.2100
+          0.8920 0.6600
+          0.9000 0.1300
+          0.9240 0.2400
+          0.9580 0.8900
+          0.9740 0.2100
+          0.9800 0.2900
+          0.9920 0.6900
+          1.0320 0.1900
+          1.0420 0.9300
+          1.0760 0.2100
+          1.1140 0.8900
+          1.1460 0.2200
+          1.1500 0.6300
+          1.1780 0.8400
+          1.1820 0.3800
+          1.2200 0.8700
+          1.2400 0.1800
+          1.2560 0.4700
+          1.2880 0.1800
+          1.3220 0.9000
+          1.3300 0.1900
+          1.3380 0.6400
+          1.3400 0.1300
+          1.3880 0.5900
+          1.3880 0.1600
+          1.4160 0.2900
+          1.4300 0.5400
+          1.4580 0.1300
+          1.4720 0.8900
+          1.4820 0.2400
+          1.5100 0.6200
+          1.5240 0.0900
+          1.5680 0.1000
+          1.5940 0.9200
+          1.6040 0.3300
+          1.6400 0.6800
+          1.6540 0.0900
+          1.7020 1.0000
+          1.7120 0.6300
+        }
+        "inner_raiser" combo 
+        {
+          0.4680 0.5833
+        }
+        {
+        }
+        "lowerer" combo 
+        {
+          0.0660 1.0000
+        }
+        {
+        }
+        "corner_puller" combo 
+        {
+          1.0000 0.3333
+        }
+        {
+        }
+        "corner_depressor" combo 
+        {
+          0.0960 0.9300
+          1.5140 0.8900
+        }
+        {
+        }
+        "part" combo 
+        {
+          0.1500 0.0500
+          0.1760 0.5800
+          0.2140 0.1600
+          0.2280 0.6100
+          0.2720 0.1400
+          0.3460 0.8200
+          0.3580 0.2000
+          0.4020 0.5100
+          0.4660 0.1000
+          0.4780 0.8700
+          0.5260 0.1900
+          0.5600 0.7700
+          0.5820 0.1500
+          0.6300 0.9000
+          0.6640 0.2700
+          0.7000 0.8900
+          0.7140 0.1900
+          0.7360 0.2400
+          0.7540 0.2000
+          0.7680 0.7400
+          0.8040 0.7800
+          0.8080 0.2100
+          0.8520 0.7700
+          0.8560 0.2300
+          0.9200 0.6900
+          0.9380 0.1900
+          0.9560 0.9400
+          0.9680 0.1300
+          1.0200 0.8400
+          1.0640 0.3400
+          1.1100 0.9900
+          1.1280 0.3800
+          1.1920 0.4600
+          1.2160 0.6800
+          1.2560 0.1100
+          1.2980 0.9100
+          1.3640 0.2400
+          1.3860 0.6900
+          1.4300 0.0900
+          1.4700 0.9000
+          1.5420 0.4000
+          1.5700 0.8000
+          1.6240 0.3300
+          1.6460 0.9700
+          1.6600 0.4900
+        }
+        {
+        }
+        "jaw_drop" 
+        {
+          0.2720 0.9800
+          0.3320 0.1000
+          0.3820 0.9000
+          0.4380 0.1800
+          0.4820 0.9800
+          0.5300 0.2800
+          0.5880 0.8500
+          0.6100 0.2000
+          0.6820 0.7600
+          0.6980 0.2600
+          0.7440 0.9700
+          0.7960 0.0800
+          0.8320 0.8300
+          0.8860 0.2200
+          0.9080 0.8700
+          1.0000 0.2800
+          1.0280 0.8200
+          1.0760 0.1200
+          1.1720 0.6800
+          1.2080 0.3000
+          1.2560 0.8100
+          1.2860 0.2200
+          1.3600 0.7400
+          1.3840 0.2200
+          1.4160 0.8400
+          1.4600 0.3100
+          1.4840 0.9700
+          1.5620 0.1200
+          1.6240 0.9200
+          1.6500 0.2600
+        }
+        "mouth_drop" combo 
+        {
+          0.2020 0.3700
+          0.2760 0.9300
+          0.3420 0.0900
+          0.3700 0.7700
+          0.4240 0.0800
+          0.4500 0.8700
+          0.4860 0.2100
+          0.5260 0.9400
+          0.5740 0.0900
+          0.6000 0.9300
+          0.6580 0.0700
+          0.6940 0.7600
+          0.7340 0.1800
+          0.7680 0.7800
+          0.8480 0.1700
+          0.8580 0.8500
+          0.9520 0.1800
+          1.0020 0.9200
+          1.0740 0.2700
+          1.1760 0.2500
+          1.2500 0.9800
+          1.3100 0.3400
+          1.3980 0.8100
+          1.5600 0.9600
+          1.5940 0.0200
+          1.6020 0.6800
+          1.6240 0.1500
+        }
+        {
+        }
+        "lower_lip" 
+        {
+          1.5820 0.0833
+        }
+      }
+    }
+  }
+}
+
+mapname "C:\Program Files (x86)\Steam\steamapps\SourceMods\NH2\maps\nh2c7.bsp"
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "RampTool" "100"
+  "CChoreoView" "116"
+}
+fps 60
+snap off
+ignorePhonemes off

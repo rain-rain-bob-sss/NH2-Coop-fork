@@ -1,0 +1,8 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "nh_textures/wall_rocks2"
+	"$surfaceprop" "concrete"
+	"%keywords" "nh"
+	"$detail" "detail/rock_detail_01"
+	"$detailscale" 2
+}

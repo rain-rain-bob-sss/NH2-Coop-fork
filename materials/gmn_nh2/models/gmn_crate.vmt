@@ -1,0 +1,10 @@
+VertexLitGeneric
+{
+	$basetexture		gmn_nh2/models/gmn_crate
+	$model			1
+
+	$detail			detail\wood_detail_01
+	$detailtexturetransform	"center .5 .5 scale 2 1 rotate 90 translate 0 0"
+	$detailblendfactor	0.8
+	$detailblendmode	0
+}

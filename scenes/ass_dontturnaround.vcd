@@ -1,0 +1,94 @@
+// Choreo version 1
+actor "ass_act"
+{
+  channel "Voice"
+  {
+    event speak "dontturnaround"
+    {
+      time 1.443074 2.193074
+      param "110"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "dontturnaround"
+    {
+      time 0.011701 0.761701
+      param "110"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "dontturnaround"
+    {
+      time 1.840132 2.590132
+      param "110"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "dontturnaround"
+    {
+      time 2.050917 2.800917
+      param "110"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "dontturnaround"
+    {
+      time 2.173466 2.923466
+      param "110"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "dontturnaround"
+    {
+      time 2.702878 3.452878
+      param "110"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "dontturnaround"
+    {
+      time 2.462682 3.212682
+      param "110"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "dontturnaround"
+    {
+      time 3.153858 3.903858
+      param "110"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+  channel "Gestures"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "136"
+  "RampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

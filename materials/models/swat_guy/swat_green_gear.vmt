@@ -1,0 +1,14 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/swat_guy/swat_green_DM"
+	"$bumpmap" "models/swat_guy/swat_generic_NM"
+	
+	"$surfaceprop" "metal"
+	
+	"$phong" "1"
+	"$phongexponent" "50"
+	"$phongboost" "2"	
+	"$phongfresnelranges"	"[0.3 0.8 1]"
+	"$phongalbedotint" "1"
+	
+}

@@ -1,0 +1,85 @@
+// Choreo version 1
+actor "SWAT3"
+{
+  channel "Idle"
+  {
+    event lookat "Look at power_room_door"
+    {
+      time 0.055556 5.228571
+      param "power_room_door"
+      event_ramp
+      {
+        0.2940 1.0000
+        4.7681 1.0000
+      }
+    }
+    event gesture "g_frustrated_point"
+    {
+      time 0.277778 5.315873
+      param "g_frustrated_point"
+      event_ramp
+      {
+        0.3040 0.9521
+        1.6420 0.8767
+        4.8548 0.9589
+      }
+      absolutetags playback_time
+      {
+        "in" 0.033606
+        "loop" 0.255409
+        "end" 0.770065
+        "out" 0.872441
+      }
+      absolutetags shifted_time
+      {
+        "in" 0.079365
+        "loop" 0.603175
+        "end" 0.698413
+        "out" 0.857143
+      }
+      sequenceduration 2.133333
+    }
+    event face "Face glass_window"
+    {
+      time -0.642857 0.276190
+      param "glass_window"
+      event_ramp
+      {
+        0.0000 1.0000
+        0.4651 1.0000
+      }
+    }
+    event lookat "Look at !player"
+    {
+      time -0.396825 0.331745
+      param "!player"
+      event_ramp
+      {
+        0.2940 1.0000
+        0.3142 1.0000
+      }
+    }
+    event face "Face power_room_door"
+    {
+      time 0.103175 5.188889
+      param "power_room_door"
+      event_ramp
+      {
+        0.4020 1.0000
+        4.6318 1.0000
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "RampTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+  "ExpressionTool" "100"
+  "CChoreoView" "108"
+}
+fps 60
+snap off
+ignorePhonemes off

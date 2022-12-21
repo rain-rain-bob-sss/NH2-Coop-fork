@@ -1,0 +1,84 @@
+// Choreo version 1
+actor "SWAT2"
+{
+  channel "voice and gestures"
+  {
+    event speak "2_hetwaitupforeverybody"
+    {
+      time 0.126667 2.696826
+      param "2_hetwaitupforeverybody"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 0.060000 0.290839
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 2.613334 2.844173
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event gesture "g_Lhandease"
+    {
+      time 0.126667 2.426667
+      param "g_Lhandease"
+      absolutetags playback_time
+      {
+        "apex" 0.191176
+        "accent" 0.338235
+        "loop" 0.602941
+        "end" 0.617647
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.191176
+        "accent" 0.338235
+        "loop" 0.602941
+        "end" 0.617647
+      }
+      sequenceduration 2.300000
+    }
+  }
+  channel "Face/Look"
+  {
+    event face "Face !player"
+    {
+      time 0.066667 3.840000
+      param "!player"
+      event_ramp
+      {
+        0.8140 0.9971
+        2.7873 0.9885
+      }
+    }
+    event lookat "Look at !player"
+    {
+      time 0.000000 3.420000
+      param "!player"
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "100"
+  "RampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

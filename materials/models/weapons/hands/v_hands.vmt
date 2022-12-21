@@ -1,0 +1,6 @@
+VertexLitGeneric
+{
+	$basetexture "models/weapons/hands/v_hands"
+	$bumpmap "models/weapons/hands/v_hands_normal"
+	$surfaceprop Flesh
+}

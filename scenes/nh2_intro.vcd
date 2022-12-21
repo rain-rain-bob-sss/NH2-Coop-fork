@@ -1,0 +1,76 @@
+// Choreo version 1
+actor "Romero"
+{
+  channel "sound"
+  {
+    event speak "NH2 intro"
+    {
+      time 0.000000 59.187119
+      param "NH2Intro"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+  channel "captions"
+  {
+    event speak "44"
+    {
+      time 11.278461 16.318756
+      param "44"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "45"
+    {
+      time 14.025641 19.065937
+      param "45"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "46"
+    {
+      time 16.769230 21.809525
+      param "46"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "47"
+    {
+      time 22.230768 27.271063
+      param "47"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "48"
+    {
+      time 25.089745 30.130039
+      param "48"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "26"
+  "RampTool" "100"
+  "ExpressionTool" "100"
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

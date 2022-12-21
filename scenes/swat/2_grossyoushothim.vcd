@@ -1,0 +1,124 @@
+// Choreo version 1
+actor "SWAT2"
+{
+  channel "voice and gestures"
+  {
+    event speak "2_didyouhearthat"
+    {
+      time 0.154445 3.484060
+      param "2_ahgroseyoushothim"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 0.060000 0.290839
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event gesture "hg_nod_yes"
+    {
+      time 0.219723 3.228056
+      param "hg_nod_yes"
+      event_ramp
+      {
+        0.1820 0.3783
+        0.5400 0.4384
+        1.0740 0.3954
+        2.0903 0.0000
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.047282
+        "extreme" 0.125985
+        "loop" 0.644342
+        "end" 0.976905
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+      sequenceduration 2.300000
+    }
+    event gesture "bg_left"
+    {
+      time 0.426666 3.216945
+      param "bg_left"
+      event_ramp
+      {
+        1.8183 0.3266
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.121300
+        "extreme" 0.230471
+        "loop" 0.376031
+        "end" 0.570112
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.153846
+        "extreme" 0.292308
+        "loop" 0.476923
+        "end" 0.723077
+      }
+      sequenceduration 2.200000
+    }
+    event gesture "g_chestup"
+    {
+      time 0.059999 3.214166
+      param "g_chestup"
+      event_ramp
+      {
+        0.4840 0.6733
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.107035
+        "accent" 0.181960
+        "loop" 0.267588
+        "end" 0.642211
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.128205
+        "accent" 0.217949
+        "loop" 0.320513
+        "end" 0.769231
+      }
+      sequenceduration 2.633333
+    }
+    event speak "blip"
+    {
+      time 3.368891 3.599730
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+  channel "Face/Look"
+  {
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "RampTool" "100"
+  "CChoreoView" "96"
+}
+fps 60
+snap off
+ignorePhonemes off

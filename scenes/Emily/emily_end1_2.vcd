@@ -1,0 +1,62 @@
+// Choreo version 1
+actor "woman_killing"
+{
+  channel "Gestures"
+  {
+    event gesture "Open_door_away"
+    {
+      time 0.293333 3.460000
+      param "Open_door_away"
+      event_ramp
+      {
+        0.2960 0.3966
+        0.4340 1.0000
+        0.6380 0.9451
+        0.9460 0.6160
+        1.3280 0.4409
+        1.8620 0.4599
+      }
+      sequenceduration 3.166667
+    }
+    event gesture "Open_door_towards_right"
+    {
+      time 0.486667 1.280001
+      param "Open_door_towards_right"
+      event_ramp
+      {
+        0.4113 0.6392
+      }
+      sequenceduration 2.500000
+    }
+  }
+  channel "Face/Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.020000 2.826667
+      param "!player"
+    }
+    event face "Face !player"
+    {
+      time 0.000000 2.840000
+      param "!player"
+      event_ramp
+      {
+        0.1580 1.0000
+        2.7367 1.0000
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "RampTool" "100"
+  "CChoreoView" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

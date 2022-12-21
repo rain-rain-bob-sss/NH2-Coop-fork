@@ -1,0 +1,10 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "nh_textures/grate1"
+	"$surfaceprop" "metalgrate"
+	"%keywords" "nh"
+	
+	"%compilepassbullets" "1"
+	"$alphatest" "1"
+}
+

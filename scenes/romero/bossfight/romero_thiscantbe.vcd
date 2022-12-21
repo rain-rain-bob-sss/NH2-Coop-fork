@@ -1,0 +1,206 @@
+// Choreo version 1
+actor "Romero"
+{
+  channel "Gestures"
+  {
+    event gesture "A_HG_smallhshake"
+    {
+      time 0.119047 2.419047
+      param "A_HG_smallhshake"
+      absolutetags playback_time
+      {
+        "apex" 0.073529
+        "extreme" 0.147059
+        "loop" 0.441176
+        "end" 0.588235
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.073529
+        "extreme" 0.147059
+        "loop" 0.441176
+        "end" 0.588235
+      }
+      sequenceduration 2.300000
+    }
+    event gesture "A_bg_yell"
+    {
+      time 0.845238 3.478572
+      param "A_bg_yell"
+      event_ramp
+      {
+        0.3120 0.5613
+        2.0040 0.4530
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.102564
+        "extreme" 0.269231
+        "loop" 0.487179
+        "end" 0.641026
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.102564
+        "extreme" 0.269231
+        "loop" 0.487179
+        "end" 0.641026
+      }
+    }
+    event gesture "A_g_hdsinhead"
+    {
+      time 0.886905 3.845238
+      param "A_g_hdsinhead"
+      event_ramp
+      {
+        0.1840 0.7297
+        1.0340 0.8205
+        2.2723 0.8011
+        2.5163 0.7977
+      }
+      absolutetags playback_time
+      {
+        "in" 0.102779
+        "loop" 0.285497
+        "end" 0.726358
+        "out" 0.943662
+      }
+      absolutetags shifted_time
+      {
+        "in" 0.121622
+        "loop" 0.337838
+        "end" 0.621622
+        "out" 0.810811
+      }
+      sequenceduration 2.500000
+    }
+    event gesture "A_HG_smallhshake"
+    {
+      time 0.119047 2.419047
+      param "A_HG_smallhshake"
+      absolutetags playback_time
+      {
+        "apex" 0.073529
+        "extreme" 0.147059
+        "loop" 0.441176
+        "end" 0.588235
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.073529
+        "extreme" 0.147059
+        "loop" 0.441176
+        "end" 0.588235
+      }
+      sequenceduration 2.300000
+    }
+    event gesture "A_bg_acctdwn_chinout"
+    {
+      time 0.011905 2.311905
+      param "A_bg_acctdwn_chinout"
+      absolutetags playback_time
+      {
+        "apex" 0.147059
+        "extreme" 0.294118
+        "loop" 0.514706
+        "end" 0.588235
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.147059
+        "extreme" 0.294118
+        "loop" 0.514706
+        "end" 0.588235
+      }
+      sequenceduration 2.300000
+    }
+    event flexanimation "Facial Animation"
+    {
+      time 0.005952 4.363095
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "inner_raiser" combo 
+        {
+          1.0840 0.2200
+          1.5640 0.0600
+          1.7180 0.9200
+        }
+        {
+        }
+        "lowerer" combo 
+        {
+          0.1660 0.8300
+          0.8100 0.0500
+        }
+        {
+        }
+        "corner_depressor" combo 
+        {
+          0.7980 0.4700
+          1.5760 0.2900
+          1.8820 0.6600
+        }
+        {
+        }
+        "part" combo 
+        {
+          0.5220 0.1000
+          0.7280 0.5000
+          1.3900 0.2500
+          1.8220 0.1900
+          1.9340 0.5000
+          2.7920 0.4800
+        }
+        {
+        }
+      }
+    }
+  }
+  channel "Face/Look"
+  {
+    event face "Face !player"
+    {
+      time 0.051298 3.817899
+      param "!player"
+      event_ramp
+      {
+        0.2560 0.7721
+        3.1266 0.8291
+        3.3366 0.8319
+        3.5606 0.7320
+      }
+      lockbodyfacing
+    }
+    event lookat "Look at !player"
+    {
+      time 0.063458 3.713392
+      param "!player"
+    }
+  }
+  channel "Voice"
+  {
+    event speak "romero_thiscantbe"
+    {
+      time 0.287356 4.396290
+      param "romero_thiscantbe"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+}
+
+mapname "C:\Program Files (x86)\Steam\steamapps\SourceMods\NH2\maps\nh2c7.bsp"
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "RampTool" "100"
+  "CChoreoView" "108"
+}
+fps 60
+snap off
+ignorePhonemes off

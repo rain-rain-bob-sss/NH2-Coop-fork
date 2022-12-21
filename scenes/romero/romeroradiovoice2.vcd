@@ -1,0 +1,82 @@
+// Choreo version 1
+actor "Romero"
+{
+  channel "1"
+  {
+    event speak "1"
+    {
+      time 0.000000 17.775419
+      param "romeroradiovoice2"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "17"
+    {
+      time 0.100000 5.140295
+      param "17"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "18"
+    {
+      time 1.780000 6.820294
+      param "18"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "19"
+    {
+      time 5.986667 11.026962
+      param "19"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "20"
+    {
+      time 8.700000 13.740294
+      param "20"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "21"
+    {
+      time 11.000000 16.040295
+      param "21"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "22"
+    {
+      time 16.206667 21.246962
+      param "22"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "100"
+  "SceneRampTool" "100"
+  "RampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

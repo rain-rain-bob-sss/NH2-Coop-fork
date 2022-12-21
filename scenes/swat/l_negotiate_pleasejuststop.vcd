@@ -1,0 +1,112 @@
+// Choreo version 1
+actor "SWATL"
+{
+  channel "Voice"
+  {
+    event speak "blip"
+    {
+      time 2.206666 2.437505
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 0.040000 0.270839
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "l_negotiate_help"
+    {
+      time 0.120000 2.277097
+      param "l_negotiate_pleasejuststop"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "bg_down"
+    {
+      time 0.093333 2.566667
+      param "bg_down"
+      event_ramp
+      {
+        0.0740 0.6634
+        2.2887 0.6782
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.068547
+        "extreme" 0.191932
+        "loop" 0.383865
+        "end" 0.772973
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.086207
+        "extreme" 0.241379
+        "loop" 0.482759
+        "end" 0.672414
+      }
+      sequenceduration 1.966667
+    }
+    event gesture "hg_puncuate_down"
+    {
+      time 0.693333 2.326666
+      param "hg_puncuate_down"
+      absolutetags playback_time
+      {
+        "apex" 0.333333
+        "extreme" 0.541667
+        "loop" 0.552500
+        "end" 0.562500
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.333333
+        "extreme" 0.541667
+        "loop" 0.562500
+        "end" 0.562500
+      }
+      sequenceduration 1.633333
+    }
+  }
+  channel "Face/Look"
+  {
+    event face "Face SWAT3"
+    {
+      time 0.000000 2.685789
+      param "SWAT3"
+      event_ramp
+      {
+        0.3980 1.0000
+        2.0798 1.0000
+      }
+    }
+    event lookat "Look at SWAT3"
+    {
+      time 0.000000 2.700000
+      param "SWAT3"
+    }
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "RampTool" "100"
+  "CChoreoView" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,132 @@
+// Choreo version 1
+actor "announcer"
+{
+  channel "Voice"
+  {
+    event speak "ann_10"
+    {
+      time 0.013611 3.200550
+      param "ann_10"
+      param2 "VOL_NORM"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "ann_9"
+    {
+      time 1.346944 4.533883
+      param "ann_9"
+      param2 "VOL_NORM"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "ann_8"
+    {
+      time 2.590000 5.776938
+      param "ann_8"
+      param2 "VOL_NORM"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "ann_7"
+    {
+      time 3.701111 6.888050
+      param "ann_7"
+      param2 "VOL_NORM"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "ann_6"
+    {
+      time 4.881668 8.068606
+      param "ann_6"
+      param2 "VOL_NORM"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "ann_5"
+    {
+      time 6.013610 9.200549
+      param "ann_5"
+      param2 "VOL_NORM"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "ann_4"
+    {
+      time 7.110833 10.297771
+      param "ann_4"
+      param2 "VOL_NORM"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "ann_3"
+    {
+      time 8.270555 11.457494
+      param "ann_3"
+      param2 "VOL_NORM"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "ann_2"
+    {
+      time 9.423333 12.610271
+      param "ann_2"
+      param2 "VOL_NORM"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "ann_1"
+    {
+      time 10.492778 13.679716
+      param "ann_1"
+      param2 "VOL_NORM"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "ann_firedrill"
+    {
+      time 12.256664 20.843876
+      param "ann_firedrill"
+      param2 "VOL_NORM"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+  channel "Gestures"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "96"
+  "RampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

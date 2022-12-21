@@ -1,0 +1,41 @@
+// Choreo version 1
+actor "announcer"
+{
+  channel "Voice"
+  {
+    event speak "ann_arearestricted"
+    {
+      time 0.096944 8.637987
+      param "ann_arearestricted"
+      param2 "VOL_NORM"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "ann_itsforyourowngood"
+    {
+      time 9.286692 10.948732
+      param "ann_itsforyourowngood"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+  channel "Gestures"
+  {
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "RampTool" "100"
+  "CChoreoView" "96"
+}
+fps 60
+snap off
+ignorePhonemes off

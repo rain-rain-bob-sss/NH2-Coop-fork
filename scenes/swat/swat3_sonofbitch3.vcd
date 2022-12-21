@@ -1,0 +1,132 @@
+// Choreo version 1
+actor "SWAT3"
+{
+  channel "Voice"
+  {
+    event speak "3_sonofbitch3"
+    {
+      time 0.106667 3.661588
+      param "3_sonofbitch3"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 0.040000 0.270839
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 3.613333 3.844172
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "hg_puncuate_down"
+    {
+      time -0.006666 1.626667
+      param "hg_puncuate_down"
+      absolutetags playback_time
+      {
+        "apex" 0.333333
+        "extreme" 0.541667
+        "loop" 0.552500
+        "end" 0.562500
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.333333
+        "extreme" 0.541667
+        "loop" 0.562500
+        "end" 0.562500
+      }
+      sequenceduration 1.633333
+    }
+    event gesture "hg_nod_no"
+    {
+      time 1.706666 3.673333
+      param "hg_nod_no"
+      event_ramp
+      {
+        0.0440 0.5854
+        1.1500 0.4177
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.157160
+        "extreme" 0.260329
+        "loop" 0.938983
+        "end" 1.000000
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.072464
+        "extreme" 0.159420
+        "loop" 0.420290
+        "end" 0.913043
+      }
+      sequenceduration 2.333333
+    }
+    event gesture "hg_nod_yes"
+    {
+      time 1.706667 3.593333
+      param "hg_nod_yes"
+      event_ramp
+      {
+        0.0800 0.5915
+        1.3027 0.4939
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.135315
+        "extreme" 0.260809
+        "loop" 0.851590
+        "end" 0.995843
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+      sequenceduration 2.300000
+    }
+    event flexanimation "Facial Animation"
+    {
+      time 1.626667 4.733334
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.3360 -0.0000
+          2.3860 -0.0000
+        }
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "100"
+  "RampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

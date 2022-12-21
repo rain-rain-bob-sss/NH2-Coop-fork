@@ -1,0 +1,142 @@
+// Choreo version 1
+actor "SWATL"
+{
+  channel "Voice"
+  {
+    event speak "blip"
+    {
+      time 1.706667 1.937506
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 0.040000 0.270839
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "l_negotiate_calmdowntheresnothinghere"
+    {
+      time 0.093333 1.755374
+      param "l_negotiate_calmdown"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "hg_nod_yes"
+    {
+      time 0.066667 2.366667
+      param "hg_nod_yes"
+      event_ramp
+      {
+        0.0500 0.5941
+        0.8820 0.3366
+        1.1680 0.0495
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+    }
+    event gesture "hg_puncuate_down"
+    {
+      time -0.020000 1.613333
+      param "hg_puncuate_down"
+      event_ramp
+      {
+        0.0400 0.2921
+        0.9560 0.3317
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.333333
+        "extreme" 0.541667
+        "loop" 0.552500
+        "end" 0.562500
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.333333
+        "extreme" 0.541667
+        "loop" 0.562500
+        "end" 0.562500
+      }
+      sequenceduration 1.633333
+    }
+    event gesture "bg_down"
+    {
+      time 0.553333 2.520000
+      param "bg_down"
+      event_ramp
+      {
+        0.0760 0.1881
+        1.7500 0.2525
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.086207
+        "extreme" 0.241379
+        "loop" 0.482759
+        "end" 0.672414
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.086207
+        "extreme" 0.241379
+        "loop" 0.482759
+        "end" 0.672414
+      }
+      sequenceduration 1.966667
+    }
+  }
+  channel "Face/Look"
+  {
+    event face "Face SWAT3"
+    {
+      time 0.000000 2.758737
+      param "SWAT3"
+      event_ramp
+      {
+        0.3980 1.0000
+        2.1527 1.0000
+      }
+    }
+    event lookat "Look at SWAT3"
+    {
+      time 0.000000 2.773333
+      param "SWAT3"
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "100"
+  "RampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,8 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "nh_textures/grass_alive_blend1"
+	"$surfaceprop" "grass"
+	"%keywords" "nh"
+	"$detail" "detail/noise_detail_01"
+	"$detailscale" 2
+}

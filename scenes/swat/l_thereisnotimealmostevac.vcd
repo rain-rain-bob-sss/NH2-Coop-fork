@@ -1,0 +1,159 @@
+// Choreo version 1
+actor "SWATL"
+{
+  channel "Voice"
+  {
+    event speak "l_thereisnotimealmostevac"
+    {
+      time 0.133333 3.116553
+      param "l_thereisnotimealmostevac"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 3.040000 3.270839
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 0.066667 0.297506
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "g_palm_up_high_l"
+    {
+      time 0.233333 2.200000
+      param "g_palm_up_high_l"
+      absolutetags playback_time
+      {
+        "apex" 0.172414
+        "accent" 0.362069
+        "loop" 0.431034
+        "end" 0.775862
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.172414
+        "accent" 0.362069
+        "loop" 0.431034
+        "end" 0.775862
+      }
+      sequenceduration 1.966667
+    }
+    event gesture "hg_puncuate_down"
+    {
+      time -0.053334 1.580000
+      param "hg_puncuate_down"
+      event_ramp
+      {
+        0.1280 0.6182
+        1.4500 0.4672
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.333333
+        "extreme" 0.541667
+        "loop" 0.552500
+        "end" 0.562500
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.333333
+        "extreme" 0.541667
+        "loop" 0.562500
+        "end" 0.562500
+      }
+      sequenceduration 1.633333
+    }
+    event gesture "hg_nod_right"
+    {
+      time 1.846666 3.280000
+      param "hg_nod_right"
+      absolutetags playback_time
+      {
+        "apex" 0.214810
+        "extreme" 0.429621
+        "loop" 0.514998
+        "end" 0.525091
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.236842
+        "extreme" 0.473684
+        "loop" 0.578947
+        "end" 0.578947
+      }
+      sequenceduration 1.300000
+    }
+    event gesture "hg_nod_yes"
+    {
+      time 1.220000 3.266666
+      param "hg_nod_yes"
+      event_ramp
+      {
+        0.1180 0.4245
+        1.4947 0.4558
+        1.5207 0.4530
+        1.7687 0.2650
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.066105
+        "extreme" 0.181788
+        "loop" 0.462733
+        "end" 0.859360
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+      sequenceduration 2.300000
+    }
+  }
+  channel "Look/Face"
+  {
+    event lookat "Look at swat2_holder"
+    {
+      time 0.000000 3.086666
+      param "swat2_holder"
+    }
+    event face "Face swat2_holder"
+    {
+      time 0.000000 3.293333
+      param "swat2_holder"
+      event_ramp
+      {
+        0.5380 0.8177
+        2.9447 0.7009
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "100"
+  "RampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,12 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/nurse_hat/hat_DM"
+	"$bumpmap" "models/nurse_hat/hat_NM"
+	"$model" 1
+	"$halflambert" "1"
+	"$phong" "1"
+	"$phongboost" "45"
+	"$phongexponent" 99
+	//"$phongalbedotint" "1"							
+	"$phongfresnelranges"	"[.1 .1 1]"		
+}

@@ -1,0 +1,134 @@
+// Choreo version 1
+actor "SWATL"
+{
+  channel "voice and gestures"
+  {
+    event speak "3_holdupwedontwant"
+    {
+      time 0.126667 2.972200
+      param "l_holdonewedontwanttogetspreadout"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 0.060000 0.290839
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 2.866667 3.097506
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event gesture "hg_nod_yes"
+    {
+      time 0.346667 2.800000
+      param "hg_nod_yes"
+      event_ramp
+      {
+        0.4820 0.4011
+        0.8560 0.1576
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.068920
+        "extreme" 0.151622
+        "loop" 0.399732
+        "end" 0.868383
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+      sequenceduration 2.300000
+    }
+    event gesture "g_palm_out_high_l"
+    {
+      time 0.133333 2.526667
+      param "g_palm_out_high_l"
+      absolutetags playback_time
+      {
+        "apex" 0.140974
+        "accent" 0.267851
+        "loop" 0.451118
+        "end" 0.721448
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.121951
+        "accent" 0.231707
+        "loop" 0.390244
+        "end" 0.780488
+      }
+      sequenceduration 2.766667
+    }
+    event gesture "hg_nod_yes"
+    {
+      time 1.360000 2.646667
+      param "hg_nod_yes"
+      event_ramp
+      {
+        0.4820 0.5215
+        0.8560 0.1833
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.131412
+        "extreme" 0.289103
+        "loop" 0.762183
+        "end" 1.000000
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+      sequenceduration 2.300000
+    }
+  }
+  channel "Face/Look"
+  {
+    event face "Face !player"
+    {
+      time 0.066667 3.073334
+      param "!player"
+      event_ramp
+      {
+        0.6000 0.9885
+        2.5746 0.9828
+      }
+    }
+    event lookat "Look at !player"
+    {
+      time 0.000000 2.633334
+      param "!player"
+    }
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "RampTool" "100"
+  "CChoreoView" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

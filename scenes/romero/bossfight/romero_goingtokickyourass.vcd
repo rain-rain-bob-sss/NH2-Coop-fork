@@ -1,0 +1,154 @@
+// Choreo version 1
+actor "Romero"
+{
+  channel "Gestures"
+  {
+    event gesture "G_medurgent_mid"
+    {
+      time 1.179012 3.212345
+      param "G_medurgent_mid"
+      absolutetags playback_time
+      {
+        "apex" 0.150000
+        "accent" 0.250000
+        "loop" 0.400000
+        "end" 0.533333
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.150000
+        "accent" 0.250000
+        "loop" 0.400000
+        "end" 0.533333
+      }
+      sequenceduration 2.033333
+    }
+    event flexanimation "Facial Animation"
+    {
+      time 0.000000 3.000000
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "corner_puller" combo 
+        {
+          0.4860 0.3500
+        }
+        {
+          0.7680 0.7500
+          1.8440 0.7500
+        }
+      }
+    }
+    event gesture "A_bg_acc_dwn_left_snipe"
+    {
+      time 2.395062 5.195062
+      param "A_bg_acc_dwn_left_snipe"
+      absolutetags playback_time
+      {
+        "apex" 0.144578
+        "extreme" 0.301205
+        "loop" 0.506024
+        "end" 0.662651
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.144578
+        "extreme" 0.301205
+        "loop" 0.506024
+        "end" 0.662651
+      }
+      sequenceduration 2.800000
+    }
+    event gesture "A_bg_embarassed"
+    {
+      time -0.006173 2.960494
+      param "A_bg_embarassed"
+      absolutetags playback_time
+      {
+        "apex" 0.136364
+        "extreme" 0.329545
+        "loop" 0.454545
+        "end" 0.568182
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.136364
+        "extreme" 0.329545
+        "loop" 0.454545
+        "end" 0.568182
+      }
+      sequenceduration 2.966667
+    }
+    event gesture "a_bg_hdaccleft"
+    {
+      time 2.666667 4.966667
+      param "a_bg_hdaccleft"
+      absolutetags playback_time
+      {
+        "apex" 0.117647
+        "extreme" 0.338235
+        "loop" 0.514706
+        "end" 0.588235
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.117647
+        "extreme" 0.338235
+        "loop" 0.514706
+        "end" 0.588235
+      }
+      sequenceduration 2.300000
+    }
+  }
+  channel "Face/Look"
+  {
+    event face "Face !player"
+    {
+      time 0.057471 5.335766
+      param "!player"
+      event_ramp
+      {
+        0.2560 0.7721
+        4.6383 0.8291
+        4.8483 0.8319
+        5.0723 0.7320
+      }
+      lockbodyfacing
+    }
+    event lookat "Look at !player"
+    {
+      time 0.063458 5.275570
+      param "!player"
+    }
+    event interrupt "Interrupt"
+    {
+      time 0.047397 5.298105
+      param ""
+    }
+  }
+  channel "Voice"
+  {
+    event speak "romero_goodnight"
+    {
+      time 0.000000 5.493968
+      param "romero_goingtokickyourass"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+}
+
+mapname "C:\Program Files (x86)\Steam\steamapps\SourceMods\NH2\maps\nh2c7.bsp"
+scalesettings
+{
+  "CChoreoView" "108"
+  "RampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

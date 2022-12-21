@@ -1,0 +1,6 @@
+VertexLitGeneric
+{
+	$basetexture		gmn_nh2/models/gmn_rustyKey_diff
+	$surfaceprop		metal
+	$model			1
+}

@@ -1,0 +1,163 @@
+// Choreo version 1
+actor "SWAT1"
+{
+  channel "all"
+  {
+    event lookat "Look at dead_body1"
+    {
+      time 1.449275 4.999421
+      param "dead_body1"
+    }
+  }
+}
+
+actor "SWAT3"
+{
+  channel "all"
+  {
+    event lookat "Look at dead_body1"
+    {
+      time 1.797101 2.974203
+      param "dead_body1"
+    }
+    event lookat "Look at SWATL"
+    {
+      time 4.366667 6.157778
+      param "SWATL"
+    }
+  }
+}
+
+actor "SWAT2"
+{
+  channel "all"
+  {
+    event lookat "Look at dead_body1"
+    {
+      time 0.528986 5.796232
+      param "dead_body1"
+    }
+    event speak "3_jesuswhathappend"
+    {
+      time 0.156521 3.711442
+      param "2_jesuswhatthehell"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event gesture "hg_nod_no"
+    {
+      time 0.077778 2.411111
+      param "hg_nod_no"
+      absolutetags playback_time
+      {
+        "apex" 0.072464
+        "extreme" 0.159420
+        "loop" 0.420290
+        "end" 0.913043
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.072464
+        "extreme" 0.159420
+        "loop" 0.420290
+        "end" 0.913043
+      }
+      sequenceduration 2.333333
+    }
+    event speak "b1"
+    {
+      time 3.611550 3.842389
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip2"
+    {
+      time 0.082564 0.313403
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+}
+
+actor "SWATL"
+{
+  channel "all"
+  {
+    event lookat "Look at dead_body1"
+    {
+      time 0.000000 1.160000
+      param "dead_body1"
+    }
+    event gesture "hg_nod_yes"
+    {
+      time 4.043859 6.343860
+      param "hg_nod_yes"
+      event_ramp
+      {
+        0.3940 0.4063
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+      sequenceduration 2.300000
+    }
+    event speak "l_findout"
+    {
+      time 4.451461 6.159669
+      param "l_findout"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip3"
+    {
+      time 4.343434 4.574273
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip4"
+    {
+      time 6.046334 6.277173
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "RampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "CChoreoView" "92"
+}
+fps 60
+snap off
+ignorePhonemes off

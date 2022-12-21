@@ -1,0 +1,10 @@
+VertexLitGeneric
+{
+	$basetexture		gmn_nh2/models/gmn_flashlight_diff
+	$surfaceprop		metal
+	$model			1
+
+	$BasemapAlphaPhongMask	1
+	$phong			1
+	$phongExponent		4
+}

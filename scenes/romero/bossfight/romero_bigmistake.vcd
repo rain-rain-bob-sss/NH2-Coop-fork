@@ -1,0 +1,53 @@
+// Choreo version 1
+actor "romero_scream"
+{
+  channel "Voice"
+  {
+    event speak "romero_cutitout"
+    {
+      time 0.451282 9.176996
+      param "romero_bigmistake"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+      cc_noattenuate
+    }
+  }
+  channel "Flex Animation"
+  {
+  }
+  channel "Gestures"
+  {
+    event speak "204"
+    {
+      time 0.461539 5.501833
+      param "204"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "204"
+    {
+      time 6.762821 11.803116
+      param "205"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look/Face"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "96"
+  "RampTool" "100"
+  "ExpressionTool" "156"
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

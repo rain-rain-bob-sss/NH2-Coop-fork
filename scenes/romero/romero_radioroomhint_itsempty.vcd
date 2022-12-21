@@ -1,0 +1,121 @@
+// Choreo version 1
+actor "Romero"
+{
+  channel "Voice"
+  {
+    event speak "romero_radioroomhint_canisclosed"
+    {
+      time 0.000000 4.293605
+      param "romero_radioroomhint_itsempty"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+  channel "Flex Animation"
+  {
+    event flexanimation "Facial Animation"
+    {
+      time 0.000000 4.300000
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "inner_raiser" combo 
+        {
+          0.1340 0.7900
+        }
+        {
+        }
+        "lowerer" combo 
+        {
+          2.9620 0.0619
+          3.0480 0.4124
+          3.5080 0.2784
+        }
+        {
+        }
+        "head_updown" 
+        {
+          0.1820 0.0000
+          0.8020 0.0000
+          0.9620 1.0000
+          1.2340 1.0000
+        }
+        "head_tilt" 
+        {
+          0.1600 0.6000
+          0.7720 1.0000
+          1.2400 1.0000
+        }
+      }
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "a_bg_hdaccleft"
+    {
+      time 0.073333 2.373333
+      param "a_bg_hdaccleft"
+      absolutetags playback_time
+      {
+        "apex" 0.117647
+        "extreme" 0.338235
+        "loop" 0.514706
+        "end" 0.588235
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.117647
+        "extreme" 0.338235
+        "loop" 0.514706
+        "end" 0.588235
+      }
+    }
+    event gesture "A_bg_hshake"
+    {
+      time 1.593334 4.893333
+      param "A_bg_hshake"
+      absolutetags playback_time
+      {
+        "apex" 0.132653
+        "extreme" 0.479592
+        "loop" 0.612245
+        "end" 0.714286
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.132653
+        "extreme" 0.479592
+        "loop" 0.612245
+        "end" 0.714286
+      }
+      sequenceduration 3.300000
+    }
+  }
+  channel "Face/Look"
+  {
+    event face "Face lab_screen"
+    {
+      time 0.000000 6.600000
+      param "lab_screen"
+    }
+    event lookat "Look at lab_screen"
+    {
+      time 0.000000 6.600000
+      param "lab_screen"
+    }
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "RampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "CChoreoView" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

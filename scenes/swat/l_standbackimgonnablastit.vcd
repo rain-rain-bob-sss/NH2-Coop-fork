@@ -1,0 +1,117 @@
+// Choreo version 1
+actor "SWATL"
+{
+  channel "All"
+  {
+    event speak "l_standback"
+    {
+      time 0.120000 2.520726
+      param "l_standbackimgonnablastit"
+      param2 "VOL_NORM"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 0.026666 0.257505
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 2.015277 2.246116
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event gesture "hg_puncuate_down"
+    {
+      time 0.006944 1.437500
+      param "hg_puncuate_down"
+      event_ramp
+      {
+        0.4260 0.6160
+        0.9552 0.3496
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.230097
+        "extreme" 0.467961
+        "loop" 0.480330
+        "end" 0.491747
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.333333
+        "extreme" 0.541667
+        "loop" 0.562500
+        "end" 0.562500
+      }
+      sequenceduration 1.633333
+    }
+    event gesture "bg_accentUp"
+    {
+      time 0.048611 2.631944
+      param "bg_accentUp"
+      absolutetags playback_time
+      {
+        "apex" 0.117742
+        "extreme" 0.287814
+        "loop" 0.523297
+        "end" 0.776882
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+    event gesture "hg_nod_yes"
+    {
+      time 0.645833 2.611111
+      param "hg_nod_yes"
+      event_ramp
+      {
+        0.4980 0.8567
+        1.1006 0.0430
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.068842
+        "extreme" 0.189316
+        "loop" 0.481896
+        "end" 0.894949
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+      sequenceduration 2.300000
+    }
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "RampTool" "100"
+  "CChoreoView" "96"
+}
+fps 60
+snap off
+ignorePhonemes off

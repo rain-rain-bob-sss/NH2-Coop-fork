@@ -1,0 +1,74 @@
+// Choreo version 1
+actor "SWATL"
+{
+  channel "voice and gestures"
+  {
+    event speak "l_alrightletsgo"
+    {
+      time 0.126667 2.146077
+      param "l_alrightletsgo"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 0.026667 0.257506
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 2.020000 2.250839
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event gesture "bg_accentUp"
+    {
+      time 0.426667 1.820000
+      param "bg_accentUp"
+      event_ramp
+      {
+        0.1940 0.6648
+        0.7120 0.6132
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.218301
+        "extreme" 0.533627
+        "loop" 0.706731
+        "end" 1.000000
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+  }
+  channel "Face/Look"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "100"
+  "RampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

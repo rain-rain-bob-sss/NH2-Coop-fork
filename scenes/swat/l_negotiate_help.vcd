@@ -1,0 +1,91 @@
+// Choreo version 1
+actor "SWATL"
+{
+  channel "Voice"
+  {
+    event speak "blip"
+    {
+      time 1.020000 1.250839
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 0.040000 0.270839
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "l_negotiate_help"
+    {
+      time 0.120000 1.089524
+      param "l_negotiate_help"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "bg_up_l"
+    {
+      time 0.066667 1.666667
+      param "bg_up_l"
+      event_ramp
+      {
+        0.0560 0.6535
+        1.4900 0.7228
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.085106
+        "extreme" 0.276596
+        "loop" 0.425532
+        "end" 0.638298
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.085106
+        "extreme" 0.276596
+        "loop" 0.425532
+        "end" 0.638298
+      }
+    }
+  }
+  channel "Face/Look"
+  {
+    event face "Face SWAT3"
+    {
+      time 0.000000 1.744105
+      param "SWAT3"
+      event_ramp
+      {
+        0.3980 1.0000
+        1.1381 1.0000
+      }
+    }
+    event lookat "Look at SWAT3"
+    {
+      time 0.000000 1.753333
+      param "SWAT3"
+    }
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "RampTool" "100"
+  "CChoreoView" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

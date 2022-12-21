@@ -1,0 +1,110 @@
+// Choreo version 1
+actor "SWAT3"
+{
+  channel "all"
+  {
+    event lookat "Look at SWAT2"
+    {
+      time 1.311111 2.435555
+      param "SWAT2"
+    }
+    event gesture "hg_nod_yes"
+    {
+      time 1.366667 3.666667
+      param "hg_nod_yes"
+      event_ramp
+      {
+        0.0960 0.6376
+        0.4600 0.6742
+        1.0280 0.5815
+        1.1840 0.4073
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+      sequenceduration 2.300000
+    }
+  }
+}
+
+actor "SWAT2"
+{
+  channel "all"
+  {
+    event lookat "Look at SWAT3"
+    {
+      time 0.000000 1.582223
+      param "SWAT3"
+    }
+    event speak "2_didyouseethat2"
+    {
+      time 0.113580 1.406278
+      param "2_didyouseethat"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event gesture "hg_puncuate_down"
+    {
+      time 0.077777 1.711111
+      param "hg_puncuate_down"
+      absolutetags playback_time
+      {
+        "apex" 0.333333
+        "extreme" 0.541667
+        "loop" 0.552500
+        "end" 0.562500
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.333333
+        "extreme" 0.541667
+        "loop" 0.562500
+        "end" 0.562500
+      }
+      sequenceduration 1.633333
+    }
+    event speak "blip"
+    {
+      time 0.024691 0.255530
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 1.228395 1.459234
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "108"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "RampTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

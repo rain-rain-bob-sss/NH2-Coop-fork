@@ -1,0 +1,81 @@
+// Choreo version 1
+actor "SWAT2"
+{
+  channel "Voice"
+  {
+    event speak "2_thebloodicansmellit"
+    {
+      time 0.166667 5.107710
+      param "2_thebloodicansmellit"
+      param2 "VOL_NORM"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 0.086667 0.317506
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 4.980279 5.211118
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "hg_puncuate_down"
+    {
+      time 0.206945 4.962222
+      param "hg_headshake"
+      event_ramp
+      {
+        0.0100 0.0157
+        0.7680 0.7357
+        4.6886 0.3861
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.075238
+        "loop" 0.131867
+        "extreme" 0.141867
+        "end" 0.153951
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.208333
+        "loop" 0.270833
+        "extreme" 0.416667
+        "end" 0.625000
+      }
+      sequenceduration 1.633333
+    }
+    event lookat "Look at blood_target"
+    {
+      time 0.215278 4.958334
+      param "blood_target"
+    }
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "ExpressionTool" "100"
+  "RampTool" "100"
+  "GestureTool" "100"
+  "CChoreoView" "96"
+}
+fps 60
+snap off
+ignorePhonemes off

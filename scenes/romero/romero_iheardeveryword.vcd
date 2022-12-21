@@ -1,0 +1,109 @@
+// Choreo version 1
+actor "Romero"
+{
+  channel "Voice"
+  {
+    event speak "romero_iherdeveryword"
+    {
+      time 0.133333 36.559731
+      param "romero_iherdeveryword"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+      cc_noattenuate
+    }
+    event speak "77"
+    {
+      time 0.313333 5.353628
+      param "77"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+      cc_noattenuate
+    }
+    event speak "78"
+    {
+      time 4.946667 9.986961
+      param "78"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+      cc_noattenuate
+    }
+    event speak "79"
+    {
+      time 10.886667 15.926962
+      param "79"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+      cc_noattenuate
+    }
+    event speak "81"
+    {
+      time 17.820000 22.860294
+      param "81"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+      cc_noattenuate
+    }
+    event speak "80"
+    {
+      time 14.913333 19.953629
+      param "80"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+      cc_noattenuate
+    }
+    event speak "82"
+    {
+      time 21.213333 26.253628
+      param "82"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+      cc_noattenuate
+    }
+    event speak "83"
+    {
+      time 26.693336 31.733631
+      param "83"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+      cc_noattenuate
+    }
+    event speak "84"
+    {
+      time 31.066669 36.106964
+      param "84"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+      cc_noattenuate
+    }
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "RampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "CChoreoView" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

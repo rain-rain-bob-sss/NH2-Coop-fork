@@ -1,0 +1,138 @@
+// Choreo version 1
+actor "SWAT2"
+{
+  channel "all"
+  {
+    event lookat "Look at SWAT3"
+    {
+      time 1.897778 3.022222
+      param "SWAT3"
+    }
+    event speak "2_yup"
+    {
+      time 2.000001 2.600182
+      param "2_yup"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event gesture "hg_nod_yes"
+    {
+      time 1.846667 4.146667
+      param "hg_nod_yes"
+      event_ramp
+      {
+        0.0960 0.6376
+        0.4600 0.6742
+        1.0280 0.5815
+        1.1840 0.4073
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+      sequenceduration 2.300000
+    }
+    event speak "blip3"
+    {
+      time 1.806667 2.037506
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip4"
+    {
+      time 2.606666 2.837505
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+}
+
+actor "SWAT3"
+{
+  channel "all"
+  {
+    event lookat "Look at SWAT2"
+    {
+      time 0.000000 1.471112
+      param "SWAT2"
+    }
+    event speak "3_didyousee"
+    {
+      time 0.239999 1.394194
+      param "3_didyousee"
+      param2 "VOL_NORM"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event gesture "hg_puncuate_down"
+    {
+      time 0.044444 1.677777
+      param "hg_puncuate_down"
+      absolutetags playback_time
+      {
+        "apex" 0.333333
+        "extreme" 0.541667
+        "loop" 0.552500
+        "end" 0.562500
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.333333
+        "extreme" 0.541667
+        "loop" 0.562500
+        "end" 0.562500
+      }
+      sequenceduration 1.633333
+    }
+    event speak "blip1"
+    {
+      time 0.140000 0.370839
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip2"
+    {
+      time 1.326667 1.557506
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "96"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "RampTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,55 @@
+// Choreo version 1
+actor "announcer"
+{
+  channel "Voice"
+  {
+    event speak "ann_maintenancearea"
+    {
+      time 1.596944 25.004019
+      param "ann_maintenancearea"
+      param2 "VOL_NORM"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "ann_dingdong"
+    {
+      time 0.056134 4.719082
+      param "ann_dingdong"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "ann_yesyou"
+    {
+      time 23.410303 28.269079
+      param "ann_yesyou"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+  channel "Gestures"
+  {
+    event interrupt "interrupt"
+    {
+      time 0.077777 28.114088
+      param ""
+    }
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "RampTool" "100"
+  "CChoreoView" "68"
+}
+fps 60
+snap off
+ignorePhonemes off

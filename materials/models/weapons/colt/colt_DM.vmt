@@ -1,0 +1,15 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/colt/colt_DM"
+	"$bumpmap" "models/weapons/colt/colt_NM"
+	
+	"$phong" "1"
+	"$phongexponent" "30"
+	"$phongboost" "5"	
+	"$phongfresnelranges"	"[0.3 0.8 1]"
+	"$phongalbedotint" "1"
+	
+	"$envmap" "env_cubemap"
+	"$normalmapenvmapmask" "1"
+	"$envmaptint" "[.025 .025 .025]"
+}

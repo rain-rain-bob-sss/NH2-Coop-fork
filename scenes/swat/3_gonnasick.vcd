@@ -1,0 +1,80 @@
+// Choreo version 1
+actor "SWAT3"
+{
+  channel "Voice"
+  {
+    event speak "3_ithinkimgonnabesick"
+    {
+      time 0.166667 2.340771
+      param "3_ithinkimgonnabesick"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 0.086667 0.317506
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 2.244168 2.475007
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "hg_puncuate_down"
+    {
+      time -0.029166 2.844166
+      param "hg_headshake"
+      event_ramp
+      {
+        0.0100 0.3728
+        0.7680 0.7357
+        2.8067 0.3861
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.124517
+        "loop" 0.224785
+        "extreme" 0.234785
+        "end" 0.254785
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.208333
+        "loop" 0.270833
+        "extreme" 0.416667
+        "end" 0.625000
+      }
+      sequenceduration 1.633333
+    }
+    event lookat "Look at skell_bed"
+    {
+      time 0.152778 2.423611
+      param "skell_bed"
+    }
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "ExpressionTool" "100"
+  "RampTool" "100"
+  "GestureTool" "100"
+  "CChoreoView" "96"
+}
+fps 60
+snap off
+ignorePhonemes off

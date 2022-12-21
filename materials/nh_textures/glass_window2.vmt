@@ -1,0 +1,6 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "nh_textures/glass_window2"
+	"$surfaceprop" "glass"
+	"%keywords" "nh"
+}

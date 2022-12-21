@@ -1,0 +1,7 @@
+VertexLitGeneric
+{
+	$basetexture		gmn_nh2/models/emily/emily_body
+	$model			1
+	$alphatest		1
+	$halflambert 		1
+}

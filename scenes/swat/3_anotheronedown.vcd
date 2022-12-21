@@ -1,0 +1,46 @@
+// Choreo version 1
+actor "SWAT3"
+{
+  channel "All"
+  {
+    event speak "blip"
+    {
+      time 0.053030 0.283869
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 1.174242 1.405081
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "3_anotheronedown"
+    {
+      time 0.143939 1.344302
+      param "3_anotheronedown"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "88"
+  "RampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

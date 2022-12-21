@@ -1,0 +1,102 @@
+// Choreo version 1
+actor "SWATL"
+{
+  channel "voice"
+  {
+    event speak "l_getdown_combat"
+    {
+      time 0.253334 3.282450
+      param "l_thevent"
+      param2 "VOL_NORM"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+      cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 0.146667 0.377506
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+      cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 3.180000 3.410839
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+      cc_noattenuate
+    }
+  }
+  channel "gestures"
+  {
+    event gesture "hg_nod_yes"
+    {
+      time 0.026667 2.826667
+      param "hg_nod_yes"
+      event_ramp
+      {
+        0.2360 0.9571
+        0.5180 0.9286
+        1.9593 0.0000
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.048319
+        "extreme" 0.132878
+        "loop" 0.338235
+        "end" 0.628151
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+      sequenceduration 2.300000
+    }
+    event gesture "hg_nod_yes"
+    {
+      time 1.786667 3.420000
+      param "hg_nod_yes"
+      event_ramp
+      {
+        0.2360 0.9571
+        0.5180 0.9286
+        1.1429 0.0000
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.082833
+        "extreme" 0.227791
+        "loop" 0.579831
+        "end" 1.000000
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+      sequenceduration 2.300000
+    }
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "SceneRampTool" "100"
+  "RampTool" "100"
+  "CChoreoView" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

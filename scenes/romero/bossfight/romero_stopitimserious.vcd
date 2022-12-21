@@ -1,0 +1,190 @@
+// Choreo version 1
+actor "Romero"
+{
+  channel "Voice"
+  {
+    event speak "romero_isweartogod"
+    {
+      time 0.280000 2.357551
+      param "romero_stopitimserious"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+  channel "Flex Animation"
+  {
+    event flexanimation "Facial Animation"
+    {
+      time 0.053333 3.473333
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "lid_raiser" combo 
+        {
+          0.2632 0.0000
+        }
+        {
+          0.2632 0.5000
+        }
+        "lid_tightener" combo 
+        {
+          0.2632 0.0000
+        }
+        {
+          0.2632 0.5000
+        }
+        "lid_droop" combo 
+        {
+          0.2632 0.0000
+        }
+        {
+          0.2632 0.5000
+        }
+        "lid_closer" combo 
+        {
+          0.2632 0.0000
+        }
+        {
+          0.2632 0.5000
+        }
+        "half_closed" 
+        {
+          0.2632 0.0000
+        }
+        "blink" 
+        {
+          0.2632 0.0000
+        }
+        "inner_raiser" combo 
+        {
+          0.2632 1.0000
+        }
+        {
+          0.2632 0.5000
+        }
+        "wrinkler" 
+        {
+          0.2632 0.6600
+        }
+        "corner_depressor" combo 
+        {
+          0.2632 1.0000
+        }
+        {
+          0.2632 0.5000
+        }
+        "part" combo 
+        {
+          0.2632 0.4800
+        }
+        {
+          0.2632 0.5000
+        }
+        "stretcher" combo 
+        {
+          0.2632 0.2000
+        }
+        {
+          0.2632 0.5000
+        }
+        "jaw_drop" 
+        {
+          0.2632 0.1300
+        }
+      }
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "A_bg_bighshake"
+    {
+      time 0.046667 3.346667
+      param "A_bg_bighshake"
+      absolutetags playback_time
+      {
+        "apex" 0.132653
+        "extreme" 0.479592
+        "loop" 0.612245
+        "end" 0.714286
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.132653
+        "extreme" 0.479592
+        "loop" 0.612245
+        "end" 0.714286
+      }
+      sequenceduration 3.300000
+    }
+    event gesture "bg_down"
+    {
+      time 0.733334 2.700000
+      param "bg_down"
+      absolutetags playback_time
+      {
+        "apex" 0.086207
+        "extreme" 0.241379
+        "loop" 0.482759
+        "end" 0.672414
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.086207
+        "extreme" 0.241379
+        "loop" 0.482759
+        "end" 0.672414
+      }
+      sequenceduration 1.966667
+    }
+  }
+  channel "Look/Face"
+  {
+    event face "Face !player"
+    {
+      time 0.061439 1.146666
+      param "!player"
+      event_ramp
+      {
+        0.0800 0.6749
+        0.9898 0.6722
+      }
+    }
+    event lookat "Look at core"
+    {
+      time 0.993333 3.497121
+      param "core"
+    }
+    event lookat "Look at !player"
+    {
+      time 0.113334 1.430454
+      param "!player"
+    }
+    event face "Face core"
+    {
+      time 1.028106 3.493333
+      param "core"
+      event_ramp
+      {
+        0.0800 0.6749
+        2.3699 0.6722
+      }
+    }
+  }
+  channel "Face/Look"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "100"
+  "RampTool" "100"
+  "ExpressionTool" "152"
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

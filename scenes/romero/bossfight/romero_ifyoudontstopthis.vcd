@@ -1,0 +1,212 @@
+// Choreo version 1
+actor "Romero"
+{
+  channel "Voice"
+  {
+    event speak "romero_cutitout"
+    {
+      time 0.133333 3.041904
+      param "romero_ifyoudontstopthis"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+  channel "Flex Animation"
+  {
+    event flexanimation "Facial Animation"
+    {
+      time 0.086666 3.460000
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "inner_raiser" combo 
+        {
+          0.0936 1.0000
+          1.3590 0.1800
+        }
+        {
+        }
+        "outer_raiser" combo 
+        {
+          0.0449 0.5000
+          1.3590 0.1400
+        }
+        {
+        }
+        "lowerer" combo 
+        {
+          0.3013 0.1100
+          0.3628 0.6600
+          1.3474 0.2500
+          1.5577 0.1300
+          1.6449 0.9600
+        }
+        {
+        }
+        "wrinkler" 
+        {
+          0.1000 0.4600
+          0.4192 0.6000
+        }
+        "corner_depressor" combo 
+        {
+          0.1026 0.2800
+          0.7436 0.4900
+        }
+        {
+        }
+        "part" combo 
+        {
+          0.0205 0.2200
+          0.0692 0.2300
+          0.2808 0.1000
+          0.9962 0.2800
+        }
+        {
+        }
+      }
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "A_bg_acc_dwn_rt"
+    {
+      time 0.386667 2.920000
+      param "A_bg_acc_dwn_rt"
+      event_ramp
+      {
+        0.1020 0.9394
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.159797
+        "extreme" 0.226379
+        "loop" 0.559290
+        "end" 0.732403
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.144578
+        "extreme" 0.204819
+        "loop" 0.506024
+        "end" 0.662651
+      }
+      sequenceduration 2.800000
+    }
+    event gesture "A_HG_smallhshake"
+    {
+      time 0.200000 2.500000
+      param "A_HG_smallhshake"
+      absolutetags playback_time
+      {
+        "apex" 0.073529
+        "extreme" 0.147059
+        "loop" 0.441176
+        "end" 0.588235
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.073529
+        "extreme" 0.147059
+        "loop" 0.441176
+        "end" 0.588235
+      }
+    }
+    event gesture "a_bg_hdaccup"
+    {
+      time 1.400000 3.700000
+      param "a_bg_hdaccup"
+      absolutetags playback_time
+      {
+        "apex" 0.117647
+        "extreme" 0.338235
+        "loop" 0.514706
+        "end" 0.588235
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.117647
+        "extreme" 0.338235
+        "loop" 0.514706
+        "end" 0.588235
+      }
+      sequenceduration 2.300000
+    }
+    event gesture "A_HG_smallnod"
+    {
+      time 1.513333 4.313334
+      param "A_HG_smallnod"
+      event_ramp
+      {
+        0.0480 0.8843
+        1.3420 0.7934
+        1.7940 0.0165
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.060241
+        "extreme" 0.120482
+        "loop" 0.566265
+        "end" 0.662651
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.060241
+        "extreme" 0.120482
+        "loop" 0.566265
+        "end" 0.662651
+      }
+      sequenceduration 2.800000
+    }
+  }
+  channel "Look/Face"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.260000 3.393334
+      param "!player"
+    }
+    event face "Face !player"
+    {
+      time 0.246666 3.239999
+      param "!player"
+      event_ramp
+      {
+        0.0800 0.6749
+        2.8979 0.6722
+      }
+    }
+    event lookat "Look at target_labscreen2"
+    {
+      time 3.133334 4.720001
+      param "target_labscreen2"
+    }
+    event face "Face target_labscreen2"
+    {
+      time 3.133333 4.659999
+      param "target_labscreen2"
+      event_ramp
+      {
+        0.0800 0.6749
+        1.4312 0.6722
+      }
+    }
+  }
+  channel "Face/Look"
+  {
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+  "ExpressionTool" "156"
+  "RampTool" "100"
+  "CChoreoView" "108"
+}
+fps 60
+snap off
+ignorePhonemes off

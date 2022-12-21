@@ -1,0 +1,16 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/blackhawk/blackhawk_broken_diffuse"
+	"$bumpmap" "models/blackhawk/blackhawk_normal"
+	"$envmap" 		"env_cubemap"
+	"$normalmapalphaenvmapmask" 1
+	"$envmapcontrast" 0.3
+	"$envmapsaturation" 0.7
+	"$envmaptint" "[ 0.05 0.05 0.05 ]"
+	
+	"$phong"     "1"
+	"$phongexponent"  "17"
+	"$phongboost"   "0.1"
+	"$phongfresnelranges"   "[1 9 3]"
+	"$phongalbedotint" "1"
+}

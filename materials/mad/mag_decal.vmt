@@ -1,0 +1,7 @@
+"LightmappedGeneric"
+{
+	"$baseTexture" "mad/mag_decal"
+	"$decal" 1
+	"$translucent" "1"
+	"%keywords" "mag"
+}

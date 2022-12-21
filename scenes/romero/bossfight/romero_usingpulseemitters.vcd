@@ -1,0 +1,196 @@
+// Choreo version 1
+actor "Romero"
+{
+  channel "Gestures"
+  {
+    event gesture "A_bg_acc_dwn_rt"
+    {
+      time 0.035715 3.097619
+      param "A_bg_acc_dwn_rt"
+      absolutetags playback_time
+      {
+        "apex" 0.217748
+        "extreme" 0.272836
+        "loop" 0.548277
+        "end" 0.691506
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.144578
+        "extreme" 0.204819
+        "loop" 0.506024
+        "end" 0.662651
+      }
+      sequenceduration 2.800000
+    }
+    event gesture "A_bg_hshake"
+    {
+      time 2.976191 6.276191
+      param "A_bg_hshake"
+      absolutetags playback_time
+      {
+        "apex" 0.132653
+        "extreme" 0.479592
+        "loop" 0.612245
+        "end" 0.714286
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.132653
+        "extreme" 0.479592
+        "loop" 0.612245
+        "end" 0.714286
+      }
+      sequenceduration 3.300000
+    }
+    event gesture "a_bg_hdaccleft"
+    {
+      time 4.952382 7.252381
+      param "a_bg_hdaccleft"
+      absolutetags playback_time
+      {
+        "apex" 0.117647
+        "extreme" 0.338235
+        "loop" 0.689119
+        "end" 0.772021
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.117647
+        "extreme" 0.338235
+        "loop" 0.514706
+        "end" 0.588235
+      }
+      sequenceduration 2.300000
+    }
+    event gesture "A_bg_acctdwn_chinout"
+    {
+      time 4.857142 7.157142
+      param "A_bg_acctdwn_chinout"
+      absolutetags playback_time
+      {
+        "apex" 0.147059
+        "extreme" 0.294118
+        "loop" 0.514706
+        "end" 0.692506
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.147059
+        "extreme" 0.294118
+        "loop" 0.514706
+        "end" 0.588235
+      }
+      sequenceduration 2.300000
+    }
+    event gesture "kgesture07"
+    {
+      time 1.863095 4.663095
+      param "kgesture07"
+      absolutetags playback_time
+      {
+        "apex" 0.168675
+        "accent" 0.313253
+        "loop" 0.481928
+        "end" 0.662651
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.168675
+        "accent" 0.313253
+        "loop" 0.481928
+        "end" 0.662651
+      }
+      sequenceduration 2.800000
+    }
+    event gesture "g_Pacer_ArmsCrossed"
+    {
+      time 0.107143 2.603572
+      param "g_Pacer_ArmsCrossed"
+      event_ramp
+      {
+        0.3080 0.8750
+        1.5837 1.0000
+        2.4037 0.9119
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.207542
+        "accent" 0.396757
+        "loop" 0.465904
+        "end" 0.823342
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.285714
+        "accent" 0.464286
+        "loop" 0.642857
+        "end" 0.892857
+      }
+      sequenceduration 0.966667
+    }
+    event flexanimation "Facial Animation"
+    {
+      time 4.839286 7.142857
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "corner_puller" combo 
+        {
+          0.0300 0.1400
+          0.2380 0.3300
+          1.1620 0.3200
+          2.0960 0.2300
+        }
+        {
+        }
+      }
+    }
+  }
+  channel "Face/Look"
+  {
+    event face "Face !player"
+    {
+      time 0.051298 6.895280
+      param "!player"
+      event_ramp
+      {
+        0.2560 0.7721
+        6.2040 0.8291
+        6.4140 0.8319
+        6.6380 0.7320
+      }
+      lockbodyfacing
+    }
+    event lookat "Look at !player"
+    {
+      time 0.063458 6.814583
+      param "!player"
+    }
+  }
+  channel "Voice"
+  {
+    event speak "romero_usingpulseemitters"
+    {
+      time 0.287356 7.027855
+      param "romero_usingpulseemitters"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+}
+
+mapname "C:\Program Files (x86)\Steam\steamapps\SourceMods\NH2\maps\nh2c7.bsp"
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "RampTool" "100"
+  "CChoreoView" "112"
+}
+fps 60
+snap off
+ignorePhonemes off

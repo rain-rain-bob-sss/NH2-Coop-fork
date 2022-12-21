@@ -1,0 +1,189 @@
+// Choreo version 1
+actor "Romero"
+{
+  channel "Gestures"
+  {
+    event gesture "G_noway_small"
+    {
+      time 0.012345 3.572839
+      param "G_noway_small"
+      absolutetags playback_time
+      {
+        "apex" 0.205995
+        "accent" 0.355274
+        "loop" 0.577141
+        "end" 0.693159
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.151515
+        "accent" 0.287879
+        "loop" 0.454545
+        "end" 0.575758
+      }
+      sequenceduration 2.233333
+    }
+    event gesture "G_medpuct_mid"
+    {
+      time 1.580247 3.546914
+      param "G_medpuct_mid"
+      absolutetags playback_time
+      {
+        "apex" 0.137931
+        "accent" 0.258621
+        "loop" 0.396552
+        "end" 0.517241
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.137931
+        "accent" 0.258621
+        "loop" 0.396552
+        "end" 0.517241
+      }
+      sequenceduration 1.966667
+    }
+    event gesture "G_righthandroll"
+    {
+      time 2.740741 5.374075
+      param "G_righthandroll"
+      absolutetags playback_time
+      {
+        "apex" 0.282051
+        "accent" 0.397436
+        "loop" 0.512821
+        "end" 0.641026
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.282051
+        "accent" 0.397436
+        "loop" 0.512821
+        "end" 0.641026
+      }
+      sequenceduration 2.633333
+    }
+    event gesture "A_HG_smallhshake"
+    {
+      time 0.283950 2.583950
+      param "A_HG_smallhshake"
+      absolutetags playback_time
+      {
+        "apex" 0.073529
+        "extreme" 0.147059
+        "loop" 0.441176
+        "end" 0.588235
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.073529
+        "extreme" 0.147059
+        "loop" 0.441176
+        "end" 0.588235
+      }
+    }
+    event gesture "a_bg_hdaccleft"
+    {
+      time 1.530864 3.830864
+      param "a_bg_hdaccleft"
+      absolutetags playback_time
+      {
+        "apex" 0.117647
+        "extreme" 0.338235
+        "loop" 0.514706
+        "end" 0.588235
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.117647
+        "extreme" 0.338235
+        "loop" 0.514706
+        "end" 0.588235
+      }
+    }
+    event gesture "A_bg_chinout_pod"
+    {
+      time 2.876544 5.676544
+      param "A_bg_chinout_pod"
+      absolutetags playback_time
+      {
+        "apex" 0.156627
+        "extreme" 0.349398
+        "loop" 0.542169
+        "end" 0.662651
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.156627
+        "extreme" 0.349398
+        "loop" 0.542169
+        "end" 0.662651
+      }
+    }
+    event gesture "a_bg_htiltrt"
+    {
+      time 3.462963 5.762963
+      param "a_bg_htiltrt"
+      absolutetags playback_time
+      {
+        "apex" 0.117647
+        "extreme" 0.338235
+        "loop" 0.514706
+        "end" 0.588235
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.117647
+        "extreme" 0.338235
+        "loop" 0.514706
+        "end" 0.588235
+      }
+    }
+  }
+  channel "Face/Look"
+  {
+    event face "Face !player"
+    {
+      time 0.051298 5.295413
+      param "!player"
+      event_ramp
+      {
+        0.2560 0.7721
+        4.6041 0.8291
+        4.8141 0.8319
+        5.0381 0.7320
+      }
+      lockbodyfacing
+    }
+    event lookat "Look at !player"
+    {
+      time 0.063458 5.130282
+      param "!player"
+    }
+  }
+  channel "Voice"
+  {
+    event speak "romero_youwontgetanycloser"
+    {
+      time 0.287356 5.550485
+      param "romero_youwontgetanycloser"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+}
+
+mapname "C:\Program Files (x86)\Steam\steamapps\SourceMods\NH2\maps\nh2c7.bsp"
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "RampTool" "100"
+  "CChoreoView" "108"
+}
+fps 60
+snap off
+ignorePhonemes off

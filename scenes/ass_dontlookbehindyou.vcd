@@ -1,0 +1,85 @@
+// Choreo version 1
+actor "ass_act"
+{
+  channel "Voice"
+  {
+    event speak "dontlookbehindyou"
+    {
+      time 0.021505 0.771505
+      param "109"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "dontlookbehindyou"
+    {
+      time 1.158760 1.908760
+      param "109"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "dontlookbehindyou"
+    {
+      time 1.472485 2.222486
+      param "109"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "dontlookbehindyou"
+    {
+      time 1.771505 2.521505
+      param "109"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "dontlookbehindyou"
+    {
+      time 2.095035 2.845035
+      param "109"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "dontlookbehindyou"
+    {
+      time 2.418564 3.168564
+      param "109"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "dontlookbehindyou"
+    {
+      time 2.820525 3.570525
+      param "109"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+  channel "Gestures"
+  {
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "RampTool" "100"
+  "CChoreoView" "136"
+}
+fps 60
+snap off
+ignorePhonemes off

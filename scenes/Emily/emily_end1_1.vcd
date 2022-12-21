@@ -1,0 +1,211 @@
+// Choreo version 1
+actor "woman_killing"
+{
+  channel "Gestures"
+  {
+    event gesture "urgenthandsweepcrouch"
+    {
+      time 0.040000 1.506667
+      param "urgenthandsweepcrouch"
+      absolutetags playback_time
+      {
+        "apex" 0.232558
+        "accent" 0.372093
+        "loop" 0.465116
+        "end" 0.581395
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.232558
+        "accent" 0.372093
+        "loop" 0.465116
+        "end" 0.581395
+      }
+      sequenceduration 1.466667
+    }
+    event gesture "b_accent_fwd_UpperBody"
+    {
+      time 0.073333 2.806667
+      param "b_accent_fwd_UpperBody"
+      absolutetags playback_time
+      {
+        "apex" 0.034063
+        "extreme" 0.129268
+        "loop" 0.518519
+        "end" 0.654321
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.098765
+        "extreme" 0.296296
+        "loop" 0.518519
+        "end" 0.654321
+      }
+      sequenceduration 2.733333
+    }
+    event gesture "b_accent_fwd_UpperBody"
+    {
+      time 0.073333 2.806666
+      param "b_accent_fwd_UpperBody"
+      absolutetags playback_time
+      {
+        "apex" 0.034063
+        "extreme" 0.129268
+        "loop" 0.518519
+        "end" 0.654321
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.098765
+        "extreme" 0.296296
+        "loop" 0.518519
+        "end" 0.654321
+      }
+      sequenceduration 2.733333
+    }
+    event gesture "gesture_shoot_smg1"
+    {
+      time 0.640000 0.880000
+      param "gesture_shoot_smg1"
+      sequenceduration 0.240000
+    }
+    event gesture "gesture_shoot_smg1"
+    {
+      time 0.420000 0.660000
+      param "gesture_shoot_smg1"
+      sequenceduration 0.240000
+    }
+  }
+  channel "Face/Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.020000 2.826667
+      param "!player"
+    }
+    event face "Face !player"
+    {
+      time 0.000000 2.833333
+      param "!player"
+      event_ramp
+      {
+        0.1580 1.0000
+        2.7300 1.0000
+      }
+    }
+  }
+}
+
+actor "woman_killing"
+{
+  channel "Flex Animations"
+  {
+    event flexanimation "Facial Animation"
+    {
+      time 0.033333 2.801884
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "lowerer" combo 
+        {
+          0.0900 0.9100
+          0.7467 1.0000
+          1.3520 0.6000
+          1.4420 0.9800
+        }
+        {
+          0.7467 0.5000
+        }
+        "wrinkler" 
+        {
+          0.7467 1.0000
+        }
+        "corner_depressor" combo 
+        {
+          0.7467 1.0000
+          1.1700 0.6800
+          1.3640 0.6500
+          1.4120 0.8900
+        }
+        {
+          0.7467 0.5000
+        }
+        "chin_raiser" 
+        {
+          0.7467 0.3300
+        }
+        "part" combo 
+        {
+          0.7467 0.0000
+        }
+        {
+          0.7467 0.5000
+        }
+        "puckerer" combo 
+        {
+          0.7467 0.0000
+        }
+        {
+          0.7467 0.5000
+        }
+        "funneler" combo 
+        {
+          0.7467 0.0000
+        }
+        {
+          0.7467 0.5000
+        }
+        "stretcher" combo 
+        {
+          0.7467 1.0000
+        }
+        {
+          0.7467 0.5000
+        }
+        "bite" 
+        {
+          0.7467 0.0000
+        }
+        "presser" 
+        {
+          0.7467 1.0000
+        }
+        "tightener" 
+        {
+          0.7467 1.0000
+        }
+        "jaw_drop" 
+        {
+          0.7467 0.0000
+        }
+        "mouth_drop" combo 
+        {
+          0.7467 0.0000
+        }
+        {
+          0.7467 0.5000
+        }
+        "smile" 
+        {
+          0.7467 0.0000
+        }
+        "lower_lip" 
+        {
+          0.7467 0.0000
+        }
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "92"
+  "RampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

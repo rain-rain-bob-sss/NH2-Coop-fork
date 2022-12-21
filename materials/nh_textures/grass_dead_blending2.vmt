@@ -1,0 +1,10 @@
+"WorldVertexTransition"
+{
+	"$basetexture" "nh_textures/grass_alive_blend2"
+	"$basetexture2" "nh_textures/grass_dead_blend2"
+	"$surfaceprop" "grass"
+	"%keywords" "nh"
+	"$detail" "detail/noise_detail_01"
+	"$detailscale" 2
+	"%detailtype" "nh1_grass"
+}

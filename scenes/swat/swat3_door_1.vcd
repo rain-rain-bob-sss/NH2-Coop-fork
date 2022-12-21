@@ -1,0 +1,70 @@
+// Choreo version 1
+actor "SWAT3"
+{
+  channel "Idle"
+  {
+    event gesture "d1_town05_Leon_Door_Knock"
+    {
+      time 0.000000 3.753333
+      param "d1_town05_Leon_Door_Knock"
+      event_ramp
+      {
+        0.3340 1.0000
+        2.4413 1.0000
+      }
+      sequenceduration 4.250000
+    }
+    event face "Face glass_window"
+    {
+      time 0.000000 4.053968
+      param "glass_window"
+    }
+    event lookat "Look at !player"
+    {
+      time -0.000000 4.053968
+      param "!player"
+    }
+    event speak " physics\glass\glass_sheet_impact_soft3.wav"
+    {
+      time 1.047619 1.553787
+      param "physics\glass\glass_sheet_impact_soft3.wav"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+      cc_noattenuate
+    }
+    event speak " physics\glass\glass_sheet_impact_soft3.wav"
+    {
+      time 1.333333 1.839501
+      param "physics\glass\glass_sheet_impact_soft3.wav"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+      cc_noattenuate
+    }
+    event speak " physics\glass\glass_sheet_impact_soft3.wav"
+    {
+      time 1.650793 2.156961
+      param "physics\glass\glass_sheet_impact_soft3.wav"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+      cc_noattenuate
+    }
+  }
+}
+
+scalesettings
+{
+  "RampTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+  "ExpressionTool" "100"
+  "CChoreoView" "84"
+}
+fps 60
+snap off
+ignorePhonemes off

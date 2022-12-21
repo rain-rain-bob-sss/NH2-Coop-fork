@@ -1,0 +1,9 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/blackhawk/blackhawk_glass"
+	"$envmap" 			"env_cubemap"
+	"$envmapmask"		"models/blackhawk/blackhawk_glass_specular"
+	"$envmaptint" "[ 0.4 0.4 0.4 ]"
+	"$translucent" 1
+
+}

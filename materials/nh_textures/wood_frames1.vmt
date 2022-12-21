@@ -1,0 +1,8 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "nh_textures/wood_frames1"
+	"$surfaceprop" "wood"
+	"%keywords" "nh"
+	"$detail" "detail/wood_detail_01"
+	"$detailscale" 2
+}

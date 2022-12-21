@@ -1,0 +1,51 @@
+// Choreo version 1
+actor "firstdream_woman"
+{
+  channel "Gestures"
+  {
+    event gesture "urgenthandsweepcrouch"
+    {
+      time 0.040000 5.074567
+      param "urgenthandsweepcrouch"
+      absolutetags playback_time
+      {
+        "apex" 0.121302
+        "accent" 0.227804
+        "loop" 0.287817
+        "end" 0.569853
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.232558
+        "accent" 0.372093
+        "loop" 0.465116
+        "end" 0.581395
+      }
+      sequenceduration 1.466667
+    }
+    event gesture "gesture_shoot_smg1"
+    {
+      time 0.640000 5.074074
+      param "gesture_shoot_smg1"
+      sequenceduration 0.240000
+    }
+    event gesture "gesture_shoot_smg1"
+    {
+      time 0.420000 5.067408
+      param "gesture_shoot_smg1"
+      sequenceduration 0.240000
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "108"
+  "RampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

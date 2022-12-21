@@ -1,0 +1,113 @@
+// Choreo version 1
+actor "Romero"
+{
+  channel "Gestures"
+  {
+    event flexanimation "Facial Animation"
+    {
+      time 1.209877 4.209877
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "corner_puller" combo 
+        {
+          0.4860 0.3500
+        }
+        {
+          0.7680 0.7500
+          1.8440 0.7500
+        }
+      }
+    }
+    event gesture "A_bg_acc_dwn_left_snipe"
+    {
+      time 0.061728 2.861728
+      param "A_bg_acc_dwn_left_snipe"
+      absolutetags playback_time
+      {
+        "apex" 0.144578
+        "extreme" 0.301205
+        "loop" 0.506024
+        "end" 0.662651
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.144578
+        "extreme" 0.301205
+        "loop" 0.506024
+        "end" 0.662651
+      }
+    }
+    event gesture "A_bg_h_jerkrt"
+    {
+      time 1.944445 4.577778
+      param "A_bg_h_jerkrt"
+      absolutetags playback_time
+      {
+        "apex" 0.141026
+        "extreme" 0.269231
+        "loop" 0.628205
+        "end" 0.641026
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.141026
+        "extreme" 0.269231
+        "loop" 0.628205
+        "end" 0.641026
+      }
+      sequenceduration 2.633333
+    }
+  }
+  channel "Face/Look"
+  {
+    event face "Face !player"
+    {
+      time 0.057471 3.734568
+      param "!player"
+      event_ramp
+      {
+        0.2560 0.7721
+        3.0371 0.8291
+        3.2471 0.8319
+        3.4711 0.7320
+      }
+      lockbodyfacing
+    }
+    event lookat "Look at !player"
+    {
+      time 0.063458 3.668200
+      param "!player"
+    }
+    event interrupt "Interrupt"
+    {
+      time 0.080246 4.486377
+      param ""
+    }
+  }
+  channel "Voice"
+  {
+    event speak "romero_goodnight"
+    {
+      time 0.287356 4.488626
+      param "romero_gottapee"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+}
+
+mapname "C:\Program Files (x86)\Steam\steamapps\SourceMods\NH2\maps\nh2c7.bsp"
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "RampTool" "100"
+  "CChoreoView" "108"
+}
+fps 60
+snap off
+ignorePhonemes off

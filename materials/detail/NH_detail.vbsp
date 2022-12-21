@@ -1,0 +1,154 @@
+detail
+{
+	nh1_grass
+	{
+		"density" "600.0"
+
+		Group1
+		{
+			"alpha" "1"
+			Model1
+			{
+				"sprite" "288 0 128 128 512" 
+				"spritesize" "0.5 0.0 25 33"
+				"spriterandomscale" "0.2"
+				"amount" "0.3"
+				"detailOrientation" "2"
+			}
+			Model2
+			{
+				"sprite" "0 0 128 128 512" 
+				"spritesize" "0.5 0.0 40 50"
+				"spriterandomscale" "0.2"
+				"amount" "0.1"
+				"detailOrientation" "2"
+			}
+			Model3
+			{
+				"sprite" "144 0 128 128 512" 
+				"spritesize" "0.5 0.0 20 20"
+				"spriterandomscale" "0.2"
+				"amount" "0.3"
+				"detailOrientation" "2"
+			}
+			Model4
+			{
+				"sprite" "144 144 128 128 512" 
+				"spritesize" "0.5 0.0 23 28"
+				"spriterandomscale" "0.2"
+				"amount" "0.2"
+				"detailOrientation" "2"
+			}
+			//shrub
+			Model4
+			{
+				"sprite" "288 144 128 128 512" 
+				"spritesize" "0.5 0.0 50 50"
+				"spriterandomscale" "0.2"
+				"amount" "0.1"
+				"detailOrientation" "2"
+			}
+		}
+
+		Group2
+		{
+			"alpha" "0.5"
+		Model1
+			{
+				"sprite" "0 144 128 128 512" 
+				"spritesize" "0.5 0.0 20 20"
+				"spriterandomscale" "0.2"
+				"amount" "1"
+				"detailOrientation" "2"
+			}
+		}
+
+		Group4
+		{
+			"alpha" "0.3"
+
+		}
+
+		Group5
+		{
+			"alpha" "0.0"
+
+		}
+	}
+	nh2_grass
+	{
+		"density" "600.0"
+
+		Group1
+		{
+			"alpha" "1"
+			Model1
+			{
+				"sprite" "288 0 128 128 512" 
+				"spritesize" "0.5 0.0 25 33"
+				"spriterandomscale" "0.2"
+				"amount" "0.3"
+				"detailOrientation" "2"
+			}
+			Model2
+			{
+				"sprite" "0 0 128 128 512" 
+				"spritesize" "0.5 0.0 40 50"
+				"spriterandomscale" "0.2"
+				"amount" "0.1"
+				"detailOrientation" "2"
+			}
+			Model3
+			{
+				"sprite" "144 0 128 128 512" 
+				"spritesize" "0.5 0.0 20 20"
+				"spriterandomscale" "0.2"
+				"amount" "0.3"
+				"detailOrientation" "2"
+			}
+			Model4
+			{
+				"sprite" "144 144 128 128 512" 
+				"spritesize" "0.5 0.0 23 28"
+				"spriterandomscale" "0.2"
+				"amount" "0.2"
+				"detailOrientation" "2"
+			}
+			//shrub
+			Model4
+			{
+				"sprite" "288 144 128 128 512" 
+				"spritesize" "0.5 0.0 50 50"
+				"spriterandomscale" "0.2"
+				"amount" "0.1"
+				"detailOrientation" "2"
+			}
+		}
+
+		Group2
+		{
+			"alpha" "0.5"
+		Model1
+			{
+				"sprite" "0 144 128 128 512" 
+				"spritesize" "0.5 0.0 20 20"
+				"spriterandomscale" "0.2"
+				"amount" "1"
+				"detailOrientation" "2"
+			}
+		}
+
+		Group4
+		{
+			"alpha" "0.3"
+
+		}
+
+		Group5
+		{
+			"alpha" "0.0"
+
+		}
+	}
+}
+

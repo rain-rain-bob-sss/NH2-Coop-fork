@@ -1,0 +1,187 @@
+// Choreo version 1
+actor "SWAT2"
+{
+  channel "Voice"
+  {
+    event speak "2_whatthehell"
+    {
+      time 0.160000 2.500680
+      param "2_whatishedoing"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 0.066667 0.297506
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 2.426667 2.657506
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "hg_nod_yes"
+    {
+      time 0.226667 2.526667
+      param "hg_nod_yes"
+      event_ramp
+      {
+        0.0800 0.4112
+        1.1240 0.5178
+        1.4940 0.5838
+        1.9160 0.1878
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+      sequenceduration 2.300000
+    }
+    event gesture "hg_nod_yes"
+    {
+      time 0.233334 2.533334
+      param "hg_nod_yes"
+      event_ramp
+      {
+        0.0800 0.4112
+        0.8000 0.5394
+        1.2920 0.0000
+        1.6700 0.0000
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+      sequenceduration 2.300000
+    }
+    event gesture "hg_nod_no"
+    {
+      time 0.220000 2.553333
+      param "hg_nod_no"
+      event_ramp
+      {
+        0.0600 0.4213
+        1.0800 0.4365
+        1.3600 0.0457
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.072464
+        "extreme" 0.159420
+        "loop" 0.420290
+        "end" 0.913043
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.072464
+        "extreme" 0.159420
+        "loop" 0.420290
+        "end" 0.913043
+      }
+      sequenceduration 2.333333
+    }
+    event gesture "bg_down"
+    {
+      time 0.286667 2.253333
+      param "bg_down"
+      event_ramp
+      {
+        0.0360 0.3756
+        1.7600 0.3503
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.086207
+        "extreme" 0.241379
+        "loop" 0.482759
+        "end" 0.672414
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.086207
+        "extreme" 0.241379
+        "loop" 0.482759
+        "end" 0.672414
+      }
+      sequenceduration 1.966667
+    }
+    event gesture "hg_turn_r"
+    {
+      time -0.053334 3.593333
+      param "hg_turn_r"
+      event_ramp
+      {
+        0.0560 0.6954
+        3.4800 0.6650
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.046656
+        "extreme" 0.093312
+        "loop" 0.139968
+        "end" 0.760073
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.104167
+        "extreme" 0.208333
+        "loop" 0.312500
+        "end" 0.729167
+      }
+      sequenceduration 1.633333
+    }
+  }
+  channel "look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.000000 2.873333
+      param "!player"
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "100"
+  "RampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

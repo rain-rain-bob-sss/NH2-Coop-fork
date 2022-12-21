@@ -1,0 +1,156 @@
+// Choreo version 1
+event section "look_pause"
+{
+  time 9.160919 -1.000000
+  param "automate Resume 999999.000000"
+}
+actor "SWAT3"
+{
+  channel "Idle"
+  {
+    event gesture "d1_town05_Leon_Door_Knock"
+    {
+      time 0.000000 3.753333
+      param "d1_town05_Leon_Door_Knock"
+      event_ramp
+      {
+        0.3340 1.0000
+        2.4413 1.0000
+      }
+      sequenceduration 4.250000
+    }
+    event face "Face glass_window"
+    {
+      time 0.000000 2.180952
+      param "glass_window"
+      event_ramp
+      {
+        0.1000 1.0000
+        1.8753 0.9932
+      }
+    }
+    event lookat "Look at !player"
+    {
+      time -0.000000 2.173016
+      param "!player"
+      event_ramp
+      {
+        0.1460 1.0000
+        1.8973 1.0000
+      }
+    }
+    event lookat "Look at power_room_door"
+    {
+      time 3.034852 8.207869
+      param "power_room_door"
+      event_ramp
+      {
+        0.2940 1.0000
+        4.7681 1.0000
+      }
+    }
+    event gesture "g_frustrated_point"
+    {
+      time 3.044513 8.741380
+      param "g_frustrated_point"
+      event_ramp
+      {
+        0.4980 0.0000
+        0.8660 1.0000
+        1.6420 0.8767
+        5.5136 0.9589
+      }
+      absolutetags playback_time
+      {
+        "in" 0.029720
+        "loop" 0.466779
+        "end" 0.759146
+        "out" 0.896256
+      }
+      absolutetags shifted_time
+      {
+        "in" 0.079365
+        "loop" 0.603175
+        "end" 0.698413
+        "out" 0.857143
+      }
+      sequenceduration 2.133333
+    }
+    event face "Face power_room_door"
+    {
+      time 3.031746 8.117461
+      param "power_room_door"
+      event_ramp
+      {
+        0.4020 1.0000
+        4.6318 1.0000
+      }
+    }
+    event face "Face !player"
+    {
+      time 8.784619 9.542747
+      param "!player"
+      event_ramp
+      {
+        0.1740 1.0000
+        0.5782 0.9857
+      }
+    }
+    event lookat "Look at !player"
+    {
+      time 8.776232 9.552696
+      param "!player"
+      event_ramp
+      {
+        0.2000 0.9862
+        0.6261 0.9885
+      }
+    }
+  }
+}
+
+actor "knock_actor"
+{
+  channel "knocks"
+  {
+    event speak "physics\glass\glass_sheet_impact_soft3.wav"
+    {
+      time 1.034879 1.541047
+      param "physics\glass\glass_sheet_impact_soft3.wav"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "physics\glass\glass_sheet_impact_soft3.wav"
+    {
+      time 1.333730 1.839898
+      param "physics\glass\glass_sheet_impact_soft3.wav"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "physics\glass\glass_sheet_impact_soft3.wav"
+    {
+      time 1.632581 2.138749
+      param "physics\glass\glass_sheet_impact_soft3.wav"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "116"
+  "ExpressionTool" "100"
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "RampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

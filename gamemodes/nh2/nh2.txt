@@ -1,0 +1,38 @@
+"nh2"
+{
+	"base"			"base"
+	"title"			"Nightmare House 2"
+	"category"		"other"
+	"maps"			"^nh2c|^nh1remake1_v2|^4_1_22_5"
+	"menusystem"	"1"
+
+	"settings"
+	{
+		1
+		{
+			"name"		"nh2coop_sv_disable_checkpoints"
+			"text"		"Disable checkpoints"
+			"help"		"Disables checkpoints (if they so embarassing)"
+			"type"		"CheckBox"
+			"default"	"0"
+		}
+
+		2
+		{
+			"name"		"nh2coop_sv_sandbox_mode"
+			"text"		"Sandbox Mode"
+			"help"		"Enables sandbox mode (allowing spawmenu/context menu)"
+			"type"		"CheckBox"
+			"default"	"0"
+		}
+
+		3
+		{
+			"name"		"nh2coop_sv_survival_mode"
+			"text"		"Survival Mode"
+			"help"		"Enables Sven Coop like survival mode (actually has unused good feature to skip some checkopoints, not used in code)"
+			"type"		"CheckBox"
+			"default"	"0"
+		}		
+	}
+}

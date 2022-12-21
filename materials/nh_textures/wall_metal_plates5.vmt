@@ -1,0 +1,8 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "nh_textures/wall_metal_plates5"
+	"$surfaceprop" "metal"
+	"%keywords" "nh"
+	"$detail" "detail/metal_detail_01"
+	"$detailscale" 2
+}

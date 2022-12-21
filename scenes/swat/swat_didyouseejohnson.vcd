@@ -1,0 +1,105 @@
+// Choreo version 1
+actor "SWAT2"
+{
+  channel "Speech"
+  {
+    event speak "2_youdidntfoundjohnsondidyou"
+    {
+      time 0.080000 3.681088
+      param "2_youdidntfoundjohnsondidyou"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 0.006667 0.256191
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+      cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 3.573334 3.822858
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+      cc_noattenuate
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "hg_nod_no"
+    {
+      time 0.026667 2.360000
+      param "hg_nod_no"
+      absolutetags playback_time
+      {
+        "apex" 0.072464
+        "extreme" 0.159420
+        "loop" 0.420290
+        "end" 0.913043
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.072464
+        "extreme" 0.159420
+        "loop" 0.420290
+        "end" 0.913043
+      }
+      sequenceduration 2.333333
+    }
+    event gesture "hg_nod_right"
+    {
+      time 2.120000 3.420000
+      param "hg_nod_right"
+      absolutetags playback_time
+      {
+        "apex" 0.236842
+        "extreme" 0.473684
+        "loop" 0.568947
+        "end" 0.578947
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.236842
+        "extreme" 0.473684
+        "loop" 0.578947
+        "end" 0.578947
+      }
+      sequenceduration 1.300000
+    }
+  }
+  channel "look/face"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.026667 3.793334
+      param "!player"
+      event_ramp
+      {
+        0.5180 1.0000
+        1.2360 1.0000
+        2.5067 1.0000
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "100"
+  "SceneRampTool" "100"
+  "RampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,33 @@
+// Choreo version 1
+actor "SWATL_CC"
+{
+  channel "Caption"
+  {
+    event speak "96"
+    {
+      time 0.066154 5.106449
+      param "96"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event interrupt "interrupt"
+    {
+      time 0.089743 5.102564
+      param ""
+    }
+  }
+}
+
+scalesettings
+{
+  "RampTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+  "ExpressionTool" "100"
+  "CChoreoView" "52"
+}
+fps 60
+snap off
+ignorePhonemes off

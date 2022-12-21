@@ -1,0 +1,77 @@
+// Choreo version 1
+actor "Romero"
+{
+  channel "Gestures"
+  {
+    event gesture "A_bg_acc_dwn_left"
+    {
+      time 0.201149 3.001149
+      param "A_bg_acc_dwn_left"
+      absolutetags playback_time
+      {
+        "apex" 0.144578
+        "extreme" 0.301205
+        "loop" 0.506024
+        "end" 0.662651
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.144578
+        "extreme" 0.301205
+        "loop" 0.506024
+        "end" 0.662651
+      }
+    }
+  }
+  channel "Face/Look"
+  {
+    event face "Face !player"
+    {
+      time 0.057471 3.834733
+      param "!player"
+      event_ramp
+      {
+        0.2560 0.7721
+        3.1373 0.8291
+        3.3473 0.8319
+        3.5713 0.7320
+      }
+      lockbodyfacing
+    }
+    event lookat "Look at !player"
+    {
+      time 0.063458 3.900974
+      param "!player"
+    }
+    event interrupt "Interrupt"
+    {
+      time 0.018874 3.922413
+      param ""
+    }
+  }
+  channel "Voice"
+  {
+    event speak "romero_areyouhavingfun"
+    {
+      time 0.281609 3.513990
+      param "romero_areyouhavingfun"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+}
+
+mapname "C:\Program Files (x86)\Steam\steamapps\SourceMods\NH2\maps\nh2c7.bsp"
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "RampTool" "100"
+  "CChoreoView" "116"
+}
+fps 60
+snap off
+ignorePhonemes off

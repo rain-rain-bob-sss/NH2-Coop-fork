@@ -1,0 +1,76 @@
+// Choreo version 1
+actor "SWAT2"
+{
+  channel "All"
+  {
+    event speak "2_pieceofcake"
+    {
+      time 0.020000 1.405034
+      param "2_pieceofcake"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 1.186667 1.417506
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+    event speak "blip"
+    {
+      time 0.020000 0.250839
+      param "blip"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+	cc_noattenuate
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "hg_nod_yes"
+    {
+      time 0.053334 1.566667
+      param "hg_nod_yes"
+      event_ramp
+      {
+        0.0880 0.4074
+        0.4900 0.4074
+        0.8140 0.5970
+        1.4594 0.4630
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.163451
+        "extreme" 0.303122
+        "loop" 0.628319
+        "end" 0.765317
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+      sequenceduration 2.300000
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "100"
+  "RampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

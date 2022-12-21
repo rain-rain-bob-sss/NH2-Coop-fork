@@ -1,0 +1,9 @@
+VertexLitGeneric
+{
+	$basetexture	gmn_nh2/models/metal_gate_diff.vtf
+	$surfaceprop	metal
+	$bumpmap		gmn_nh2/models/metal_gate_nrm
+	
+	$envmap						env_cubemap
+	$normalmapalphaenvmapmask	1
+}
