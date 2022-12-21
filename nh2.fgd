@@ -1,0 +1,437 @@
+//=============================================================================
+//
+// Nightmare House 2
+//
+//=============================================================================
+
+@include "base.fgd"
+@include "halflife2.fgd"
+
+@NPCClass base(BaseNPC) studio("models/NH2Zombies/cook.mdl") = npc_nh_cook : "NH2 Cook"
+[
+	headmodel(choices) : "Head model to use" : 13 =
+	[
+		0 : "Half a head"
+		1 : "No head"
+	]
+]
+
+@NPCClass base(BaseNPC) studio("models/NH2Zombies/doctor01.mdl") = npc_nh_doctor : "NH2 Doctor"
+[
+	headmodel(choices) : "Head model to use" : 13 =
+	[
+		0 : "Half a head"
+		1 : "No head"
+		2 : "Black Head"
+		4 : "Bald Head"
+		5 : "Jaw-less Head"
+		6 : "Nose-less Head"
+		7 : "Cheek-less Head"
+		8 : "Old Head"
+		9 : "Squished Head"
+		3 : "Black Head + Hat"
+		10 : "Bald Head + Hat"
+		11 : "Jaw-less Head + Hat"
+		12 : "Nose-less Head + Hat"
+		13 : "Random Head"
+	]
+]
+
+@NPCClass base(BaseNPC) studio("models/NH2Zombies/patient01.mdl") = npc_nh_patient : "NH2 Patient"
+[
+	bodymodel(choices) : "Body model to use" : 0 =
+	[
+		0 : "Random Body"
+		1 : "Large Body"
+		2 : "Thin Body"
+		3 : "One Arm Body"
+	]
+
+	headmodel(choices) : "Head model to use" : 9 =
+	[
+		0 : "Half a head"
+		1 : "No head"
+		2 : "Black Head"
+		3 : "Bald Head"
+		4 : "Jaw-less Head"
+		5 : "Nose-less Head"
+		6 : "Cheek-less Head"
+		7 : "Old Head"
+		8 : "Squished Head"
+		9 : "Random Head"
+	]
+]
+
+@NPCClass base(BaseNPC) studio("models/NH2Zombies/surgeon01.mdl") = npc_nh_surgeon : "NH2 Surgeon"
+[
+	bodymodel(choices) : "Body model to use" : 0 =
+	[
+		0 : "Random Body"
+		1 : "Large Body"
+		2 : "Thin Body"
+	]
+
+	headmodel(choices) : "Head model to use" : 15 =
+	[
+		0 : "Half a head"
+		1 : "No head"
+		2 : "Black Head"
+		4 : "Bald Head"
+		5 : "Jaw-less Head"
+		6 : "Nose-less Head"
+		7 : "Cheek-less Head"
+		8 : "Old Head"
+		9 : "Squished Head"
+		3 : "Black Head + Hat"
+		10 : "Bald Head + Hat"
+		11 : "Jaw-less Head + Hat"
+		12 : "Nose-less Head + Hat"
+		13 : "Cheek-less Head + Hat"
+		14 : "Old Head + Hat"
+		15 : "Random Head"
+	]
+]
+@NPCClass base(BaseNPC) studio("models/NH2Zombies/janitor01.mdl") = npc_nh_janitor : "NH2 Janitor"
+[
+	gender(choices) : "Gender to use" : 0 =
+	[
+		0 : "Random"
+		1 : "Male"
+		2 : "Female"
+	]
+
+	bodymodel(choices) : "Body model to use" : 0 =
+	[
+		0 : "Random Body"
+		1 : "Large Body"
+		2 : "Thin Body"
+	]
+
+	headmodel(choices) : "Head model to use" : 10 =
+	[
+		0 : "Male 01"
+		1 : "Male 03"
+		2 : "Male 04"
+		3 : "Male 05"
+		4 : "Male 06"
+		5 : "Male 07"
+		6 : "Male 08"
+		7 : "Male 09"
+		8 : "Half a head (Black)"
+		9 : "Half a head (White)"
+		10 : "Random Head"
+	]
+]
+
+@NPCClass base(BaseNPC) studio("models/NH2Zombies/security01.mdl") = npc_nh_guard : "NH2 Guard"
+[
+]
+
+@PointClass base(game_text) iconsprite("editor/game_text.vmt") = mm_game_text : 
+    "An entity that displays customized text on player's screens."
+[
+  input DisplayText(string) : "Display this message text."
+]
+
+@NPCClass base(BaseNPC) studio("models/NH2Zombies/gibs/doctor_torso.mdl") = npc_nh_doctor_torso : "NH2 Doctor Torso"
+[
+	headmodel(choices) : "Head model to use" : 13 =
+	[
+		0 : "Half a head"
+		1 : "No head"
+		2 : "Black Head"
+		4 : "Bald Head"
+		5 : "Jaw-less Head"
+		6 : "Nose-less Head"
+		7 : "Cheek-less Head"
+		8 : "Old Head"
+		9 : "Squished Head"
+		3 : "Black Head + Hat"
+		10 : "Bald Head + Hat"
+		11 : "Jaw-less Head + Hat"
+		12 : "Nose-less Head + Hat"
+		13 : "Random Head"
+	]
+]
+
+@NPCClass base(BaseNPC) studio("models/NH2Zombies/gibs/patient_torso.mdl") = npc_nh_patient_torso : "NH2 Patient Torso"
+[
+	headmodel(choices) : "Head model to use" : 9 =
+	[
+		0 : "Half a head"
+		1 : "No head"
+		2 : "Black Head"
+		3 : "Bald Head"
+		4 : "Jaw-less Head"
+		5 : "Nose-less Head"
+		6 : "Cheek-less Head"
+		7 : "Old Head"
+		8 : "Squished Head"
+		9 : "Random Head"
+	]
+]
+
+
+@NPCClass base(BaseNPC) studio("models/NH2Zombies/gibs/janitor_torso.mdl") = npc_nh_janitor_torso : "NH2 Janitor Torso"
+[
+	headmodel(choices) : "Head model to use" : 15 =
+	[
+		0 : "Half a head"
+		1 : "No head"
+		2 : "Black Head"
+		4 : "Bald Head"
+		5 : "Jaw-less Head"
+		6 : "Nose-less Head"
+		7 : "Cheek-less Head"
+		8 : "Old Head"
+		9 : "Squished Head"
+		3 : "Black Head + Hat"
+		10 : "Bald Head + Hat"
+		11 : "Jaw-less Head + Hat"
+		12 : "Nose-less Head + Hat"
+		13 : "Cheek-less Head + Hat"
+		14 : "Old Head + Hat"
+		15 : "Random Head"
+	]
+]
+
+@PointClass base(Angles, Targetname, Studiomodel, DXLevelChoice, BaseFadeProp, EnableDisable) sphere(fademindist) sphere(fademaxdist) studioprop() = physics_prop_ragdoll :
+	"A prop that physically simulates and can be articulated with internal joints. The joint constraints are part of the physics model."
+[
+	spawnflags(flags) = 
+	[
+		4 : "Debris - Don't collide with the player or other debris" : 1
+		8192 : "Allow Dissolve" : 0
+		16384 : "Motion Disabled" : 0
+		32768 : "Allow stretch" : 0
+		65536 : "Start asleep" : 0
+	]
+	angleOverride(string) : "Override Animation" : "" : "Filled in by the engine via wc_update_entity, do not edit by hand except to clear."
+
+	input StartRagdollBoogie(void) : "Begins ragdoll boogie effect. Parameter override = number of seconds to boogie."
+	input EnableMotion(void) : "Enable physics motion/collision response."
+	input DisableMotion(void) : "Disable physics motion/collision response."
+	input FadeAndRemove(float) : "Fade out then remove (kill) self. Parameter override = duration of fade"
+
+	submodelone(choices) : "Submodel to use for bodygroup 0" : 0 =
+	[
+		0 : "0"
+		1 : "1"
+		2 : "2"
+		3 : "3"
+		4 : "4"
+		5 : "5"
+		6 : "6"
+		7 : "7"
+		8 : "8"
+		9 : "9"
+		10 : "10"
+		11 : "11"
+		12 : "12"
+		13 : "13"
+		14 : "14"
+		15 : "15"
+	]
+
+	submodeltwo(choices) : "Submodel to use for bodygroup 1" : 0 =
+	[
+		0 : "0"
+		1 : "1"
+		2 : "2"
+		3 : "3"
+		4 : "4"
+		5 : "5"
+		6 : "6"
+		7 : "7"
+		8 : "8"
+		9 : "9"
+		10 : "10"
+		11 : "11"
+		12 : "12"
+		13 : "13"
+		14 : "14"
+		15 : "15"
+	]
+
+	submodelthree(choices) : "Submodel to use for bodygroup 2" : 0 =
+	[
+		0 : "0"
+		1 : "1"
+		2 : "2"
+		3 : "3"
+		4 : "4"
+		5 : "5"
+		6 : "6"
+		7 : "7"
+		8 : "8"
+		9 : "9"
+		10 : "10"
+		11 : "11"
+		12 : "12"
+		13 : "13"
+		14 : "14"
+		15 : "15"
+	]
+
+submodelfour(choices) : "Submodel to use for bodygroup 3" : 0 =
+	[
+		0 : "0"
+		1 : "1"
+		2 : "2"
+		3 : "3"
+		4 : "4"
+		5 : "5"
+		6 : "6"
+		7 : "7"
+		8 : "8"
+		9 : "9"
+		10 : "10"
+		11 : "11"
+		12 : "12"
+		13 : "13"
+		14 : "14"
+		15 : "15"
+	]
+
+submodelfive(choices) : "Submodel to use for bodygroup 4" : 0 =
+	[
+		0 : "0"
+		1 : "1"
+		2 : "2"
+		3 : "3"
+		4 : "4"
+		5 : "5"
+		6 : "6"
+		7 : "7"
+		8 : "8"
+		9 : "9"
+		10 : "10"
+		11 : "11"
+		12 : "12"
+		13 : "13"
+		14 : "14"
+		15 : "15"
+	]
+]
+
+@PointClass base(Angles) studio("models/editor/scriptedsequence.mdl") sphere(m_flRadius) = scripted_sequence_vj :
+	"scripted_sequence for VJ Base NPCS"
+[
+	spawnflags(Flags) = 
+	[
+		1 : "Start on Spawn" : 0
+		// 32: "No Interruptions" : 0
+		// 64: "Override AI" : 0
+		// 128: "Don't Teleport NPC On End" : 0
+		// 256: "Loop in Post Idle" : 0
+		// 512: "Priority Script" : 0
+		// 4096: "Allow actor death" : 0
+	]
+
+	TargetEntity(target_destination) : "Target NPC" : : "The name or class name (such as 'npc_zombie') of an NPC to use for this script."
+	PreIdleAnimation(string) : "Pre Action Idle Animation" : "" : "The name of the sequence (such as 'idle01') or activity (such as 'ACT_IDLE') to play before the action animation if the NPC must wait for the script to be triggered. Use 'Start on Spawn' flag or MoveToPosition input to play this idle animation."
+	ActionAnimation(string) : "Action Animation" : "" : "The name of the main sequence (such as 'reload02') or activity (such as 'ACT_RELOAD') to play."
+]
+
+@PointClass base(Targetname) iconsprite("editor/logic_script.vmt") = logic_script : "Handles script that can be exectued in Lua. Better alternative to lua_run."
+[
+	spawnflags(flags) =
+	[
+		1 : "Execute on spawn" : 1
+	]
+
+	scriptFile(string) : "Script File" : : "The path relative to lua/mapscripts folder (in game, in addons) (example of usage: 'mapspawn' -> will load 'lua/mapscripts/mapspawn.lua')"
+	scriptChunk(string) : "Script Chunk" : : "Plain Lua code to execute (runs after Script File)"
+	thinkHook(choices) : "Use Think hook?" : 0 =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+
+	input LoadFile(void) : "Run file from keyvalues (if you specify string it will run specified string, instead of from keyvalues)"
+	input LoadChunk(void) : "Run Lua code from keyvalues (if you specify string it will run specified string, instead of from keyvalues)"
+]
+
+@SolidClass base(trigger_once) = trigger_once_mp
+[
+]
+
+@SolidClass base(Trigger) = trigger_no_player_collision
+[
+]
+
+@PointClass base(npc_fastzombie) studio("models/nh2zombies/friendly.mdl") = npc_nh_demon
+[
+	removeLeapAttackOnSpawn(choices) : "Remove Leap Attack On Spawn?" : 0 =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+]
+
+@PointClass base(PlayerClass, Angles) studio("models/editor/playerstart.mdl") = info_multiplayer_start :
+	"This entity indicates the position and facing direction at which the specified player will spawn (using in multiplayer to spawn up 4 players)."
+[
+	playerID(choices) : "Player ID" : 1 =
+	[
+		1 : "Player 1 (host)"
+		2 : "Player 2"
+		3 : "Player 3"
+		4 : "Player 4"
+	]
+]
+
+@PointClass base(Targetname) = logic_spawnpoint_controller : "Handles spawnpoints and checkpoints (hardcoded)"
+[
+	input SetSpawnpointIndex(string) : "Set hardcoded checkpoint"
+	input SetForcedSpawnpointIndex(string) : "Force hardcoded checkpoint"
+]
+
+@BaseClass = ControlEnables: "A pair of keyvalues for specifying if a comp_ entity is enabled."
+[
+	ctrl_type(choices) : "Control Type" : 0 : "Controls how the Control Value is interpreted" =
+	[
+		0: "Is Enabled?"
+		1: "Is Disabled?"
+	]
+
+	ctrl_value(choices) : "Control Value" : 1 : "Decides whether this entity is enabled. If disabled, the entity has no effect." =
+	[
+		0: "No"
+		1: "Yes"
+	]
+]
+
+@PointClass base(ControlEnables) iconsprite("editor/comp_pack") = comp_pack: "Explicitly identify resources to pack into the map. If more are needed, add additional keyvalues with SmartEdit off."
+	[
+	generic1(string) : "Generic" : : "Pack a file, starting in any of the content folders."
+	generic2(string) : "Generic" : : "Pack a file, starting in any of the content folders."
+	generic3(string) : "Generic" : : "Pack a file, starting in any of the content folders."
+	generic4(string) : "Generic" : : "Pack a file, starting in any of the content folders."
+	generic5(string) : "Generic" : : "Pack a file, starting in any of the content folders."
+	sound1(sound) : "Sound" : : "Pack a raw sound file or a soundscript."
+	sound2(sound) : "Sound" : : "Pack a raw sound file or a soundscript."
+	sound3(sound) : "Sound" : : "Pack a raw sound file or a soundscript."
+	sound4(sound) : "Sound" : : "Pack a raw sound file or a soundscript."
+	sound5(sound) : "Sound" : : "Pack a raw sound file or a soundscript."
+	model1(studio) : "Model" : : "Pack a model."
+	model2(studio) : "Model" : : "Pack a model."
+	model3(studio) : "Model" : : "Pack a model."
+	model4(studio) : "Model" : : "Pack a model."
+	model5(studio) : "Model" : : "Pack a model."
+	material1(material) : "Material" : : "Pack a material."
+	material2(material) : "Material" : : "Pack a material."
+	material3(material) : "Material" : : "Pack a material."
+	material4(material) : "Material" : : "Pack a material."
+	material5(material) : "Material" : : "Pack a material."
+	particle1(string) : "Particle" : : "Pack a particle system, and include in the manifest."
+	particle2(string) : "Particle" : : "Pack a particle system, and include in the manifest."
+	particle3(string) : "Particle" : : "Pack a particle system, and include in the manifest."
+	particle4(string) : "Particle" : : "Pack a particle system, and include in the manifest."
+	particle5(string) : "Particle" : : "Pack a particle system, and include in the manifest."
+	soundscript1(string) : "SoundScript" : : "Pack a soundscript file, and include in the manifest."
+	soundscript2(string) : "SoundScript" : : "Pack a soundscript file, and include in the manifest."
+	soundscript3(string) : "SoundScript" : : "Pack a soundscript file, and include in the manifest."
+	soundscript4(string) : "SoundScript" : : "Pack a soundscript file, and include in the manifest."
+	soundscript5(string) : "SoundScript" : : "Pack a soundscript file, and include in the manifest."
+	]
