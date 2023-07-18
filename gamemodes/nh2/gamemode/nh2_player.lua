@@ -49,16 +49,31 @@ function this.MoveToCheckpoint(force)
     end
 end
 
-function this.SelectSpawnPoint(ply, isTransition)    
+function this.SelectSpawnPoint(ply, isTransition)
     if game.SinglePlayer() then
         net.Start("_NH2_SendAntiSingleplayer")
         net.Send(ply)
     end
 
-    --                                 Current map  -      Index       - Player's index
-    local info = HARDCODED_CHECKPOINTS[game.GetMap()][CHECKPOINT_INDEX][ply:EntIndex()]
-    local weps = HARDCODED_CHECKPOINTS[game.GetMap()][CHECKPOINT_INDEX].Weapons
-    local hasSuit = HARDCODED_CHECKPOINTS[game.GetMap()][CHECKPOINT_INDEX].Suit
+    local mapinfo = HARDCODED_CHECKPOINTS[game.GetMap()]
+
+    if mapinfo == nil then
+        local spawns = ents.FindByClass("info_player_start")
+        local random_entry = math.random(#spawns)
+
+        local spawn = spawns[random_entry]
+
+        if #spawns == 0 then
+            ply:SetPos(vector_origin)
+        end
+
+        ply:SetPos(spawn:GetPos())
+        return
+    end
+
+    local info = mapinfo[CHECKPOINT_INDEX][ply:EntIndex()]
+    local weps = mapinfo.Weapons
+    local hasSuit = mapinfo.Suit
 
     ply:SetPos(info[1])
     ply:SetEyeAngles(info[2])
@@ -72,7 +87,7 @@ function this.SelectSpawnPoint(ply, isTransition)
     if hasSuit then
         timer.Simple(0.0, function()
             ply:SetNWBool("NH2COOP_SUITPICKUPED", true)
-            
+
             ply:SetWalkSpeed(150)
             ply:SetRunSpeed(230)
         end)

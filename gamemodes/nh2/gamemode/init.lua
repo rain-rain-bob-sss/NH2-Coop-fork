@@ -715,7 +715,7 @@ util.AddNetworkString("_NH2_MOTD")
 --
 -- Called to determine a spawn point for a player to spawn at.
 --
-function GM:PlayerSelectSpawn(ply, transition)    
+function GM:PlayerSelectSpawn(ply, transition)
     NH2_Player.SelectSpawnPoint(ply, transition)
 end
 
