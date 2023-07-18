@@ -89,6 +89,12 @@ function NH2_HUD.CreateFonts()
         weight = 500
     })
 
+    surface.CreateFont("NH_AmmoIcon", {
+        font = "HalfLife2",
+        size = ScrH() * 0.08,
+        weight = 500
+    })    
+
     surface.CreateFont("NH_MapTitle", {
         font = "Bebas Neue Bold",
         size = auto(45),

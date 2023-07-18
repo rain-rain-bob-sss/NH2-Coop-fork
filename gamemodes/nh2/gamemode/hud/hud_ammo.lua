@@ -28,6 +28,13 @@ local red = Color(185,42,42)
 local clip1Color = normal
 local ammo1Color = normal
 
+local weaponAmmoIcons = {
+    [3] = "p", -- pistol,
+    [5] = "q", -- revolver
+    [4] = "r", -- smg
+    [7] = "s" -- shotgun
+}
+
 local function Paint(size)
     local wep = LocalPlayer():GetActiveWeapon()
     if not IsValid(wep) then return end
@@ -57,6 +64,10 @@ local function Paint(size)
     
     SetColor(255,255,255,255)
     DrawTexture(size.x - size.y * 0.24, size.y - size.y * 0.08056, size.y * 0.22, size.y * 0.06)
+
+    if (weaponAmmoIcons[wep:GetPrimaryAmmoType()]) then
+        DrawText(weaponAmmoIcons[wep:GetPrimaryAmmoType()], "NH_AmmoIcon", size.x - size.x * 0.119, size.y - size.y * 0.05, color_white, TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
+    end
 
     DrawText(clip1, "NH_NumbersBigger", size.x - size.y * 0.095, size.y - size.y * 0.083, clip1Color, TEXT_ALIGN_RIGHT)
     DrawText(ammo1, "NH_NumbersSmaller", size.x - size.y * 0.045, size.y - size.y * 0.075, ammo1Color, TEXT_ALIGN_RIGHT)
