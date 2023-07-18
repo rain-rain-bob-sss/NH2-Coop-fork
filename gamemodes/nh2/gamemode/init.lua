@@ -38,6 +38,21 @@ AddCSLuaFile("hud/hud_crosshair.lua")
 AddCSLuaFile("hud/hud_notification.lua")
 AddCSLuaFile("hud/hud_spectator.lua")
 
+-- NH2 Sound scripts
+include("soundscripts/announcer_soundfiles.lua")
+include("soundscripts/captionsample.lua")
+include("soundscripts/emily_soundfiles.lua")
+include("soundscripts/game_sounds.lua")
+include("soundscripts/game_sounds_ambient_generic.lua")
+include("soundscripts/game_sounds_weapons.lua")
+include("soundscripts/nh2sounds.lua")
+include("soundscripts/npc_sounds_nh_guard.lua")
+include("soundscripts/npc_sounds_nhdemon.lua")
+include("soundscripts/npc_sounds_nhzombie.lua")
+include("soundscripts/npc_sounds_stalker.lua")
+include("soundscripts/romero_soundfiles.lua")
+include("soundscripts/swat_soundfiles.lua")
+
 local ipairs = ipairs
 
 -- Place them here
