@@ -71,12 +71,17 @@ function this.SelectSpawnPoint(ply, isTransition)
         return
     end
 
-    local info = mapinfo[CHECKPOINT_INDEX][ply:EntIndex()]
-    local weps = mapinfo.Weapons
-    local hasSuit = mapinfo.Suit
+    local info = mapinfo[CHECKPOINT_INDEX]
+    local weps = info.Weapons
+    local hasSuit = info.Suit
 
-    ply:SetPos(info[1])
-    ply:SetEyeAngles(info[2])
+    if (info[ply:EntIndex()]) then
+        ply:SetPos(info[ply:EntIndex()][1])
+        ply:SetEyeAngles(info[ply:EntIndex()][2])
+    else
+        ply:SetPos(info[1][1])
+        ply:SetEyeAngles(info[1][2])
+    end
 
     if weps then
         for i = 1, #weps do
