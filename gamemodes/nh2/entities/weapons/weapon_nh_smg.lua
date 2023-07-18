@@ -145,6 +145,11 @@ function SWEP:PrimaryAttack()
     end
 
     self:ShootBullet(13, 1, 0.05, self.Primary.Ammo)
+
+    local effectdata = EffectData()
+    effectdata:SetOrigin(self:GetOwner():EyePos())
+    effectdata:SetEntity(self)
+    util.Effect( "gun_light", effectdata)
 end
 
 function SWEP:Reload()

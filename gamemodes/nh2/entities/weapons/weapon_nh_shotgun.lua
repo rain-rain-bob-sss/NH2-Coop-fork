@@ -71,7 +71,7 @@ function SWEP:PrimaryAttack()
             angles.x = angles.x + 1
             angles.y = angles.y + math.Rand(0, 2)
             angles.z = 0
-            
+
             self:GetOwner():ViewPunch(Angle(-6, math.Rand(-2,-2), 0))
             self:GetOwner():SetEyeAngles(angles)
         end
@@ -81,6 +81,11 @@ function SWEP:PrimaryAttack()
 
         self:SetIdleAnim(self:SequenceDuration() - 0.05)
     end
+
+    local effectdata = EffectData()
+    effectdata:SetOrigin(self:GetOwner():EyePos())
+    effectdata:SetEntity(self)
+    util.Effect( "gun_light", effectdata)
 end
 
 function SWEP:SecondaryAttack()
