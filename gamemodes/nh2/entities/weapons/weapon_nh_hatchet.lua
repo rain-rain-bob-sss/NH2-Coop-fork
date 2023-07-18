@@ -42,6 +42,7 @@ function SWEP:SendIdleAnimation(delay)
     end
 
     timer.Create("Weapon_Idle_Delay_" .. self:EntIndex(), delay, 1, function()
+        if not IsValid(self) then return end
         self:SendWeaponAnim(ACT_VM_IDLE)
     end)
 end
