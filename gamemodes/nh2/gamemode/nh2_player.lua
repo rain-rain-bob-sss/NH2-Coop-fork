@@ -6,7 +6,7 @@ NH2_Player = {}
 local this = NH2_Player
 
 util.AddNetworkString("_NH2_SendAntiSingleplayer")
-util.AddNetworkString("_NH2_NotifyCheckpointChangeIfFarFromIt")
+util.AddNetworkString("_NH2_Notify")
 
 local CHECKPOINT_INDEX = 0
 
@@ -38,7 +38,9 @@ function this.MoveToCheckpoint(force)
         end
 
         if ply:Alive() and ply:GetPos():Distance(info[1]) > distanceCheck then
-            net.Start("_NH2_NotifyCheckpointChangeIfFarFromIt")
+            net.Start("_NH2_Notify")
+                net.WriteInt(2, 8)
+                net.WriteString("NH2.FarTeleport")
             net.Send(ply)
 
             ply:SetPos(info[1])

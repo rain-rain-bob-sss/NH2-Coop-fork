@@ -430,6 +430,7 @@ HARDCODED_CHECKPOINTS = {
             [4] = { Vector(-3934.0053710938, -4695.25390625, -255.96875), Angle(0, 0, 0) },
         },
         [1] = {
+            Distance = 2048,
             Suit = true,
             Weapons = {
                 "weapon_nh_hatchet",
@@ -472,6 +473,7 @@ HARDCODED_CHECKPOINTS = {
             [4] = { Vector(-2842.7536621094, -5191.1118164063, -287.96875), Angle(0, -90, 0) },
         },
         [4] = {
+            Distance = 496,
             Suit = true,
             Weapons = {
                 "weapon_nh_hatchet",
@@ -486,6 +488,7 @@ HARDCODED_CHECKPOINTS = {
             [4] = { Vector(-2227.3452148438, -5362.9731445313, -287.96875), Angle(0, -26, 0) },
         },
         [5] = {
+            Distance = 768,
             Suit = true,
             Weapons = {
                 "weapon_nh_hatchet",
@@ -494,10 +497,10 @@ HARDCODED_CHECKPOINTS = {
                 "weapon_nh_smg"
             },
 
-            [1] = { Vector(-1922.5595703125, -5961.3393554688, -287.96875), Angle(0, -180, 0) },
-            [2] = { Vector(-1861.2811279297, -5925.3491210938, -287.96875), Angle(0, -180, 0) },
-            [3] = { Vector(-1769.5900878906, -5977.546875, -287.96875), Angle(0, -180, 0) },
-            [4] = { Vector(-1720.3931884766, -5923.0263671875, -287.96875), Angle(0, -180, 0) },
+            [1] = { Vector(-1673.2598876953, -5937.4946289063, -287.96875), Angle(0, 0, 0) },
+            [2] = { Vector(-1670.6513671875, -5977.6762695313, -287.96875), Angle(0, 0, 0) },
+            [3] = { Vector(-1737.7744140625, -5982.0302734375, -287.96875), Angle(0, 0, 0) },
+            [4] = { Vector(-1756.1174316406, -5923.236328125, -287.96875), Angle(0, 0, 0) },
         },
         [6] = {
             Suit = true,
@@ -547,12 +550,7 @@ HARDCODED_CHECKPOINTS = {
         
         [0] = {
             Suit = true,
-            Weapons = {
-                "weapon_nh_hatchet",
-                "weapon_nh_pistol",
-                "weapon_nh_revolver",
-                "weapon_nh_smg"
-            },
+            Weapons = {},
 
             [1] = { Vector(-73.823921203613, -9129.33984375, 768.02838134766), Angle(0, -180, 0) },
             [2] = { Vector(-74.293930053711, -9075.099609375, 768.02838134766), Angle(0, -180, 0) },
@@ -1016,7 +1014,7 @@ function GM:AcceptInput(ent, input, activator, caller, value)
                     ply:SetVelocity(Vector(0,0,0))
                 end
             end
-            
+
             SetGlobalBool("IsSpeedModified", true)
             -- Disable flashlight for everyone
             for _, ply in ipairs(player.GetAll()) do
@@ -1045,6 +1043,10 @@ function GM:AcceptInput(ent, input, activator, caller, value)
     if ent:GetName() == "swat3_Hate" then
         local swat3 = ents.FindByName("SWAT3")[1]
         swat3:SetNWBool("NH2COOP_IM_CRAZY_NOW", true)
+    end
+
+    if string.lower(input) == "allowattackandcrosshair" then
+        SetGlobal2Bool("OverrideCrosshairAndAttack", true)
     end
 end
 

@@ -213,7 +213,7 @@ local function ShowMOTD()
     function frame:Paint(w,h)
         SetColor(0,0,0,176)
         DrawBox(0,0,w,h * 0.1)
-        
+
         DrawBox(0,h * 0.105,w,h * 0.9)
         DrawText("Nightmare House 2 Coop", "NH_Numbers", auto(30), auto(10))
     end
@@ -266,7 +266,7 @@ local function ShowMOTD()
         end
     end
 
-    for i = 4, 6 do        
+    for i = 4, 6 do
         local model = NH2COOP_PLY_MODELS[i]
         local mat = NH2COOL_PLY_ICONS[i]
 

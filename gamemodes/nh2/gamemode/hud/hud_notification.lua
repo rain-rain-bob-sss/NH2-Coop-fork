@@ -34,9 +34,9 @@ local INSTRUCTOR_ICONS = {
 
 local bg = Material("vgui/hud/bar_bg.png")
 
-net.Receive("_NH2_NotifyCheckpointChangeIfFarFromIt", function(len, ply)
-    SelectedIcon = 2
-    SelectedMessage = "You were teleported to latest checkpoint"
+net.Receive("_NH2_Notify", function(len, ply)
+    SelectedIcon = net.ReadInt(8)
+    SelectedMessage = net.ReadString()
     SelectedTime = CurTime()
 end)
 
