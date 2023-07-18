@@ -10,21 +10,6 @@ include("cl_worldtips.lua")
 include("cl_search_models.lua")
 include("cl_hud.lua")
 
--- Add/Override sounds
-sound.AddSoundOverrides("scripts/announcer_soundfiles.txt")
-sound.AddSoundOverrides("scripts/captionsample.txt")
-sound.AddSoundOverrides("scripts/emily_soundfiles.txt")
-sound.AddSoundOverrides("scripts/game_sounds.txt")
-sound.AddSoundOverrides("scripts/game_sounds_ambient_generic.txt")
-sound.AddSoundOverrides("scripts/game_sounds_weapons.txt")
-sound.AddSoundOverrides("scripts/nh2sounds.txt")
-sound.AddSoundOverrides("scripts/npc_sounds_nh_guard.txt")
-sound.AddSoundOverrides("scripts/npc_sounds_nhdemon.txt")
-sound.AddSoundOverrides("scripts/npc_sounds_nhzombie.txt")
-sound.AddSoundOverrides("scripts/npc_sounds_stalker.txt")
-sound.AddSoundOverrides("scripts/romero_soundfiles.txt")
-sound.AddSoundOverrides("scripts/swat_soundfiles.txt")
-
 --
 -- Make BaseClass available
 --
