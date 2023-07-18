@@ -1048,6 +1048,25 @@ function GM:AcceptInput(ent, input, activator, caller, value)
     if string.lower(input) == "allowattackandcrosshair" then
         SetGlobal2Bool("OverrideCrosshairAndAttack", true)
     end
+
+    if input == "NH2C6PickupWeapons" then
+        if activator:IsPlayer() then
+            activator:Give("weapon_nh_hatchet")
+            activator:Give("weapon_nh_pistol", true)
+            activator:Give("weapon_nh_revolver", true)
+            activator:Give("weapon_nh_smg", true)
+            activator:GiveAmmo(24, "Pistol")
+            activator:GiveAmmo(45, "SMG1")
+            activator:GiveAmmo(6, "357")
+        end
+    end
+
+    if input == "RemindAboutBringSWAT" then
+        net.Start("_NH2_Notify")
+            net.WriteInt(2, 8)
+            net.WriteString("NH2.RemindBringSWAT")
+        net.Broadcast()
+    end
 end
 
 ---
