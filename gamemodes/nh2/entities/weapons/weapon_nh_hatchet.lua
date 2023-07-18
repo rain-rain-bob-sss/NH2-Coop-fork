@@ -81,7 +81,7 @@ function SWEP:Deploy()
 end
 
 function SWEP:PrimaryAttack()
-    if self:GetOwner():GetLaggedMovementValue() < 1 then return end
+    if self:GetOwner():IsPlayer() and self:GetOwner():GetLaggedMovementValue() < 1 then return end
     local status, target = self:ValidateHitPos()
 
     self:GetOwner():DoAttackEvent()
@@ -141,7 +141,7 @@ function SWEP:PrimaryAttack()
 end
 
 function SWEP:SecondaryAttack()
-    if self:GetOwner():GetLaggedMovementValue() < 1 then return end
+    if self:GetOwner():IsPlayer() and self:GetOwner():GetLaggedMovementValue() < 1 then return end
     if SERVER then
         self:SetNextPrimaryFire(CurTime() + 2)
         self:SetNextSecondaryFire(CurTime() + 2)

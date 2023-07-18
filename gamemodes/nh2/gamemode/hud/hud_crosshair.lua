@@ -32,8 +32,8 @@ local function Paint(size)
 
     if LocalPlayer().PointingAlly then
         color.r = 0
-        color.b = 200
-        color.g = 0
+        color.g = 200
+        color.b = 0
     else
         color.r = 255
         color.g = 255
