@@ -1,0 +1,694 @@
+world
+{
+	"id" "1"
+	"skyname" "sky_day01_01"
+	"maxpropscreenwidth" "-1"
+	"detailvbsp" "detail.vbsp"
+	"detailmaterial" "detail/detailsprites"
+	"mapversion" "34"
+	"comment" "Decompiled by BSPSource v1.4.3 from dev_nh2_scripted_sequence_test"
+	"classname" "worldspawn"
+	solid
+	{
+		"id" "2"
+		side
+		{
+			"id" "3"
+			"plane" "(-1216 -224 192) (-1216 -224 64) (-1216 -192 64)"
+			"smoothing_groups" "0"
+			"material" "nh_textures/wall_brickdecay"
+			"uaxis" "[0 -1 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"lightmapscale" "16"
+		}
+		side
+		{
+			"id" "4"
+			"plane" "(-832 -192 192) (-832 -192 64) (-832 -224 64)"
+			"smoothing_groups" "0"
+			"material" "nh_textures/wall_brickdecay"
+			"uaxis" "[0 1 -0 0] 0.25"
+			"vaxis" "[0 -0 -1 0] 0.25"
+			"lightmapscale" "16"
+		}
+		side
+		{
+			"id" "5"
+			"plane" "(-832 -224 192) (-832 -224 64) (-1216 -224 64)"
+			"smoothing_groups" "0"
+			"material" "nh_textures/wall_brickdecay"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 0 -1 256] 0.25"
+			"lightmapscale" "16"
+		}
+		side
+		{
+			"id" "6"
+			"plane" "(-1216 -192 192) (-1216 -192 64) (-832 -192 64)"
+			"smoothing_groups" "0"
+			"material" "nh_textures/wall_brickdecay"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 0 -1 256] 0.25"
+			"lightmapscale" "16"
+		}
+		side
+		{
+			"id" "7"
+			"plane" "(-1216 -192 64) (-1216 -224 64) (-832 -224 64)"
+			"smoothing_groups" "0"
+			"material" "nh_textures/wall_brickdecay"
+			"uaxis" "[-1 0 0 0] 0.25"
+			"vaxis" "[0 -1 0 0] 0.25"
+			"lightmapscale" "16"
+		}
+		side
+		{
+			"id" "8"
+			"plane" "(-1216 -224 192) (-1216 -192 192) (-832 -192 192)"
+			"smoothing_groups" "0"
+			"material" "nh_textures/wall_brickdecay"
+			"uaxis" "[1 -0 0 0] 0.25"
+			"vaxis" "[0 -1 -0 0] 0.25"
+			"lightmapscale" "16"
+		}
+	}
+	solid
+	{
+		"id" "9"
+		side
+		{
+			"id" "10"
+			"plane" "(-1216 -192 64) (-1216 -192 -0) (-1216 192 -0)"
+			"smoothing_groups" "0"
+			"material" "nh_textures/floor_browntiles"
+			"uaxis" "[0 -1 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"lightmapscale" "16"
+		}
+		side
+		{
+			"id" "11"
+			"plane" "(-832 192 64) (-832 192 -0) (-832 -192 -0)"
+			"smoothing_groups" "0"
+			"material" "nh_textures/floor_browntiles"
+			"uaxis" "[0 1 -0 0] 0.25"
+			"vaxis" "[0 -0 -1 0] 0.25"
+			"lightmapscale" "16"
+		}
+		side
+		{
+			"id" "12"
+			"plane" "(-832 -192 64) (-832 -192 -0) (-1216 -192 -0)"
+			"smoothing_groups" "0"
+			"material" "nh_textures/floor_browntiles"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"lightmapscale" "16"
+		}
+		side
+		{
+			"id" "13"
+			"plane" "(-1216 192 64) (-1216 192 -0) (-832 192 -0)"
+			"smoothing_groups" "0"
+			"material" "nh_textures/floor_browntiles"
+			"uaxis" "[-1 0 0 0] 0.25"
+			"vaxis" "[-0 -0 -1 0] 0.25"
+			"lightmapscale" "16"
+		}
+		side
+		{
+			"id" "14"
+			"plane" "(-1216 192 0) (-1216 -192 0) (-832 -192 0)"
+			"smoothing_groups" "0"
+			"material" "nh_textures/floor_browntiles"
+			"uaxis" "[1 0 0 256] 0.25"
+			"vaxis" "[0 -1 0 0] 0.25"
+			"lightmapscale" "16"
+		}
+		side
+		{
+			"id" "15"
+			"plane" "(-1216 -192 64) (-1216 192 64) (-832 192 64)"
+			"smoothing_groups" "0"
+			"material" "nh_textures/floor_browntiles"
+			"uaxis" "[1 0 0 256] 0.25"
+			"vaxis" "[0 -1 0 0] 0.25"
+			"lightmapscale" "16"
+		}
+	}
+	solid
+	{
+		"id" "16"
+		side
+		{
+			"id" "17"
+			"plane" "(-1216 192 192) (-1216 -192 192) (-832 -192 192)"
+			"smoothing_groups" "0"
+			"material" "nh_textures/wall_con_black1"
+			"uaxis" "[0.7071 0.7071 0 0] 0.25"
+			"vaxis" "[0.7071 -0.7071 0 128] 0.25"
+			"lightmapscale" "2"
+		}
+		side
+		{
+			"id" "18"
+			"plane" "(-1216 -192 224) (-1216 192 224) (-832 192 224)"
+			"smoothing_groups" "0"
+			"material" "nh_textures/floor_browntiles"
+			"uaxis" "[1 0 0 256] 0.25"
+			"vaxis" "[0 -1 0 0] 0.25"
+			"lightmapscale" "16"
+		}
+		side
+		{
+			"id" "19"
+			"plane" "(-1216 -192 224) (-1216 -192 192) (-1216 192 192)"
+			"smoothing_groups" "0"
+			"material" "nh_textures/floor_browntiles"
+			"uaxis" "[0 -1 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"lightmapscale" "16"
+		}
+		side
+		{
+			"id" "20"
+			"plane" "(-832 192 224) (-832 192 192) (-832 -192 192)"
+			"smoothing_groups" "0"
+			"material" "nh_textures/floor_browntiles"
+			"uaxis" "[0 1 -0 0] 0.25"
+			"vaxis" "[0 -0 -1 0] 0.25"
+			"lightmapscale" "16"
+		}
+		side
+		{
+			"id" "21"
+			"plane" "(-832 -192 224) (-832 -192 192) (-1216 -192 192)"
+			"smoothing_groups" "0"
+			"material" "nh_textures/floor_browntiles"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"lightmapscale" "16"
+		}
+		side
+		{
+			"id" "22"
+			"plane" "(-1216 192 224) (-1216 192 192) (-832 192 192)"
+			"smoothing_groups" "0"
+			"material" "nh_textures/floor_browntiles"
+			"uaxis" "[-1 0 0 0] 0.25"
+			"vaxis" "[-0 -0 -1 0] 0.25"
+			"lightmapscale" "16"
+		}
+	}
+	solid
+	{
+		"id" "23"
+		side
+		{
+			"id" "24"
+			"plane" "(-1248 -192 192) (-1248 -192 64) (-1248 192 64)"
+			"smoothing_groups" "0"
+			"material" "nh_textures/wall_brickdecay"
+			"uaxis" "[0 -1 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"lightmapscale" "16"
+		}
+		side
+		{
+			"id" "25"
+			"plane" "(-1216 192 192) (-1216 192 64) (-1216 -192 64)"
+			"smoothing_groups" "0"
+			"material" "nh_textures/wall_brickdecay"
+			"uaxis" "[-0 -1 0 -512] 0.25"
+			"vaxis" "[0 0 -1 256] 0.25"
+			"lightmapscale" "16"
+		}
+		side
+		{
+			"id" "26"
+			"plane" "(-1216 -192 192) (-1216 -192 64) (-1248 -192 64)"
+			"smoothing_groups" "0"
+			"material" "nh_textures/wall_brickdecay"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 0 -1 256] 0.25"
+			"lightmapscale" "16"
+		}
+		side
+		{
+			"id" "27"
+			"plane" "(-1248 192 192) (-1248 192 64) (-1216 192 64)"
+			"smoothing_groups" "0"
+			"material" "nh_textures/wall_brickdecay"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 0 -1 256] 0.25"
+			"lightmapscale" "16"
+		}
+		side
+		{
+			"id" "28"
+			"plane" "(-1248 192 64) (-1248 -192 64) (-1216 -192 64)"
+			"smoothing_groups" "0"
+			"material" "nh_textures/wall_brickdecay"
+			"uaxis" "[-1 0 0 0] 0.25"
+			"vaxis" "[0 -1 0 0] 0.25"
+			"lightmapscale" "16"
+		}
+		side
+		{
+			"id" "29"
+			"plane" "(-1248 -192 192) (-1248 192 192) (-1216 192 192)"
+			"smoothing_groups" "0"
+			"material" "nh_textures/wall_brickdecay"
+			"uaxis" "[1 -0 0 0] 0.25"
+			"vaxis" "[0 -1 -0 0] 0.25"
+			"lightmapscale" "16"
+		}
+	}
+	solid
+	{
+		"id" "30"
+		side
+		{
+			"id" "32"
+			"plane" "(-1216 192 192) (-1216 192 64) (-1216 224 64)"
+			"smoothing_groups" "0"
+			"material" "nh_textures/wall_brickdecay"
+			"uaxis" "[0 -1 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"lightmapscale" "16"
+		}
+		side
+		{
+			"id" "33"
+			"plane" "(-832 224 192) (-832 224 64) (-832 192 64)"
+			"smoothing_groups" "0"
+			"material" "nh_textures/wall_brickdecay"
+			"uaxis" "[0 1 -0 0] 0.25"
+			"vaxis" "[0 -0 -1 0] 0.25"
+			"lightmapscale" "16"
+		}
+		side
+		{
+			"id" "34"
+			"plane" "(-832 192 192) (-832 192 64) (-1216 192 64)"
+			"smoothing_groups" "0"
+			"material" "nh_textures/wall_brickdecay"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 0 -1 256] 0.25"
+			"lightmapscale" "16"
+		}
+		side
+		{
+			"id" "35"
+			"plane" "(-1216 224 192) (-1216 224 64) (-832 224 64)"
+			"smoothing_groups" "0"
+			"material" "nh_textures/wall_brickdecay"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 0 -1 256] 0.25"
+			"lightmapscale" "16"
+		}
+		side
+		{
+			"id" "36"
+			"plane" "(-1216 224 64) (-1216 192 64) (-832 192 64)"
+			"smoothing_groups" "0"
+			"material" "nh_textures/wall_brickdecay"
+			"uaxis" "[-1 0 0 0] 0.25"
+			"vaxis" "[0 -1 0 0] 0.25"
+			"lightmapscale" "16"
+		}
+		side
+		{
+			"id" "38"
+			"plane" "(-1216 192 192) (-1216 224 192) (-832 224 192)"
+			"smoothing_groups" "0"
+			"material" "nh_textures/wall_brickdecay"
+			"uaxis" "[1 -0 0 0] 0.25"
+			"vaxis" "[0 -1 -0 0] 0.25"
+			"lightmapscale" "16"
+		}
+	}
+	solid
+	{
+		"id" "39"
+		side
+		{
+			"id" "40"
+			"plane" "(-800 -192 192) (-800 -192 64) (-832 -192 64)"
+			"smoothing_groups" "0"
+			"material" "nh_textures/wall_brickdecay"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 0 -1 256] 0.25"
+			"lightmapscale" "16"
+		}
+		side
+		{
+			"id" "41"
+			"plane" "(-832 192 192) (-832 192 64) (-800 192 64)"
+			"smoothing_groups" "0"
+			"material" "nh_textures/wall_brickdecay"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 0 -1 256] 0.25"
+			"lightmapscale" "16"
+		}
+		side
+		{
+			"id" "42"
+			"plane" "(-832 192 64) (-832 -192 64) (-800 -192 64)"
+			"smoothing_groups" "0"
+			"material" "nh_textures/wall_brickdecay"
+			"uaxis" "[-1 0 0 0] 0.25"
+			"vaxis" "[0 -1 0 0] 0.25"
+			"lightmapscale" "16"
+		}
+		side
+		{
+			"id" "43"
+			"plane" "(-832 -192 192) (-832 192 192) (-800 192 192)"
+			"smoothing_groups" "0"
+			"material" "nh_textures/wall_brickdecay"
+			"uaxis" "[1 -0 0 0] 0.25"
+			"vaxis" "[0 -1 -0 0] 0.25"
+			"lightmapscale" "16"
+		}
+		side
+		{
+			"id" "44"
+			"plane" "(-832 -192 192) (-832 -192 64) (-832 192 64)"
+			"smoothing_groups" "0"
+			"material" "nh_textures/wall_brickdecay"
+			"uaxis" "[-0 -1 0 0] 0.25"
+			"vaxis" "[0 -0 -1 256] 0.25"
+			"lightmapscale" "16"
+		}
+		side
+		{
+			"id" "45"
+			"plane" "(-800 192 192) (-800 192 64) (-800 -192 64)"
+			"smoothing_groups" "0"
+			"material" "nh_textures/wall_brickdecay"
+			"uaxis" "[0 1 -0 0] 0.25"
+			"vaxis" "[0 -0 -1 0] 0.25"
+			"lightmapscale" "16"
+		}
+	}
+}
+entity
+{
+	"id" "31"
+	"origin" "-864 0 64"
+	"angles" "0 180 0"
+	"classname" "info_player_start"
+}
+entity
+{
+	"id" "37"
+	"origin" "-864 0 64"
+	"spawnflags" "0"
+	"gmod_allowphysgun" "1"
+	"fadescale" "1"
+	"fademindist" "-1"
+	"fademaxdist" "0"
+	"disableshadows" "0"
+	"angles" "0 180 0"
+	"classname" "item_suit"
+}
+entity
+{
+	"id" "51"
+	"origin" "-1024 20 185"
+	"spawnflags" "1"
+	"scale" "1"
+	"rendermode" "9"
+	"renderfx" "0"
+	"rendercolor" "226 223 199"
+	"renderamt" "130"
+	"model" "materials/Sprites/light_glow03.vmt"
+	"mindxlevel" "0"
+	"maxdxlevel" "0"
+	"HDRColorScale" "1.0"
+	"gmod_allowphysgun" "1"
+	"GlowProxySize" "4"
+	"framerate" "10.0"
+	"disablereceiveshadows" "0"
+	"classname" "env_sprite"
+}
+entity
+{
+	"id" "54"
+	"origin" "-1024 0 180"
+	"spawnflags" "0"
+	"pitch" "-90"
+	"angles" "-90 90 0"
+	"_zero_percent_distance" "108"
+	"_quadratic_attn" "1"
+	"_lightscaleHDR" "1"
+	"_lightHDR" "-1 -1 -1 1"
+	"_light" "226 223 199 200"
+	"_inner_cone" "60"
+	"_fifty_percent_distance" "204"
+	"_exponent" "1"
+	"_cone" "75"
+	"classname" "light_spot"
+}
+entity
+{
+	"id" "60"
+	"origin" "-1024 0 185"
+	"spawnflags" "1"
+	"scale" "1"
+	"rendermode" "9"
+	"renderfx" "0"
+	"rendercolor" "226 223 199"
+	"renderamt" "130"
+	"model" "materials/Sprites/light_glow03.vmt"
+	"mindxlevel" "0"
+	"maxdxlevel" "0"
+	"HDRColorScale" "1.0"
+	"gmod_allowphysgun" "1"
+	"GlowProxySize" "4"
+	"framerate" "10.0"
+	"disablereceiveshadows" "0"
+	"classname" "env_sprite"
+}
+entity
+{
+	"id" "67"
+	"origin" "-1024 -20 185"
+	"spawnflags" "1"
+	"scale" "1"
+	"rendermode" "9"
+	"renderfx" "0"
+	"rendercolor" "226 223 199"
+	"renderamt" "130"
+	"model" "materials/Sprites/light_glow03.vmt"
+	"mindxlevel" "0"
+	"maxdxlevel" "0"
+	"HDRColorScale" "1.0"
+	"gmod_allowphysgun" "1"
+	"GlowProxySize" "4"
+	"framerate" "10.0"
+	"disablereceiveshadows" "0"
+	"classname" "env_sprite"
+}
+entity
+{
+	"id" "125"
+	"origin" "-1024 0 64"
+	"spawnflags" "884"
+	"onplayerdeath" "0"
+	"mindxlevel" "0"
+	"maxdxlevel" "0"
+	"m_iszPostIdle" "slump_a"
+	"m_iszEntity" "cook"
+	"m_fMoveTo" "0"
+	"m_flRepeat" "0"
+	"m_flRadius" "0"
+	"m_bSynchPostIdles" "0"
+	"m_bLoopActionSequence" "0"
+	"m_bIgnoreGravity" "0"
+	"m_bDisableNPCCollisions" "0"
+	"angles" "0 0 0"
+	"classname" "scripted_sequence"
+}
+entity
+{
+	"id" "155"
+	"origin" "-1024 0 152"
+	"targetname" "tonemap"
+	"classname" "env_tonemap_controller"
+}
+entity
+{
+	"id" "160"
+	"origin" "-960 0 80"
+	"spawnflags" "1"
+	"classname" "logic_auto"
+	connections
+	{
+		"OnMapSpawn" "tonemap,SetBloomScale,0,0,-1"
+		"OnMapSpawn" "slumprise_a2,BeginSequence,,4,-1"
+	}
+}
+entity
+{
+	"id" "173"
+	"origin" "-1024 -160 65"
+	"wakesquad" "0"
+	"wakeradius" "0"
+	"targetname" "cook"
+	"spawnflags" "516"
+	"sleepstate" "0"
+	"rendermode" "0"
+	"renderfx" "0"
+	"rendercolor" "255 255 255"
+	"renderamt" "255"
+	"physdamagescale" "1.0"
+	"modelscale" "1.0"
+	"ignoreunseenenemies" "0"
+	"hintlimiting" "0"
+	"headmodel" "13"
+	"gmod_allowphysgun" "1"
+	"disableshadows" "0"
+	"disablereceiveshadows" "0"
+	"angles" "0 90 0"
+	"classname" "npc_nh_cook"
+}
+entity
+{
+	"id" "289"
+	"origin" "-1000 -32 64"
+	"targetname" "slumprise_a2"
+	"spawnflags" "96"
+	"onplayerdeath" "0"
+	"mindxlevel" "0"
+	"maxdxlevel" "0"
+	"m_iszPlay" "slumprise_a2"
+	"m_iszEntity" "cook"
+	"m_fMoveTo" "0"
+	"m_flRepeat" "0"
+	"m_flRadius" "0"
+	"m_bSynchPostIdles" "0"
+	"m_bLoopActionSequence" "0"
+	"m_bIgnoreGravity" "0"
+	"m_bDisableNPCCollisions" "0"
+	"angles" "0 0 0"
+	"classname" "scripted_sequence"
+}
+entity
+{
+	"id" "342"
+	"origin" "-936 140 64"
+	"targetname" "patient_sit_seq_idle"
+	"spawnflags" "884"
+	"onplayerdeath" "0"
+	"mindxlevel" "0"
+	"maxdxlevel" "0"
+	"m_iszPostIdle" "slump_a"
+	"m_iszEntity" "patient_sit"
+	"m_fMoveTo" "0"
+	"m_flRepeat" "0"
+	"m_flRadius" "0"
+	"m_bSynchPostIdles" "0"
+	"m_bLoopActionSequence" "0"
+	"m_bIgnoreGravity" "0"
+	"m_bDisableNPCCollisions" "0"
+	"angles" "0 180 0"
+	"classname" "scripted_sequence"
+}
+entity
+{
+	"id" "345"
+	"origin" "-960 172 64"
+	"targetname" "patient_sit_seq"
+	"spawnflags" "96"
+	"onplayerdeath" "0"
+	"mindxlevel" "0"
+	"maxdxlevel" "0"
+	"m_iszPlay" "slumprise_a2"
+	"m_iszEntity" "patient_sit"
+	"m_fMoveTo" "0"
+	"m_flRepeat" "0"
+	"m_flRadius" "0"
+	"m_bSynchPostIdles" "0"
+	"m_bLoopActionSequence" "0"
+	"m_bIgnoreGravity" "0"
+	"m_bDisableNPCCollisions" "0"
+	"angles" "0 180 0"
+	"classname" "scripted_sequence"
+}
+entity
+{
+	"id" "348"
+	"origin" "-948 154 74.3159"
+	"spawnflags" "1"
+	"classname" "logic_auto"
+	connections
+	{
+		"OnMapSpawn" "patient_sit_seq_idle,BeginSequence,,0.5,-1"
+	}
+}
+entity
+{
+	"id" "350"
+	"origin" "-1012 180 73.0005"
+	"wakesquad" "0"
+	"wakeradius" "0"
+	"targetname" "patient_sit"
+	"spawnflags" "516"
+	"sleepstate" "0"
+	"rendermode" "0"
+	"renderfx" "0"
+	"rendercolor" "255 255 255"
+	"renderamt" "255"
+	"physdamagescale" "1.0"
+	"modelscale" "1.0"
+	"ignoreunseenenemies" "0"
+	"hintlimiting" "0"
+	"headmodel" "9"
+	"gmod_allowphysgun" "1"
+	"disableshadows" "0"
+	"disablereceiveshadows" "0"
+	"bodymodel" "0"
+	"angles" "0 270 0"
+	"classname" "npc_nh_patient"
+}
+entity
+{
+	"id" "46"
+	"classname" "prop_static"
+	"origin" "-1024 0 188.53"
+	"angles" "0 180 0"
+	"skin" "1"
+	"fademindist" "-1"
+	"fademaxdist" "0"
+	"solid" "6"
+	"model" "models/props_interiors/lights_florescent01a.mdl"
+	"screenspacefade" "0"
+	"ignorenormals" "0"
+	"disableselfshadowing" "0"
+	"disablevertexlighting" "0"
+	"disableshadows" "0"
+	"fadescale" "1"
+	"maxdxlevel" "0"
+	"mindxlevel" "0"
+}
+entity
+{
+	"id" "47"
+	"classname" "env_cubemap"
+	"origin" "-1024 0 112"
+	"cubemapsize" "3"
+}
+visgroups
+{
+}
+cameras
+{
+	"activecamera" "0"
+	camera
+	{
+		"position" "[-803.2843 0 148.2386]"
+		"look" "[-1056 0 64]"
+	}
+}

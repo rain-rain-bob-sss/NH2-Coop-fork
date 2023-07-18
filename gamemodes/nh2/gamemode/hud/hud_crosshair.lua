@@ -23,14 +23,12 @@ local function Paint(size)
     if clip1 == -1 then return end
 
     offset = abs(velocity.x + velocity.y)
-       
+
     if wep:GetInternalVariable("m_bInReload") == true then
         color.a = lerp(color.a, 0, FrameTime() * 2900)
     else
         color.a = lerp(color.a, 255, FrameTime() * 2900)
     end
-
-    print(color.a)
 
     if LocalPlayer().PointingAlly then
         color.r = 0
@@ -44,7 +42,7 @@ local function Paint(size)
 
     if wep:GetPrimaryAmmoType() ~= 7 then
         SetColor(color)
-        
+
         -- Vertical 
         if wep:GetPrimaryAmmoType() ~= 3 and wep:GetPrimaryAmmoType() ~= 5 then
             Rect(ScrW() / 2, ScrH() / 2 - auto(30) - offset, auto(1), auto(24))

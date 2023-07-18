@@ -24,10 +24,6 @@ SWEP.Secondary.DefaultClip	= -1
 SWEP.Secondary.Automatic	= false
 SWEP.Secondary.Ammo			= "none"
 
-if SERVER then
-    
-end
-
 function SWEP:Initialize()
     self:SetDeploySpeed(1)
     self:SetHoldType("shotgun")
@@ -45,6 +41,7 @@ function SWEP:SetIdleAnim(delay)
 end
 
 function SWEP:PrimaryAttack()
+    if self:GetOwner():GetLaggedMovementValue() < 1 then return end
     if not self:CanPrimaryAttack() then return end
     
     self:ShootBullet(15, 5, 0.1, self.Primary.Ammo)

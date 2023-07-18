@@ -53,6 +53,20 @@ include("soundscripts/npc_sounds_stalker.lua")
 include("soundscripts/romero_soundfiles.lua")
 include("soundscripts/swat_soundfiles.lua")
 
+AddCSLuaFile("soundscripts/announcer_soundfiles.lua")
+AddCSLuaFile("soundscripts/captionsample.lua")
+AddCSLuaFile("soundscripts/emily_soundfiles.lua")
+AddCSLuaFile("soundscripts/game_sounds.lua")
+AddCSLuaFile("soundscripts/game_sounds_ambient_generic.lua")
+AddCSLuaFile("soundscripts/game_sounds_weapons.lua")
+AddCSLuaFile("soundscripts/nh2sounds.lua")
+AddCSLuaFile("soundscripts/npc_sounds_nh_guard.lua")
+AddCSLuaFile("soundscripts/npc_sounds_nhdemon.lua")
+AddCSLuaFile("soundscripts/npc_sounds_nhzombie.lua")
+AddCSLuaFile("soundscripts/npc_sounds_stalker.lua")
+AddCSLuaFile("soundscripts/romero_soundfiles.lua")
+AddCSLuaFile("soundscripts/swat_soundfiles.lua")
+
 local ipairs = ipairs
 
 -- Place them here
