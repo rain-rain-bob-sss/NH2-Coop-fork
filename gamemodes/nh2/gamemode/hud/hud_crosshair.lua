@@ -11,8 +11,7 @@ local offset = 0
 
 local leftBracket, rightBracket = '(', ')'
 
-local color_green = Color(0,200,0,255)
-local color = color_white
+local color = Color(255,255,255)
 
 local function Paint(size)
     local velocity = LocalPlayer():GetViewPunchVelocity()
@@ -25,11 +24,24 @@ local function Paint(size)
 
     offset = abs(velocity.x + velocity.y)
        
-    if LocalPlayer().PointingAlly then
-        color = color_green
+    if wep:GetInternalVariable("m_bInReload") == true then
+        color.a = lerp(color.a, 0, FrameTime() * 2900)
     else
-        color = color_white
+        color.a = lerp(color.a, 255, FrameTime() * 2900)
     end
+
+    print(color.a)
+
+    if LocalPlayer().PointingAlly then
+        color.r = 0
+        color.b = 200
+        color.g = 0
+    else
+        color.r = 255
+        color.g = 255
+        color.b = 255
+    end
+
     if wep:GetPrimaryAmmoType() ~= 7 then
         SetColor(color)
         
