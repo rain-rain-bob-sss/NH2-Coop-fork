@@ -24,14 +24,14 @@ local ScreenWidth = ScrW()
 local ScreenHeight = ScrH()
 
 do
-    local files, dirs = file.Find("media/*", "GAME")
+    local files, dirs = file.Find("materials/media/*", "GAME")
 
     for _, dir in ipairs(dirs) do
-        local frames = file.Find("media/" .. dir .. "/*.png", "GAME")
+        local frames = file.Find("materials/media/" .. dir .. "/*.png", "GAME")
         
         for i, frame in pairs(frames) do
             CACHED_VIDEOS[dir] = CACHED_VIDEOS[dir] or {}
-            CACHED_VIDEOS[dir][i] = Material("media/" .. dir .. "/" .. i .. ".png")
+            CACHED_VIDEOS[dir][i] = Material("materials/media/" .. dir .. "/" .. i .. ".png")
         end
     end
 end
@@ -51,7 +51,7 @@ net.Receive("_NH2_StartPlayingVideo", function(len, ply)
             ScreenHeight = ScrH()
         end
 
-        local audioName = "media/" .. vidName .. audioExtension
+        local audioName = "materials/media/" .. vidName .. audioExtension
         audio = CreateSound(LocalPlayer(), audioName)
 
         currentVideo = vidName
