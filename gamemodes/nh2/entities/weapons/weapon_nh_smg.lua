@@ -22,6 +22,12 @@ SWEP.Secondary.DefaultClip	= -1
 SWEP.Secondary.Automatic	= false
 SWEP.Secondary.Ammo			= "none"
 
+if SERVER then
+    SWEP.m_fFireDuration = 0
+    SWEP.LastFireTime = 0
+    SWEP.Attacking = false
+end
+
 function SWEP:Initialize()
     self:SetDeploySpeed(1)
     self:SetHoldType("smg")
@@ -38,6 +44,69 @@ function SWEP:SetIdleAnim(delay)
     end)
 end
 
+local function UTIL_ClipPunchAngleOffset(inAngles, punchAngles, clipAngles)
+    local finalAngles = inAngles + punchAngles
+
+    for i = 1, 3 do
+        if finalAngles[i] > clipAngles[i] then
+            finalAngles[i] = clipAngles[i]
+        elseif finalAngles[i] < -clipAngles[i] then
+            finalAngles[i] = -clipAngles[i]
+        end
+
+        inAngles[i] = finalAngles[i] - punchAngles[i]
+    end
+end
+
+function SWEP:DoMachineGunKick(ply, dampEasy, maxVerticleKickAngle, fireDurationTime, slideLimitTime)
+    if not SERVER then return end
+
+    local KICK_MIN_X = 0.2 -- Degrees
+    local KICK_MIN_Y = 0.2 -- Degrees
+    local KICK_MIN_Z = 0.1 -- Degrees
+
+    local vecScratch = Angle(0, 0, 0)
+
+    local kickPerc = fireDurationTime / 2
+
+    ply:ViewPunchReset()
+
+    vecScratch.x = -(KICK_MIN_X + (maxVerticleKickAngle * kickPerc))
+    vecScratch.y = -(KICK_MIN_Y + (maxVerticleKickAngle * kickPerc)) / 3
+    vecScratch.z = KICK_MIN_Z + (maxVerticleKickAngle * kickPerc) / 8
+
+    if math.random(-1, 1) >= 0 then
+        vecScratch.y = -vecScratch.y
+    end
+
+    if math.random(-1, 1) >= 0 then
+        vecScratch.z = -vecScratch.z
+    end
+
+    if game.GetSkillLevel() == 1 then
+        for i = 1, 3 do
+            vecScratch[i] = vecScratch[i] * dampEasy
+        end
+    end
+
+    UTIL_ClipPunchAngleOffset(vecScratch, ply:GetViewPunchAngles(), Angle(24.0, 3.0, 1.0))
+
+    for i = 1, 3 do
+        if vecScratch[i] ~= vecScratch[i] then
+            vecScratch[i] = 0
+        end
+    end
+
+    ply:ViewPunch(vecScratch * 1)
+end
+
+function SWEP:AddViewKick()
+    local EASY_DAMPEN           = 0.5
+    local MAX_VERTICAL_KICK     = 1 -- Degrees
+    local SLIDE_LIMIT           = 2 -- Seconds
+
+    self:DoMachineGunKick(self:GetOwner(), EASY_DAMPEN, MAX_VERTICAL_KICK, SLIDE_LIMIT, self.m_fFireDuration)
+end
 
 function SWEP:PrimaryAttack()
     if not self:CanPrimaryAttack() then return end
@@ -48,12 +117,30 @@ function SWEP:PrimaryAttack()
 
         self:SetNextPrimaryFire(CurTime() + 0.09)
 
-        if self:GetOwner():IsPlayer() then
-            self:GetOwner():ViewPunch(Angle(math.Rand(-0.05,0.05), math.Rand(-0.5,0.5), 0))
-        end
-
         self:GetOwner():MuzzleFlash()
         self:GetOwner():SetAnimation(PLAYER_ATTACK1)
+
+        if self.Attacking and timer.Exists(self:EntIndex() .. "attacking_event") then
+            timer.Remove(self:EntIndex() .. "attacking_event")
+        end
+
+        timer.Create(self:EntIndex() .. "attacking_event", 0.5, 1, function()
+            self.Attacking = false
+            print("Stopped attacking")
+        end)
+
+        if not self.Attacking then
+            self.m_fFireDuration = 0
+            self.LastFireTime = CurTime()
+            self.Attacking = true
+            print("Started attacking")
+        end
+
+        if self:GetOwner():IsPlayer() then
+            self:AddViewKick()
+        end
+
+        self.m_fFireDuration = CurTime() - self.LastFireTime;
     end
 
     self:ShootBullet(13, 1, 0.05, self.Primary.Ammo)
@@ -64,6 +151,10 @@ function SWEP:Reload()
 
     self:DefaultReload(ACT_VM_RELOAD)
     self:EmitSound("Weapon_NH_SMG1.Reload")
+    
+    if SERVER then
+        self.Attacking = false
+    end
 end
 
 function SWEP:GetNPCBurstSettings()
