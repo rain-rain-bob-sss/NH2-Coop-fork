@@ -1,0 +1,420 @@
+
+
+
+materialPath: D:\Projects\NH2-Coop-Release\materials
+Loading d:\projects\nh2-coop-release\mapsrc\nh2c3_v2.vmf
+ConVarRef mat_reduceparticles doesn't point to an existing ConVar
+Could not locate 'GameData' key in d:\projects\nh2-coop-release\gameinfo.txt
+Patching WVT material: maps/nh2c3_v2/dev/dev_blendmeasure_wvt_patch
+Patching WVT material: maps/nh2c3_v2/nh_textures/rubble_stone_blending2_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 282 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing d:\projects\nh2-coop-release\mapsrc\nh2c3_v2.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (635394 bytes)
+Placing static props...
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 2249 texinfos to 1531
+Reduced 232 texdatas to 175 (8635 bytes to 6036)
+Writing d:\projects\nh2-coop-release\mapsrc\nh2c3_v2.bsp
+3 seconds elapsed
+
+
+
+8 threads
+reading d:\projects\nh2-coop-release\mapsrc\nh2c3_v2.bsp
+reading d:\projects\nh2-coop-release\mapsrc\nh2c3_v2.prt
+ 624 portalclusters
+1468 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 133 visible clusters (0.00%)
+Total clusters visible: 28735
+Average clusters visible: 46
+Building PAS...
+Average clusters audible: 112
+visdatasize:38331  compressed from 99840
+writing d:\projects\nh2-coop-release\mapsrc\nh2c3_v2.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[48 texlights parsed from 'lights.rad']
+
+Loading d:\projects\nh2-coop-release\mapsrc\nh2c3_v2.bsp
+Loaded alpha texture materials\Models\props_wasteland\fence_alpha.vtf
+4740 faces
+1 degenerate faces
+223084 square feet [32124196.00 square inches]
+7 Displacements
+4141 Square Feet [596433.94 Square Inches]
+4739 patches before subdivision
+42953 patches after subdivision
+67 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 3316878, max 396
+transfer lists:  25.3 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(21256, 20105, 15517)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(6528, 5974, 4166)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(2220, 1978, 1244)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(775, 670, 373)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(286, 240, 116)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(110, 89, 37)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(44, 34, 12)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(18, 13, 4)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #9 added RGB(7, 5, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #10 added RGB(3, 2, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #11 added RGB(1, 1, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #12 added RGB(1, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0080 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                 111/4096         5328/196608   ( 2.7%) 
+brushes               1736/32768       20832/393216   ( 5.3%) 
+brushsides           12189/65536       97512/524288   (18.6%) 
+planes                6772/65536      135440/1310720  (10.3%) 
+vertexes              7256/65536       87072/786432   (11.1%) 
+nodes                 2266/65536       72512/2097152  ( 3.5%) 
+texinfos              1531/12288      110232/884736   (12.5%) 
+texdata                175/2048         5600/65536    ( 8.5%) 
+dispinfos                7/0            1232/0        ( 0.0%) 
+disp_verts             567/0           11340/0        ( 0.0%) 
+disp_tris              896/0            1792/0        ( 0.0%) 
+disp_lmsamples       40068/0           40068/0        ( 0.0%) 
+faces                 4740/65536      265440/3670016  ( 7.2%) 
+hdr faces             4740/65536      265440/3670016  ( 7.2%) 
+origfaces             3976/65536      222656/3670016  ( 6.1%) 
+leaves                2378/65536       76096/2097152  ( 3.6%) 
+leaffaces             5479/65536       10958/131072   ( 8.4%) 
+leafbrushes           2478/65536        4956/131072   ( 3.8%) 
+areas                    9/1024           72/8192     ( 0.9%) 
+surfedges            38717/512000     154868/2048000  ( 7.6%) 
+edges                23754/256000      95016/1024000  ( 9.3%) 
+LDR worldlights          0/16384           0/1441792  ( 0.0%) 
+HDR worldlights         67/16384        5896/1441792  ( 0.4%) 
+leafwaterdata            6/32768          72/393216   ( 0.0%) 
+waterstrips            512/131072       5120/1310720  ( 0.4%) 
+waterverts               0/131072          0/1572864  ( 0.0%) 
+waterindices          9117/131072      18234/262144   ( 7.0%) 
+cubemapsamples          77/1024         1232/16384    ( 7.5%) 
+overlays                38/1024        13376/360448   ( 3.7%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     1640316/0        ( 0.0%) 
+visdata               [variable]       38331/16777216 ( 0.2%) 
+entdata               [variable]      317197/393216   (80.7%) VERY FULL!
+LDR ambient table     2378/65536        9512/262144   ( 3.6%) 
+HDR ambient table     2378/65536        9512/262144   ( 3.6%) 
+LDR leaf ambient      2378/65536       66584/1835008  ( 3.6%) 
+HDR leaf ambient      4289/65536      120092/1835008  ( 6.5%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/26654    ( 0.0%) 
+pakfile               [variable]     2080863/0        ( 0.0%) 
+physics               [variable]      635394/4194304  (15.1%) 
+physics terrain       [variable]        2361/1048576  ( 0.2%) 
+
+Level flags = 2
+
+Total triangle count: 13255
+Writing d:\projects\nh2-coop-release\mapsrc\nh2c3_v2.bsp
+12 seconds elapsed
+
+
+
+materialPath: D:\Projects\NH2-Coop-Release\materials
+Loading d:\projects\nh2-coop-release\mapsrc\nh2c3_v2.vmf
+ConVarRef mat_reduceparticles doesn't point to an existing ConVar
+Could not locate 'GameData' key in d:\projects\nh2-coop-release\gameinfo.txt
+Patching WVT material: maps/nh2c3_v2/dev/dev_blendmeasure_wvt_patch
+Patching WVT material: maps/nh2c3_v2/nh_textures/rubble_stone_blending2_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 282 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing d:\projects\nh2-coop-release\mapsrc\nh2c3_v2.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (635394 bytes)
+Placing static props...
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 2249 texinfos to 1531
+Reduced 232 texdatas to 175 (8635 bytes to 6036)
+Writing d:\projects\nh2-coop-release\mapsrc\nh2c3_v2.bsp
+2 seconds elapsed
+
+
+
+8 threads
+reading d:\projects\nh2-coop-release\mapsrc\nh2c3_v2.bsp
+reading d:\projects\nh2-coop-release\mapsrc\nh2c3_v2.prt
+ 624 portalclusters
+1468 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 133 visible clusters (0.00%)
+Total clusters visible: 28735
+Average clusters visible: 46
+Building PAS...
+Average clusters audible: 112
+visdatasize:38331  compressed from 99840
+writing d:\projects\nh2-coop-release\mapsrc\nh2c3_v2.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[48 texlights parsed from 'lights.rad']
+
+Loading d:\projects\nh2-coop-release\mapsrc\nh2c3_v2.bsp
+Loaded alpha texture materials\Models\props_wasteland\fence_alpha.vtf
+4740 faces
+1 degenerate faces
+223084 square feet [32124196.00 square inches]
+7 Displacements
+4141 Square Feet [596433.94 Square Inches]
+4739 patches before subdivision
+42953 patches after subdivision
+67 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 3316878, max 396
+transfer lists:  25.3 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(21256, 20105, 15517)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(6528, 5974, 4166)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(2220, 1978, 1244)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(775, 670, 373)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(286, 240, 116)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(110, 89, 37)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(44, 34, 12)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(18, 13, 4)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #9 added RGB(7, 5, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #10 added RGB(3, 2, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #11 added RGB(1, 1, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #12 added RGB(1, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0165 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                 111/4096         5328/196608   ( 2.7%) 
+brushes               1736/32768       20832/393216   ( 5.3%) 
+brushsides           12189/65536       97512/524288   (18.6%) 
+planes                6772/65536      135440/1310720  (10.3%) 
+vertexes              7256/65536       87072/786432   (11.1%) 
+nodes                 2266/65536       72512/2097152  ( 3.5%) 
+texinfos              1531/12288      110232/884736   (12.5%) 
+texdata                175/2048         5600/65536    ( 8.5%) 
+dispinfos                7/0            1232/0        ( 0.0%) 
+disp_verts             567/0           11340/0        ( 0.0%) 
+disp_tris              896/0            1792/0        ( 0.0%) 
+disp_lmsamples       40068/0           40068/0        ( 0.0%) 
+faces                 4740/65536      265440/3670016  ( 7.2%) 
+hdr faces             4740/65536      265440/3670016  ( 7.2%) 
+origfaces             3976/65536      222656/3670016  ( 6.1%) 
+leaves                2378/65536       76096/2097152  ( 3.6%) 
+leaffaces             5479/65536       10958/131072   ( 8.4%) 
+leafbrushes           2478/65536        4956/131072   ( 3.8%) 
+areas                    9/1024           72/8192     ( 0.9%) 
+surfedges            38717/512000     154868/2048000  ( 7.6%) 
+edges                23754/256000      95016/1024000  ( 9.3%) 
+LDR worldlights          0/16384           0/1441792  ( 0.0%) 
+HDR worldlights         67/16384        5896/1441792  ( 0.4%) 
+leafwaterdata            6/32768          72/393216   ( 0.0%) 
+waterstrips            512/131072       5120/1310720  ( 0.4%) 
+waterverts               0/131072          0/1572864  ( 0.0%) 
+waterindices          9117/131072      18234/262144   ( 7.0%) 
+cubemapsamples          77/1024         1232/16384    ( 7.5%) 
+overlays                38/1024        13376/360448   ( 3.7%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     1640316/0        ( 0.0%) 
+visdata               [variable]       38331/16777216 ( 0.2%) 
+entdata               [variable]      317197/393216   (80.7%) VERY FULL!
+LDR ambient table     2378/65536        9512/262144   ( 3.6%) 
+HDR ambient table     2378/65536        9512/262144   ( 3.6%) 
+LDR leaf ambient      2378/65536       66584/1835008  ( 3.6%) 
+HDR leaf ambient      4289/65536      120092/1835008  ( 6.5%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/26654    ( 0.0%) 
+pakfile               [variable]     2080863/0        ( 0.0%) 
+physics               [variable]      635394/4194304  (15.1%) 
+physics terrain       [variable]        2361/1048576  ( 0.2%) 
+
+Level flags = 2
+
+Total triangle count: 13255
+Writing d:\projects\nh2-coop-release\mapsrc\nh2c3_v2.bsp
+14 seconds elapsed
+
+
+
+materialPath: D:\Projects\NH2-Coop-Release\materials
+Loading d:\projects\nh2-coop-release\mapsrc\nh2c3_v2.vmf
+ConVarRef mat_reduceparticles doesn't point to an existing ConVar
+Could not locate 'GameData' key in d:\projects\nh2-coop-release\gameinfo.txt
+Patching WVT material: maps/nh2c3_v2/dev/dev_blendmeasure_wvt_patch
+Patching WVT material: maps/nh2c3_v2/nh_textures/rubble_stone_blending2_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 282 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing d:\projects\nh2-coop-release\mapsrc\nh2c3_v2.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (634418 bytes)
+Placing static props...
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 2239 texinfos to 1515
+Reduced 232 texdatas to 175 (8635 bytes to 6036)
+Writing d:\projects\nh2-coop-release\mapsrc\nh2c3_v2.bsp
+2 seconds elapsed
+
+
+
+8 threads
+reading d:\projects\nh2-coop-release\mapsrc\nh2c3_v2.bsp
+reading d:\projects\nh2-coop-release\mapsrc\nh2c3_v2.prt
+ 621 portalclusters
+1456 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 122 visible clusters (0.00%)
+Total clusters visible: 28309
+Average clusters visible: 45
+Building PAS...
+Average clusters audible: 111
+visdatasize:37383  compressed from 99360
+writing d:\projects\nh2-coop-release\mapsrc\nh2c3_v2.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[48 texlights parsed from 'lights.rad']
+
+Loading d:\projects\nh2-coop-release\mapsrc\nh2c3_v2.bsp
+Loaded alpha texture materials\Models\props_wasteland\fence_alpha.vtf
+4685 faces
+1 degenerate faces
+223072 square feet [32122452.00 square inches]
+7 Displacements
+4141 Square Feet [596433.94 Square Inches]
+4684 patches before subdivision
+42912 patches after subdivision
+67 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 3310610, max 396
+transfer lists:  25.3 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(21228, 20075, 15492)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(6519, 5965, 4157)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(2218, 1975, 1241)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(774, 669, 371)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(286, 240, 116)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(109, 89, 37)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(43, 34, 12)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(18, 13, 4)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #9 added RGB(7, 5, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #10 added RGB(3, 2, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #11 added RGB(1, 1, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #12 added RGB(1, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0116 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                 111/4096         5328/196608   ( 2.7%) 
+brushes               1736/32768       20832/393216   ( 5.3%) 
+brushsides           12042/65536       96336/524288   (18.4%) 
+planes                6322/65536      126440/1310720  ( 9.6%) 
+vertexes              7243/65536       86916/786432   (11.1%) 
+nodes                 2263/65536       72416/2097152  ( 3.5%) 
+texinfos              1515/12288      109080/884736   (12.3%) 
+texdata                175/2048         5600/65536    ( 8.5%) 
+dispinfos                7/0            1232/0        ( 0.0%) 
+disp_verts             567/0           11340/0        ( 0.0%) 
+disp_tris              896/0            1792/0        ( 0.0%) 
+disp_lmsamples       40068/0           40068/0        ( 0.0%) 
+faces                 4685/65536      262360/3670016  ( 7.1%) 
+hdr faces             4685/65536      262360/3670016  ( 7.1%) 
+origfaces             3929/65536      220024/3670016  ( 6.0%) 
+leaves                2375/65536       76000/2097152  ( 3.6%) 
+leaffaces             5419/65536       10838/131072   ( 8.3%) 
+leafbrushes           2474/65536        4948/131072   ( 3.8%) 
+areas                    9/1024           72/8192     ( 0.9%) 
+surfedges            38296/512000     153184/2048000  ( 7.5%) 
+edges                23519/256000      94076/1024000  ( 9.2%) 
+LDR worldlights          0/16384           0/1441792  ( 0.0%) 
+HDR worldlights         67/16384        5896/1441792  ( 0.4%) 
+leafwaterdata            6/32768          72/393216   ( 0.0%) 
+waterstrips            508/131072       5080/1310720  ( 0.4%) 
+waterverts               0/131072          0/1572864  ( 0.0%) 
+waterindices          9045/131072      18090/262144   ( 6.9%) 
+cubemapsamples          77/1024         1232/16384    ( 7.5%) 
+overlays                38/1024        13376/360448   ( 3.7%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     1638620/0        ( 0.0%) 
+visdata               [variable]       37383/16777216 ( 0.2%) 
+entdata               [variable]      317962/393216   (80.9%) VERY FULL!
+LDR ambient table     2375/65536        9500/262144   ( 3.6%) 
+HDR ambient table     2375/65536        9500/262144   ( 3.6%) 
+LDR leaf ambient      2375/65536       66500/1835008  ( 3.6%) 
+HDR leaf ambient      4291/65536      120148/1835008  ( 6.5%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/27384    ( 0.0%) 
+pakfile               [variable]     2110167/0        ( 0.0%) 
+physics               [variable]      634418/4194304  (15.1%) 
+physics terrain       [variable]        2361/1048576  ( 0.2%) 
+
+Level flags = 2
+
+Total triangle count: 13134
+Writing d:\projects\nh2-coop-release\mapsrc\nh2c3_v2.bsp
+12 seconds elapsed
