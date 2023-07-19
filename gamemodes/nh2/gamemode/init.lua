@@ -473,7 +473,7 @@ HARDCODED_CHECKPOINTS = {
             [4] = { Vector(-2842.7536621094, -5191.1118164063, -287.96875), Angle(0, -90, 0) },
         },
         [4] = {
-            Distance = 496,
+            Distance = 650,
             Suit = true,
             Weapons = {
                 "weapon_nh_hatchet",

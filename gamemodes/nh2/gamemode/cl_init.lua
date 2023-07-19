@@ -131,6 +131,8 @@ end
 local ipairs = ipairs
 
 function GM:PreDrawHalos()
+    if GetGlobal2Int("NH2_CITIZEN_MEMBERS_COUNT", 0) == 0 then return end
+
     SWATInTable = {}
 
     for i, ent in ipairs(ents.FindByClass("npc_citizen*")) do

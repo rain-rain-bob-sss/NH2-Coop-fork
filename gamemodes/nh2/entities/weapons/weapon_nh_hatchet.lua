@@ -115,7 +115,7 @@ function SWEP:PrimaryAttack()
                     for k, v in pairs(util.KeyValuesToTable(util.GetModelInfo(target:GetModel()).KeyValues)) do                        
                         if k == "break" then
                             local dmg = DamageInfo()
-                            dmg:SetDamageType(DMG_CLUB)
+                            dmg:SetDamageType(DMG_SLASH)
                             dmg:SetDamage(25)
 
                             target:TakeDamageInfo(dmg)
