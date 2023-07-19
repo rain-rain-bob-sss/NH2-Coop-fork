@@ -35,7 +35,7 @@ local function Paint(size)
     
     SetMaterial(mask)
     for i = 1, count do
-        DrawTexture(auto(-20) + i * auto(66), auto(size.y) - auto(165),  auto(64), auto(64))
+        DrawTexture(auto(-20) + i * auto(66), size.y - auto(165),  auto(64), auto(64))
     end
 end
 
