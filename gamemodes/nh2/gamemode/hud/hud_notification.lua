@@ -29,14 +29,15 @@ local SelectedTime = 0
 local alpha = 0
 
 local INSTRUCTOR_ICONS = {
-    [2] = Material("vgui/hud/gameinstructor_icon_2.png")
+    [2] = Material("vgui/hud/gameinstructor_icon_2.png"),
+    [3] = Material("vgui/hud/gameinstructor_icon_3.png"),
 }
 
 local bg = Material("vgui/hud/bar_bg.png")
 
 net.Receive("_NH2_Notify", function(len, ply)
     SelectedIcon = net.ReadInt(8)
-    SelectedMessage = net.ReadString()
+    SelectedMessage = language.GetPhrase(net.ReadString())
     SelectedTime = CurTime()
 end)
 

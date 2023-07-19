@@ -22,6 +22,8 @@ SWEP.Secondary.DefaultClip	= -1
 SWEP.Secondary.Automatic	= false
 SWEP.Secondary.Ammo			= "none"
 
+SWEP.ViewModelFOV = 54
+
 if SERVER then
     SWEP.m_fFireDuration = 0
     SWEP.LastFireTime = 0

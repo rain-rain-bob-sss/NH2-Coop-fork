@@ -1049,22 +1049,20 @@ function GM:AcceptInput(ent, input, activator, caller, value)
         SetGlobal2Bool("OverrideCrosshairAndAttack", true)
     end
 
-    if input == "NH2C6PickupWeapons" then
-        if activator:IsPlayer() then
-            activator:Give("weapon_nh_hatchet")
-            activator:Give("weapon_nh_pistol", true)
-            activator:Give("weapon_nh_revolver", true)
-            activator:Give("weapon_nh_smg", true)
-            activator:GiveAmmo(24, "Pistol")
-            activator:GiveAmmo(45, "SMG1")
-            activator:GiveAmmo(6, "357")
-        end
+    if input == "NH2C6PickupWeapons" and activator:IsPlayer() then
+        activator:Give("weapon_nh_hatchet")
+        activator:Give("weapon_nh_pistol", true)
+        activator:Give("weapon_nh_revolver", true)
+        activator:Give("weapon_nh_smg", true)
+        activator:GiveAmmo(24, "Pistol")
+        activator:GiveAmmo(45, "SMG1")
+        activator:GiveAmmo(6, "357")
     end
 
     if input == "RemindAboutBringSWAT" then
         net.Start("_NH2_Notify")
-            net.WriteInt(2, 8)
-            net.WriteString("NH2.RemindBringSWAT")
+            net.WriteInt(3, 8)
+            net.WriteString("NH2COOP.NotifyBringSWAT")
         net.Broadcast()
     end
 end
@@ -1152,6 +1150,10 @@ function GM:Think()
     for i = 1, ents.GetCount() do
         local ent = Entity(i)
         if not IsValid(ent) then continue end
+
+        if ent:GetClass() == "prop_ragdoll" then
+            ent:SetCollisionGroup(COLLISION_GROUP_PASSABLE_DOOR)
+        end
     end
 end
 
@@ -1268,6 +1270,20 @@ function GM:PlayerDeathThink(ply)
         if CurTime() > ply.DEATH_TIME + 1 and (ply:KeyPressed(IN_ATTACK) or ply:KeyPressed(IN_JUMP)) then
             ply:UnSpectate()
             ply:Spawn()
+        end
+    end
+end
+
+--
+--
+--
+function GM:SetupPlayerVisibility(ply, ent)
+    for i = 1, ents.GetCount() do
+        local ent = Entity(i)
+        if not IsValid(ent) then continue end
+
+        if ent:GetClass() == "npc_citizen" and string.StartWith(ent:GetName(), 'SWAT') then
+            AddOriginToPVS(ent:GetPos())
         end
     end
 end

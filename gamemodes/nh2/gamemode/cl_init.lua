@@ -111,6 +111,8 @@ function GM:PostRenderVGUI()
 end
 
 local PhysgunHalos = {}
+local SWATInTable = {}
+local SWATCOLOR = Color(0,255,0,255)
 
 --
 --	Name: gamemode:DrawPhysgunBeam()
@@ -126,18 +128,42 @@ function GM:DrawPhysgunBeam(ply, weapon, bOn, target, boneid, pos)
     return true
 end
 
-hook.Add("PreDrawHalos", "AddPhysgunHalos", function()
-    if not PhysgunHalos or table.IsEmpty(PhysgunHalos) then return end
+local ipairs = ipairs
 
-    for k, v in pairs(PhysgunHalos) do
-        if not IsValid(k) then continue end
-        local size = math.random(1, 2)
-        local colr = k:GetWeaponColor() + VectorRand() * 0.3
-        halo.Add(PhysgunHalos, Color(colr.x * 255, colr.y * 255, colr.z * 255), size, size, 1, true, false)
+function GM:PreDrawHalos()
+    SWATInTable = {}
+
+    for i, ent in ipairs(ents.FindByClass("npc_citizen*")) do
+        if ent:GetClass() ~= "npc_citizen" then
+            continue
+        end
+
+        local allowedModels = {
+            "models/lua_replace/humans/group01/male_02.mdl",
+            "models/lua_replace/humans/group01/male_03.mdl",
+            "models/lua_replace/humans/group01/male_04.mdl",
+            "models/lua_replace/humans/group01/male_05.mdl"
+        }
+
+        if not table.HasValue(allowedModels, ent:GetModel()) then
+            print(ent:GetModel())
+            continue
+        end
+
+        local tr = util.TraceLine( {
+            start = ent:GetPos() + ent:GetAngles():Up() * 32,
+            endpos = LocalPlayer():EyePos(),
+            filter = { LocalPlayer(), ent },
+            mask = MASK_OPAQUE
+        } )
+
+        if not tr.Hit then continue end
+
+        SWATInTable[#SWATInTable + 1] = ent
     end
 
-    PhysgunHalos = {}
-end)
+    halo.Add( SWATInTable, SWATCOLOR, 2, 2, 1, true, true )
+end
 
 --
 --	Name: gamemode:NetworkEntityCreated()
@@ -197,6 +223,8 @@ local FLASHLIGHT_TRACE_BACK = {}
 
 local forceflicker = CreateClientConVar("r_flashlightforceflicker", "0", false, false)
 local flick_time = 0
+
+local clamp = math.Clamp
 
 plyMeta.FlashlightState = function() return state_light end
 
@@ -260,8 +288,8 @@ function GM:Think()
             --print("Back: " .. offset_light_back)
 
             if ply:GetViewEntity() == ply then
-                _HEADLIGHT:SetPos(origin - angles:Forward() * (offset_light - offset_light_back))
-                _HEADLIGHT:SetAngles(angles)
+                _HEADLIGHT:SetPos(origin)
+                _HEADLIGHT:SetAngles(LerpAngle(0.1, _HEADLIGHT:GetAngles(), angles))
             else
                 _HEADLIGHT:SetPos(ply:GetBonePosition(0) + ply:EyeAngles():Forward() * 10)
                 _HEADLIGHT:SetAngles(ply:EyeAngles())

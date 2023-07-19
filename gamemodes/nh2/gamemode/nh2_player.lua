@@ -40,7 +40,7 @@ function this.MoveToCheckpoint(force)
         if ply:Alive() and ply:GetPos():Distance(info[1]) > distanceCheck then
             net.Start("_NH2_Notify")
                 net.WriteInt(2, 8)
-                net.WriteString("NH2.FarTeleport")
+                net.WriteString("NH2.NotifyCheckpoint")
             net.Send(ply)
 
             ply:SetPos(info[1])
