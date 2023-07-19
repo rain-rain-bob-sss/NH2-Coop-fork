@@ -29,7 +29,7 @@ function SWEP:Initialize()
 end
 
 function SWEP:PrimaryAttack()
-    if self:GetOwner():IsPlayer() and self:GetOwner():GetLaggedMovementValue() < 1 and not GetGlobal2Bool("OverrideCrosshairAndAttack", false) then return end
+    if self:GetOwner():IsPlayer() and GetGlobalBool("IsSpeedModifiedSoNoAttack", false) and not GetGlobal2Bool("OverrideCrosshairAndAttack", false) then return end
     if not self:CanPrimaryAttack() then return end
     
     if SERVER then

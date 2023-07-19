@@ -1016,6 +1016,11 @@ function GM:AcceptInput(ent, input, activator, caller, value)
             end
 
             SetGlobalBool("IsSpeedModified", true)
+
+            if ent:HasSpawnFlags(64) then
+                SetGlobalBool("IsSpeedModifiedSoNoAttack", true)
+            end
+
             -- Disable flashlight for everyone
             for _, ply in ipairs(player.GetAll()) do
                 ply:SetNWBool("NH2COOP_FLASHLIGHT_ISON", false)
@@ -1049,14 +1054,16 @@ function GM:AcceptInput(ent, input, activator, caller, value)
         SetGlobal2Bool("OverrideCrosshairAndAttack", true)
     end
 
-    if input == "NH2C6PickupWeapons" and activator:IsPlayer() and not activator.GotC6Weapons then
+    if input == "NH2C6PickupWeapons" and activator:IsPlayer() then
         activator:Give("weapon_nh_hatchet")
         activator:Give("weapon_nh_pistol", true)
         activator:Give("weapon_nh_revolver", true)
         activator:Give("weapon_nh_smg", true)
-        activator:GiveAmmo(24, "Pistol")
-        activator:GiveAmmo(45, "SMG1")
-        activator:GiveAmmo(6, "357")
+        if not activator.GotC6Weapons then
+            activator:GiveAmmo(24, "Pistol")
+            activator:GiveAmmo(45, "SMG1")
+            activator:GiveAmmo(6, "357")
+        end
         activator.GotC6Weapons = true
     end
 
@@ -1168,11 +1175,8 @@ function GM:Think()
         if not IsValid(ent) then continue end
 
         if ent:GetClass() == "prop_ragdoll" then
-            ent:SetSolid(SOLID_NONE)
-
-            if ent:IsInWorld() then
-                ent:Remove()
-            end
+            ent:SetCollisionGroup(COLLISION_GROUP_DEBRIS_TRIGGER)
+            print(ent)
         end
 
         if ent:GetClass() == "npc_citizen" and bit.band(ent:GetFlags(), FL_ONFIRE) ~= 0 then

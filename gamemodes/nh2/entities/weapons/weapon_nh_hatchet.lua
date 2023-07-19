@@ -81,7 +81,7 @@ function SWEP:Deploy()
 end
 
 function SWEP:PrimaryAttack()
-    if self:GetOwner():IsPlayer() and self:GetOwner():GetLaggedMovementValue() < 1 then return end
+    if self:GetOwner():IsPlayer() and GetGlobalBool("IsSpeedModifiedSoNoAttack", false) then return end
     local status, target = self:ValidateHitPos()
 
     self:GetOwner():DoAttackEvent()
@@ -141,7 +141,7 @@ function SWEP:PrimaryAttack()
 end
 
 function SWEP:SecondaryAttack()
-    if self:GetOwner():IsPlayer() and self:GetOwner():GetLaggedMovementValue() < 1 and not GetGlobal2Bool("OverrideCrosshairAndAttack", false) then return end
+    if self:GetOwner():IsPlayer() and GetGlobalBool("IsSpeedModifiedSoNoAttack", false) and not GetGlobal2Bool("OverrideCrosshairAndAttack", false) then return end
     if SERVER then
         self:SetNextPrimaryFire(CurTime() + 2)
         self:SetNextSecondaryFire(CurTime() + 2)

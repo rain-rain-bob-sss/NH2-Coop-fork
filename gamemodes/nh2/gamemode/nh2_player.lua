@@ -16,6 +16,8 @@ function this.Spawn(player, isTransition)
 
     player:SetNWFloat("FlashlightNH2Power", 100)
     player:SetNWBool("NH2COOP_FLASHLIGHT_ISON", false)
+
+    player.GotC6Weapons = false
 end
 
 function this.SetCheckpointIndex(index)
@@ -24,10 +26,10 @@ end
 
 function this.MoveToCheckpoint(force)
     if GetConVar("nh2coop_sv_disable_checkpoints"):GetBool() then return end
-    
+
     for i, ply in ipairs(player.GetAll()) do
         local info = HARDCODED_CHECKPOINTS[game.GetMap()][CHECKPOINT_INDEX][ply:EntIndex()]
-        
+
         if not info then return end
 
         local distanceCheck = HARDCODED_CHECKPOINTS[game.GetMap()][CHECKPOINT_INDEX].Distance or HARDCODED_CHECKPOINTS[game.GetMap()].distance
