@@ -1168,7 +1168,15 @@ function GM:Think()
         if not IsValid(ent) then continue end
 
         if ent:GetClass() == "prop_ragdoll" then
-            ent:SetCollisionGroup(COLLISION_GROUP_PASSABLE_DOOR)
+            ent:SetSolid(SOLID_NONE)
+
+            if ent:IsInWorld() then
+                ent:Remove()
+            end
+        end
+
+        if ent:GetClass() == "npc_citizen" and bit.band(ent:GetFlags(), FL_ONFIRE) ~= 0 then
+            ent:Extinguish()
         end
     end
 end

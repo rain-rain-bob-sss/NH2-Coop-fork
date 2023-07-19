@@ -55,7 +55,7 @@ net.Receive(NH2NET.CC, function(len, ply)
     local name = net.ReadString()
     local filen = net.ReadString()
     local localize = language.GetPhrase(name)
-    local font = "CloseCaption_Normal"
+    local font = "NH_CloseCaption"
 
     if localize == name then return end
     if localize == '' or localize == ' ' then return end
@@ -87,11 +87,11 @@ net.Receive(NH2NET.CC, function(len, ply)
     end
 
     if string.find(localize, "<B>") or string.find(localize, "<b>") then
-        font = "CloseCaption_Bold"
+        font = "NH_CloseCaption"
     end
 
     if string.find(localize, "<I>") or string.find(localize, "<i>") then
-        font = "CloseCaption_Italic"
+        font = "NH_CloseCaption"
     end
 
     localize = string.gsub(localize, "<clr:(%d+),(%d+),(%d+)>", '')
@@ -110,7 +110,7 @@ end)
 
 local function Paint(size)
     local closecaptions_width = ScrW() * 0.587
-    surface.SetFont("CloseCaption_Normal")
+    surface.SetFont("NH_CloseCaption")
     closecaptions_black.a = closecaptions_alpha
     draw.RoundedBox(7, ScrW() * 0.207, (ScrH() * 0.859) - closecaptions_height, ScrW() * 0.587, closecaptions_height, closecaptions_black)
 

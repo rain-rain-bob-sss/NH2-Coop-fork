@@ -75,7 +75,13 @@ function NH2_HUD.CreateFonts()
         font = "Bebas Neue Bold",
         size = auto(30),
         weight = 500
-    })    
+    })
+
+    surface.CreateFont("NH_CloseCaption", {
+        font = "Bebas Neue Bold",
+        size = auto(30),
+        weight = 500
+    })
 
     surface.CreateFont("NH_NumbersSmaller", {
         font = "Bebas Neue Bold",
