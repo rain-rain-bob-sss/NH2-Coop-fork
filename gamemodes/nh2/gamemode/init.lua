@@ -1049,7 +1049,7 @@ function GM:AcceptInput(ent, input, activator, caller, value)
         SetGlobal2Bool("OverrideCrosshairAndAttack", true)
     end
 
-    if input == "NH2C6PickupWeapons" and activator:IsPlayer() then
+    if input == "NH2C6PickupWeapons" and activator:IsPlayer() and not activator.GotC6Weapons then
         activator:Give("weapon_nh_hatchet")
         activator:Give("weapon_nh_pistol", true)
         activator:Give("weapon_nh_revolver", true)
@@ -1057,6 +1057,7 @@ function GM:AcceptInput(ent, input, activator, caller, value)
         activator:GiveAmmo(24, "Pistol")
         activator:GiveAmmo(45, "SMG1")
         activator:GiveAmmo(6, "357")
+        activator.GotC6Weapons = true
     end
 
     if input == "RemindAboutBringSWAT" then
@@ -1064,6 +1065,12 @@ function GM:AcceptInput(ent, input, activator, caller, value)
             net.WriteInt(3, 8)
             net.WriteString("NH2COOP.NotifyBringSWAT")
         net.Broadcast()
+    end
+
+    if input == "AbleToBringSWAT" then
+        local yes = tobool(value)
+
+        SetGlobal2Bool("AbleToBringSWAT", yes)
     end
 end
 
@@ -1082,6 +1089,11 @@ end
 
 local function TeleportAllSWATSToHost(ply)
     if not ply:IsAdmin() then return end
+
+    if not GetGlobal2Bool("AbleToBringSWAT", false) then
+        MsgC(Color(245, 90, 90), "This is not possible to bring them NOW, bringing disabled by map right now\n")
+        return
+    end
     
     local swatID = 0
     local traceLen = 0
@@ -1099,6 +1111,10 @@ local function TeleportAllSWATSToHost(ply)
 
     if tr.Hit then
         MsgC(Color(245, 90, 90), "There's no room for bringing SWATs, try to find more space in back of you to bring them\n")
+        net.Start("_NH2_Notify")
+            net.WriteInt(2, 8)
+            net.WriteString("NH2COOP.NoSpaceToBring")
+        net.Send(ply)
         return
     end
 
