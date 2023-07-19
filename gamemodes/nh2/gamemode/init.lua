@@ -1031,6 +1031,7 @@ function GM:AcceptInput(ent, input, activator, caller, value)
             end
         else
             SetGlobalBool("IsSpeedModified", false) -- Don't care about >1 cases
+            SetGlobalBool("IsSpeedModifiedSoNoAttack", false)
             for _, ply in ipairs(player.GetAll()) do
                 ply:SetLaggedMovementValue(1)
             end

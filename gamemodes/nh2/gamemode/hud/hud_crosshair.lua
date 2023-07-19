@@ -24,7 +24,7 @@ local function Paint(size)
 
     offset = abs(velocity.x + velocity.y)
 
-    if wep:GetInternalVariable("m_bInReload") == true or (LocalPlayer():GetLaggedMovementValue() < 1 and not GetGlobal2Bool("OverrideCrosshairAndAttack", false)) then
+    if wep:GetInternalVariable("m_bInReload") == true or (GetGlobalBool("IsSpeedModifiedSoNoAttack", false) and not GetGlobal2Bool("OverrideCrosshairAndAttack", false)) then
         color.a = lerp(color.a, 0, FrameTime() * 2900)
     else
         color.a = lerp(color.a, 255, FrameTime() * 2900)
