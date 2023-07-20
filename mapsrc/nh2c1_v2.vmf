@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8864"
-	"mapversion" "5"
+	"mapversion" "7"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -72,7 +72,7 @@ bgimages_plus
 world
 {
 	"id" "1"
-	"mapversion" "5"
+	"mapversion" "7"
 	"classname" "worldspawn"
 	"comment" "Decompiled by BSPSource v1.4.2-rc.1 from nh2c1_v2 | Decompiled by BSPSource v1.4.3 from nh2c1_v2"
 	"detailmaterial" "detail/detailsprites"
@@ -74187,7 +74187,7 @@ world
 			"plane" "(-1504 1612.41 32) (-1504 1632 32) (-1504 1632 128.005)"
 			vertices_plus
 			{
-				"v" "-1504 1632 128.01"
+				"v" "-1504 1632 128"
 				"v" "-1504 1612.41 32"
 				"v" "-1504 1632 32"
 			}
@@ -139048,7 +139048,7 @@ entity
 	"origin" "-96 -64 0"
 	editor
 	{
-		"color" "220 220 220"
+		"color" "0 255 0"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[2500 12500]"
@@ -155303,7 +155303,7 @@ entity
 	"origin" "1472 1056 0"
 	editor
 	{
-		"color" "220 220 220"
+		"color" "0 200 200"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[5000 3500]"
@@ -155431,7 +155431,7 @@ entity
 	"origin" "-752 832 0"
 	editor
 	{
-		"color" "220 220 220"
+		"color" "0 200 200"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[5000 7000]"
@@ -155963,7 +155963,7 @@ entity
 	"origin" "1488 1020 7"
 	editor
 	{
-		"color" "220 220 220"
+		"color" "220 30 220"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[5000 14500]"
@@ -158504,9 +158504,9 @@ entity
 	"forcetoenablemotion" "0"
 	"gibdir" "0 0 0"
 	"gmod_allowphysgun" "1"
-	"health" "0"
+	"health" "94219412949149"
 	"massScale" "0.5"
-	"material" "0"
+	"material" "2"
 	"modelscale" "1.0"
 	"nodamageforces" "0"
 	"notsolid" "0"
@@ -158519,7 +158519,7 @@ entity
 	"rendercolor" "255 255 255"
 	"renderfx" "0"
 	"rendermode" "0"
-	"spawnflags" "524288"
+	"spawnflags" "524289"
 	"spawnobject" "0"
 	"targetname" "ventbox"
 	connections
@@ -158667,9 +158667,9 @@ entity
 	"forcetoenablemotion" "0"
 	"gibdir" "0 0 0"
 	"gmod_allowphysgun" "1"
-	"health" "0"
+	"health" "94219412949149"
 	"massScale" "0.5"
-	"material" "0"
+	"material" "2"
 	"modelscale" "1.0"
 	"nodamageforces" "0"
 	"notsolid" "0"
@@ -158682,7 +158682,7 @@ entity
 	"rendercolor" "255 255 255"
 	"renderfx" "0"
 	"rendermode" "0"
-	"spawnflags" "524288"
+	"spawnflags" "524289"
 	"spawnobject" "0"
 	"targetname" "ventbox2"
 	connections
@@ -159426,7 +159426,7 @@ entity
 	"origin" "-96 192 0"
 	editor
 	{
-		"color" "220 220 220"
+		"color" "0 255 0"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[5500 2500]"
@@ -160164,7 +160164,7 @@ entity
 	"origin" "224 192 0"
 	editor
 	{
-		"color" "220 220 220"
+		"color" "0 255 0"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[5500 9000]"
@@ -160179,7 +160179,7 @@ entity
 	"origin" "224 -64 0"
 	editor
 	{
-		"color" "220 220 220"
+		"color" "0 255 0"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[5500 9500]"
@@ -160193,7 +160193,7 @@ entity
 	"origin" "-1418 53.5 26"
 	editor
 	{
-		"color" "220 220 220"
+		"color" "220 30 220"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[5500 10000]"
@@ -202238,8 +202238,8 @@ cameras
 	"activecamera" "0"
 	camera
 	{
-		"position" "[-674.034 1068 96.5187]"
-		"look" "[-701.776 1332 118.809]"
+		"position" "[-926.456 1713.03 106.536]"
+		"look" "[-916.539 1476.31 -15.2298]"
 	}
 }
 cordons

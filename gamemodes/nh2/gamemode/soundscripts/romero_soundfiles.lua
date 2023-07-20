@@ -113,90 +113,105 @@ sound.Add( {
 sound.Add( {
 	name = "Romero1",
 	channel = CHAN_VOICE,
+	level = 0,
 	sound = "nh2/speech/Romero/Romero1.wav"
 } )
 
 sound.Add( {
 	name = "Romero2",
 	channel = CHAN_VOICE,
+	level = 0,
 	sound = "nh2/speech/Romero/Romero2.wav"
 } )
 
 sound.Add( {
 	name = "Romero3",
 	channel = CHAN_VOICE,
+	level = 0,
 	sound = "nh2/speech/Romero/Romero3.wav"
 } )
 
 sound.Add( {
 	name = "romeroradiovoice1",
 	channel = CHAN_VOICE,
+	level = 0,
 	sound = "nh2/speech/Romero/romeroradiovoice1.wav"
 } )
 
 sound.Add( {
 	name = "romeroradiovoice2",
 	channel = CHAN_VOICE,
+	level = 0,
 	sound = "nh2/speech/Romero/romeroradiovoice2.wav"
 } )
 
 sound.Add( {
 	name = "romeroradiovoice3",
 	channel = CHAN_VOICE,
+	level = 0,
 	sound = "nh2/speech/Romero/romeroradiovoice3.wav"
 } )
 
 sound.Add( {
 	name = "romeroradiovoice4",
 	channel = CHAN_VOICE,
+	level = 0,
 	sound = "nh2/speech/Romero/romeroradiovoice4.wav"
 } )
 
 sound.Add( {
 	name = "romeroradiovoice5",
 	channel = CHAN_VOICE,
+	level = 0,
 	sound = "nh2/speech/Romero/romeroradiovoice5.wav"
 } )
 
 sound.Add( {
 	name = "romeroradiovoice5_ee",
 	channel = CHAN_VOICE,
+	level = 0,
 	sound = "nh2/speech/Romero/romeroradiovoice5_ee.wav"
 } )
 
 sound.Add( {
 	name = "romeroradiovoice5_hint",
 	channel = CHAN_VOICE,
+	level = 0,
 	sound = "nh2/speech/Romero/romeroradiovoice5_hint.wav"
 } )
 
 sound.Add( {
 	name = "romeroradiovoice5_hint2",
 	channel = CHAN_VOICE,
+	level = 0,
 	sound = "nh2/speech/Romero/romeroradiovoice5_hint2.wav"
 } )
 
 sound.Add( {
 	name = "romeroradiovoice6",
 	channel = CHAN_VOICE,
+	level = 0,
 	sound = "nh2/speech/Romero/romeroradiovoice6.wav"
 } )
 
 sound.Add( {
 	name = "romeroradiovoice6_b",
 	channel = CHAN_VOICE,
+	level = 0,
 	sound = "nh2/speech/Romero/romeroradiovoice6_b.wav"
 } )
 
 sound.Add( {
 	name = "romeroradiovoice7",
 	channel = CHAN_VOICE,
+	level = 0,
 	sound = "nh2/speech/Romero/romeroradiovoice7.wav"
 } )
 
 sound.Add( {
 	name = "romeroradiovoice8",
 	channel = CHAN_VOICE,
+	level = 0,
 	sound = "nh2/speech/Romero/romeroradiovoice8.wav"
 } )
 
