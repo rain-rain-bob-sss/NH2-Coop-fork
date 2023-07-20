@@ -91,7 +91,7 @@ net.Receive(NH2NET.CC, function(len, ply)
     end
 
     if string.find(localize, "<I>") or string.find(localize, "<i>") then
-        font = "NH_CloseCaption"
+        font = "NH_CloseCaptionItalic"
     end
 
     localize = string.gsub(localize, "<clr:(%d+),(%d+),(%d+)>", '')

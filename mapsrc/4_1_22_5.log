@@ -1,0 +1,20 @@
+
+
+
+materialPath: D:\Projects\NH2-Coop-Release\materials
+Loading d:\projects\nh2-coop-release\mapsrc\4_1_22_5.vmf
+ConVarRef mat_reduceparticles doesn't point to an existing ConVar
+Could not locate 'GameData' key in d:\projects\nh2-coop-release\gameinfo.txt
+Patching WVT material: maps/4_1_22_5/concrete/blenddebris001a_wvt_patch
+Patching WVT material: maps/4_1_22_5/concrete/blendconcdirt004a_wvt_patch
+Patching WVT material: maps/4_1_22_5/concrete/blendconcreterock001a_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...10**** leaked ****
+Entity trigger_once (432.00 -216.00 640.00) leaked!
+--- MAP LEAKED ---
+
+
+
+8 threads
+reading d:\projects\nh2-coop-release\mapsrc\4_1_22_5.bsp
+Error opening d:\projects\nh2-coop-release\mapsrc\4_1_22_5.bsp

@@ -34,7 +34,7 @@ DECLARE_HUD_ELEMENT = function(name, func, flags)
     element.flags = flags
 
     table.insert(NH2_HUD.HUD_ELEMENTS, 1, element)
-    MsgC(Color(0,255,0), "Added and initialized element on screen \"" .. name .. "\"\n")
+    --MsgC(Color(0,255,0), "Added and initialized element on screen \"" .. name .. "\"\n")
 end
 
 --
@@ -66,31 +66,43 @@ function NH2_HUD.CreateFonts()
     })
 
     surface.CreateFont("NH_Numbers", {
-        font = "Bebas Neue Bold",
+        font = "Bebas Neue Cyrillic",
         size = ScrH() * 0.05,
-        weight = 500
+        weight = 500,
+        extended = true
     })
 
     surface.CreateFont("NH_Notification", {
-        font = "Bebas Neue Bold",
+        font = "Bebas Neue Cyrillic",
         size = auto(30),
-        weight = 500
+        weight = 500,
+        extended = true
     })
 
     surface.CreateFont("NH_CloseCaption", {
-        font = "Bebas Neue Bold",
-        size = auto(30),
-        weight = 500
+        font = "Exo 2",
+        size = auto(35),
+        weight = 500,
+        extended = true
     })
 
+    surface.CreateFont("NH_CloseCaptionItalic", {
+        font = "Exo 2",
+        size = auto(35),
+        italic = true,
+        weight = 500,
+        extended = true
+    })    
+
     surface.CreateFont("NH_NumbersSmaller", {
-        font = "Bebas Neue Bold",
+        font = "Bebas Neue Cyrillic",
         size = ScrH() * 0.041,
-        weight = 500
+        weight = 500,
+        extended = true
     })
 
     surface.CreateFont("NH_NumbersBigger", {
-        font = "Bebas Neue Bold",
+        font = "Bebas Neue Cyrillic",
         size = ScrH() * 0.06,
         weight = 500
     })
@@ -102,27 +114,31 @@ function NH2_HUD.CreateFonts()
     })    
 
     surface.CreateFont("NH_MapTitle", {
-        font = "Bebas Neue Bold",
+        font = "Bebas Neue Cyrillic",
         size = auto(45),
-        weight = 500
+        weight = 500,
+        extended = true
     })
 
     surface.CreateFont("NH_MapTitleSmaller", {
-        font = "Bebas Neue Bold",
+        font = "Bebas Neue Cyrillic",
         size = auto(32),
-        weight = 500
+        weight = 500,
+        extended = true
     })
 
     surface.CreateFont("NH_MapTitleSmall", {
-        font = "Bebas Neue Bold",
+        font = "Bebas Neue Cyrillic",
         size = auto(25),
-        weight = 500
+        weight = 500,
+        extended = true
     })
 
     surface.CreateFont("NH_BindSmall", {
-        font = "Bebas Neue Bold",
+        font = "Bebas Neue Cyrillic",
         size = auto(15),
-        weight = 500
+        weight = 500,
+        extended = true
     })
 end
 
@@ -336,7 +352,9 @@ net.Receive("_NH2_MOTD", function(len, ply)
 end)
 
 include("hud/hud_blur.lua")
+include("hud/hud_weins.lua")
 include("hud/hud_closecaption.lua")
+include("hud/hud_credits.lua")
 include("hud/hud_nh2video.lua")
 include("hud/hud_reference.lua")
 

@@ -366,3 +366,32 @@ function GM:PlayerTick(ply, mv)
         ply:RemoveEffects(EF_NODRAW)
     end
 end
+
+local explosion_blast_mul = 0
+local lerp = math.Approach
+local remap = math.Remap
+
+--
+--
+--
+function GM:EntityEmitSound(data)
+    if (data.OriginalSoundName == "BaseExplosionEffect.Sound") then
+        local blast_wave_distance = data.Pos:Distance(LocalPlayer():EyePos())
+        local blast_wave_delay = remap(blast_wave_distance, 0, 4096, 0, 1)
+
+        timer.Simple(blast_wave_delay, function()
+            explosion_blast_mul = clamp(1 - blast_wave_delay, 0, 1)
+        end)
+    end
+end
+
+--
+--
+--
+function GM:GetMotionBlurValues( h, v, f, r )
+    f = LocalPlayer():GetVelocity():Length() * 0.00001 + (0.1 * explosion_blast_mul)
+
+    explosion_blast_mul = lerp(explosion_blast_mul, 0, FrameTime() * 2)
+
+    return h, v, f, 0.003 * explosion_blast_mul
+end

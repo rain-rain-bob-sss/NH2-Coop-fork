@@ -22,8 +22,10 @@ include("player.lua")
 include("spawnmenu/init.lua")
 
 -- Hud Files
+AddCSLuaFile("hud/hud_weins.lua")
 AddCSLuaFile("hud/hud_blur.lua")
 AddCSLuaFile("hud/hud_closecaption.lua")
+AddCSLuaFile("hud/hud_credits.lua")
 AddCSLuaFile("hud/hud_nh2video.lua")
 AddCSLuaFile("hud/hud_reference.lua")
 
@@ -970,6 +972,7 @@ function GM:OnEntityCreated(ent)
 end
 
 util.AddNetworkString("_NH2_StartPlayingVideo")
+util.AddNetworkString("_NH2_StartCredits")
 
 ---
 --- Called when entity gets an input

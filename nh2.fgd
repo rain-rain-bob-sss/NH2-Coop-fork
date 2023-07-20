@@ -403,7 +403,7 @@ submodelfive(choices) : "Submodel to use for bodygroup 4" : 0 =
 ]
 
 @PointClass base(ControlEnables) iconsprite("editor/comp_pack") = comp_pack: "Explicitly identify resources to pack into the map. If more are needed, add additional keyvalues with SmartEdit off."
-	[
+[
 	generic1(string) : "Generic" : : "Pack a file, starting in any of the content folders."
 	generic2(string) : "Generic" : : "Pack a file, starting in any of the content folders."
 	generic3(string) : "Generic" : : "Pack a file, starting in any of the content folders."
@@ -434,4 +434,9 @@ submodelfive(choices) : "Submodel to use for bodygroup 4" : 0 =
 	soundscript3(string) : "SoundScript" : : "Pack a soundscript file, and include in the manifest."
 	soundscript4(string) : "SoundScript" : : "Pack a soundscript file, and include in the manifest."
 	soundscript5(string) : "SoundScript" : : "Pack a soundscript file, and include in the manifest."
-	]
+]
+
+@PointClass base(Targetname) = env_credits_nh2 : ""
+[
+	input Start(void) : ""
+]
