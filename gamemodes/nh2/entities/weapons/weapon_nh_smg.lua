@@ -129,14 +129,12 @@ function SWEP:PrimaryAttack()
 
         timer.Create(self:EntIndex() .. "attacking_event", 0.5, 1, function()
             self.Attacking = false
-            print("Stopped attacking")
         end)
 
         if not self.Attacking then
             self.m_fFireDuration = 0
             self.LastFireTime = CurTime()
             self.Attacking = true
-            print("Started attacking")
         end
 
         if self:GetOwner():IsPlayer() then

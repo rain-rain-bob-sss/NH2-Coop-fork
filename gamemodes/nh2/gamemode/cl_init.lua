@@ -148,7 +148,6 @@ function GM:PreDrawHalos()
         }
 
         if not table.HasValue(allowedModels, ent:GetModel()) then
-            print(ent:GetModel())
             continue
         end
 

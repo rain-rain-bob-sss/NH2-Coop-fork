@@ -675,6 +675,22 @@ HARDCODED_CHECKPOINTS = {
             [3] = { Vector(-2365.8046875, -1113.2416992188, -2047.96875), Angle(0, 90, 0) },
             [4] = { Vector(-2401.732421875, -1164.3817138672, -2047.96875), Angle(0, 90, 0) },
         }
+    },
+    ["4_1_22_5"] = {
+        [0] = {
+            Suit = true,
+            Weapons = {
+                "weapon_nh_hatchet",
+                "weapon_nh_pistol",
+                "weapon_nh_revolver",
+                "weapon_nh_smg"
+            },
+
+            [1] = { Vector(-287.58584594727, -267.02575683594, 711.64910888672), Angle(90, 90, 0) },
+            [2] = { Vector(-246.33801269531, -249.03651428223, 711.64910888672), Angle(90, 90, 0) },
+            [3] = { Vector(-246.33801269531, -249.03651428223, 711.64910888672), Angle(90, 90, 0) },
+            [4] = { Vector(-246.33801269531, -249.03651428223, 711.64910888672), Angle(90, 90, 0) },
+        }
     }
 }
 
@@ -1177,7 +1193,6 @@ function GM:Think()
 
         if ent:GetClass() == "prop_ragdoll" then
             ent:SetCollisionGroup(COLLISION_GROUP_DEBRIS_TRIGGER)
-            print(ent)
         end
 
         if ent:GetClass() == "npc_citizen" and bit.band(ent:GetFlags(), FL_ONFIRE) ~= 0 then

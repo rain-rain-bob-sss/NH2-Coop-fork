@@ -44,8 +44,6 @@ function GM:PlayerTick(ply, mv)
         ply.CachedModel = "models/humans/nh2/" .. ply:GetInfo("nh2coop_cl_playermodel") .. ".mdl"
         ply:SetModel(ply.CachedModel)
         ply:GetHands():SetModel("models/weapons/c_arms_citizen.mdl")
-
-        print(model)
     end
 
     if IsValid(ply:GetActiveWeapon()) and string.StartWith(ply:GetActiveWeapon():GetClass(), "weapon_nh") then
