@@ -82,7 +82,7 @@ HARDCODED_CHECKPOINTS = {
             [4] = { Vector(-3043, -297, -4), Angle(0, 0, 0) },
         },
         [1] = {
-            Distance = 390,
+            Distance = 590,
 
             Suit = true,
             Weapons = {
