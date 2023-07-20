@@ -4399,8 +4399,9 @@ sound.Add( {
 sound.Add( {
 	name = "l_thevent",
 	channel = CHAN_VOICE,
-	level = SNDLVL_90dB } )
+	level = SNDLVL_90dB,
 	sound = "nh2/speech/swat_new/new/swatl_thevent.wav",
+} )
 
 sound.Add( {
 	name = "l_wedontkickpeople",
@@ -4408,7 +4409,6 @@ sound.Add( {
 	level = SNDLVL_90dB,
 	sound = "nh2/speech/swat_new/new/swatl_wedontkickpeople.wav"
 } )
-
 
 sound.Add( {
 	name = "l_wegottogetthehelloutofhere",
