@@ -282,6 +282,9 @@ local function InitCreditsPanel()
 
             if currentCreditsIndex > #credits_data then
                 self:Remove()
+                if LocalPlayer() == player.GetAll()[1] then
+                    LocalPlayer():ConCommand("disconnect")
+                end
             end
         end
     end
