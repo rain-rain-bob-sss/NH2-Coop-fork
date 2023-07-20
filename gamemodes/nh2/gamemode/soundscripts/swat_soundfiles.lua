@@ -4399,29 +4399,61 @@ sound.Add( {
 sound.Add( {
 	name = "l_thevent",
 	channel = CHAN_VOICE,
-	level = SNDLVL_90dB,
+	level = SNDLVL_90dB } )
 	sound = "nh2/speech/swat_new/new/swatl_thevent.wav",
+
+sound.Add( {
+	name = "l_wedontkickpeople",
 	channel = CHAN_VOICE,
 	level = SNDLVL_90dB,
-	sound = "nh2/speech/swat_new/new/swatl_wedontkickpeople.wav",
+	sound = "nh2/speech/swat_new/new/swatl_wedontkickpeople.wav"
+} )
+
+
+sound.Add( {
+	name = "l_wegottogetthehelloutofhere",
 	channel = CHAN_VOICE,
 	level = SNDLVL_90dB,
-	sound = "nh2/speech/swat_new/new/swatl_wegottagetthehelloutofhere.wav",
+	sound = "nh2/speech/swat_new/new/swatl_wegottagetthehelloutofhere.wav"
+} )	
+
+sound.Add( {
+	name = "l_weneedtogetthisgateopen",
 	channel = CHAN_VOICE,
 	level = SNDLVL_90dB,
 	sound = "nh2/speech/swat_new/new/swatl_weneedtogetthisgateopen.wav",
+} )	
+
+sound.Add( {
+	name = "l_weneedtogettroughthisgate",
 	channel = CHAN_VOICE,
 	level = SNDLVL_90dB,
-	sound = "nh2/speech/swat_new/new/swatl_weneedtogettrougthisgate.wav",
+	sound = "nh2/speech/swat_new/new/swatl_weneedtogettrougthisgate.wav"
+} )	
+
+sound.Add( {
+	name = "l_what",
 	channel = CHAN_VOICE,
 	level = SNDLVL_90dB,
-	sound = "nh2/speech/swat_new/new/swatl_what.wav",
+	sound = "nh2/speech/swat_new/new/swatl_what.wav"
+} )	
+
+sound.Add( {
+	name = "l_youretalkingaboutthatnewguy",
 	channel = CHAN_VOICE,
 	level = SNDLVL_90dB,
-	sound = "nh2/speech/swat_new/new/swatl_youretalkingaboutfranksguy.wav",
+	sound = "nh2/speech/swat_new/new/swatl_youretalkingaboutfranksguy.wav"
+} )	
+
+sound.Add( {
+	name = "l_youseemtoknowyourway",
 	channel = CHAN_VOICE,
 	level = SNDLVL_90dB,
 	sound = "nh2/speech/swat_new/new/swatl_youseemtoknowyourway.wav",
+} )
+
+sound.Add( {
+	name = "swat_static",
 	channel = CHAN_VOICE,
 	level = SNDLVL_90dB,
 	sound = "nh2/speech/swat_new/new/swat_static.wav"
