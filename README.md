@@ -24,7 +24,3 @@ This base is used for main npcs in gamemode
 ### I'm stuck
 
 Use noclip (or kill yourself to respawn).
-
-### Ally npcs stuck somewhere
-
-Use `nh2coop_teleport_swats` console command , to bring them behind of you.

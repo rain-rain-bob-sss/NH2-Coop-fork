@@ -395,3 +395,12 @@ function GM:GetMotionBlurValues( h, v, f, r )
 
     return h, v, f, 0.003 * explosion_blast_mul
 end
+
+--
+--
+--
+function GM:Move(ply, mv)
+    if input.WasKeyReleased(KEY_F3) and ply:IsAdmin() then
+        ply:ConCommand("nh2coop_teleport_swats")
+    end
+end
