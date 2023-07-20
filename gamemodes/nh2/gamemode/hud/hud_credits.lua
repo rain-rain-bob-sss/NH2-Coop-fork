@@ -197,7 +197,7 @@ local function InitCreditsPanel()
             if not currentActive then
                 currentStartTime = CurTime()
                 currentActive = true
-                print("Transition to view index" .. currentCreditsIndex)
+                --print("Transition to view index" .. currentCreditsIndex)
             end
 
             -- Select kind to do stuff with credit's data
