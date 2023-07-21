@@ -41,11 +41,10 @@ function GM:PlayerTick(ply, mv)
     ply.CachedModel = ply.CachedModel or ""
     
     if not ply:IsBot() and ply.CachedModel ~= "models/humans/nh2/" .. model .. ".mdl" then
-            ply.CachedModel = "models/humans/nh2/" .. ply:GetInfo("nh2coop_cl_playermodel") .. ".mdl"
-    
-            ply:SetModel(ply.CachedModel)
-            ply:GetHands():SetModel("models/weapons/c_arms_citizen.mdl")
-        end
+        ply.CachedModel = "models/humans/nh2/" .. ply:GetInfo("nh2coop_cl_playermodel") .. ".mdl"
+
+        ply:SetModel(ply.CachedModel)
+        ply:GetHands():SetModel("models/weapons/c_arms_citizen.mdl")
     end
 
     if IsValid(ply:GetActiveWeapon()) and string.StartWith(ply:GetActiveWeapon():GetClass(), "weapon_nh") then
