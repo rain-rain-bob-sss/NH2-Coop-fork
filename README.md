@@ -18,9 +18,3 @@ This base is used for main npcs in gamemode
 * Launch game and choose "Nightmare House 2 Coop" gamemode from menu.
 
 * Create multiplayer server on `nh1remake1_v2` or `nh2c1_v2` (there's no sense in singleplayer).
-
-## FAQ
-
-### I'm stuck
-
-Use noclip (or kill yourself to respawn).
