@@ -757,6 +757,10 @@ function GM:PlayerSpawn(pl, transiton)
     -- I don't want to fuck with player_manager and other stuff!
     local model = pl:GetInfo("nh2coop_cl_playermodel")
 
+    if pl:IsBot() then
+        model = "male_0" .. math.random(0, 9)
+    end
+
     pl.CachedModel = pl.CachedModel or "models/humans/nh2/" .. model .. ".mdl"
     pl:SetModel(pl.CachedModel)
     pl:GetHands():SetModel("models/weapons/c_arms_citizen.mdl")

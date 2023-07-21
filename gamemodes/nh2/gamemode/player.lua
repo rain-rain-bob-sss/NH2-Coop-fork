@@ -36,14 +36,16 @@ function GM:PlayerTick(ply, mv)
         FLASHLIGHT_REGEN_TIME = CurTime() + FLASHLIGHT_REGEN_DELAY
     end
 
-        local model = ply:GetInfo("nh2coop_cl_playermodel")
+    local model = ply:GetInfo("nh2coop_cl_playermodel")
     
     ply.CachedModel = ply.CachedModel or ""
     
-    if ply.CachedModel ~= "models/humans/nh2/" .. model .. ".mdl" then
-        ply.CachedModel = "models/humans/nh2/" .. ply:GetInfo("nh2coop_cl_playermodel") .. ".mdl"
-        ply:SetModel(ply.CachedModel)
-        ply:GetHands():SetModel("models/weapons/c_arms_citizen.mdl")
+    if not ply:IsBot() and ply.CachedModel ~= "models/humans/nh2/" .. model .. ".mdl" then
+            ply.CachedModel = "models/humans/nh2/" .. ply:GetInfo("nh2coop_cl_playermodel") .. ".mdl"
+    
+            ply:SetModel(ply.CachedModel)
+            ply:GetHands():SetModel("models/weapons/c_arms_citizen.mdl")
+        end
     end
 
     if IsValid(ply:GetActiveWeapon()) and string.StartWith(ply:GetActiveWeapon():GetClass(), "weapon_nh") then
