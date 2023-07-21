@@ -223,6 +223,8 @@ local NH2COOL_PLY_ICONS = {
 local male_placeholder = Material("vgui/hud/male_placeholder.png")
 
 local function ShowMOTD()
+    if GetConVar("nh2coop_cl_playermodel"):GetString() ~= "" then return end
+
     local frame = vgui.Create("DFrame")
     
     frame:SetTitle("")
