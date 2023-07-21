@@ -1,25 +1,19 @@
 -- NIGHTMARE HOUSE 2 PORT TO GMOD
 -- Den Urakolouy
-
 -- Video hud element for fake "nh2_playvideo" command
-
 -- Current playing frame
 local CACHED_VIDEOS = {}
-
 local frame = 1
 local frameTime = CurTime()
 local audio = NULL
-
 local isPlayingVideo = false
 local currentVideo = ""
 local extension = ".png"
 local audioExtension = ".mp3"
-
 local DrawColor = surface.SetDrawColor
 local DrawTexture = surface.DrawTexturedRect
 local SetVideo = surface.SetMaterial
 local SetMaterial = surface.SetMaterial
-
 local ScreenWidth = ScrW()
 local ScreenHeight = ScrH()
 
@@ -28,7 +22,7 @@ do
 
     for _, dir in ipairs(dirs) do
         local frames = file.Find("materials/media/" .. dir .. "/*.png", "GAME")
-        
+
         for i, frame in pairs(frames) do
             CACHED_VIDEOS[dir] = CACHED_VIDEOS[dir] or {}
             CACHED_VIDEOS[dir][i] = Material("materials/media/" .. dir .. "/" .. i .. ".png")
@@ -39,11 +33,10 @@ end
 -- Whacky i know...
 net.Receive("_NH2_StartPlayingVideo", function(len, ply)
     local vidName = net.ReadString()
-    
     -- To get num of files
     local vidFrames = CACHED_VIDEOS[vidName]
 
-    if (vidFrames) then
+    if vidFrames then
         frame = 1
 
         if ScreenWidth ~= ScrW() and ScreenHeight ~= ScrH() then
@@ -53,7 +46,6 @@ net.Receive("_NH2_StartPlayingVideo", function(len, ply)
 
         local audioName = "materials/media/" .. vidName .. audioExtension
         audio = CreateSound(LocalPlayer(), audioName)
-
         currentVideo = vidName
         isPlayingVideo = true
     else
@@ -66,13 +58,13 @@ local function Paint(size)
         if audio and not audio:IsPlaying() then
             audio:Play()
         end
-        
+
         if frame < #CACHED_VIDEOS[currentVideo] then
-            if (CurTime() > frameTime) then
+            if CurTime() > frameTime then
                 frame = frame + 1
                 frameTime = CurTime() + 0.03
             end
-    
+
             SetMaterial(CACHED_VIDEOS[currentVideo][frame])
             DrawColor(255, 255, 255, 255)
             DrawTexture(0, 0, ScreenWidth, ScreenHeight)

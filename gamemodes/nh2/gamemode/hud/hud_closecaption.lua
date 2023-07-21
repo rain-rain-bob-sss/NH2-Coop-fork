@@ -1,9 +1,7 @@
 -- NIGHTMARE HOUSE 2 PORT TO GMOD
 -- Den Urakolouy
-
 -- Limited recreation for Source Engine's closecaptions
 -- Lack of multicoloring and multistyling
-
 local CC_ENTRIES = {}
 local CC_NOREPEAT = {}
 local closecaptions_black = Color(0, 0, 0, 128)
@@ -12,7 +10,6 @@ local SetFont = surface.SetFont
 local GetTextSize = surface.GetTextSize
 local ExplodeString = string.Explode
 local pairs = pairs
-
 local closecaptions_height = 25
 
 local function Wrap(font, text, width)
@@ -56,13 +53,10 @@ net.Receive(NH2NET.CC, function(len, ply)
     local filen = net.ReadString()
     local localize = language.GetPhrase(name)
     local font = "NH_CloseCaption"
-
     if localize == name then return end
     if localize == '' or localize == ' ' then return end
-
     -- Don't repeat if already we've got an block
     if CC_NOREPEAT[name] then return end
-
     -- Strip SFX entries if we're don't want them
     if string.find(localize, "<sfx>") then return false end --and cc_subtitles:GetBool() 
     localize = string.Replace(localize, "<sfx>", '')

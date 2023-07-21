@@ -1,13 +1,10 @@
 -- NIGHTMARE HOUSE 2 PORT TO GMOD
 -- Den Urakolouy
-
 local DrawTexture = surface.DrawTexturedRect
 local DrawTextureUV = surface.DrawTexturedRectUV
 local SetMaterial = surface.SetMaterial
 local SetColor = surface.SetDrawColor
-
 local DrawText = draw.SimpleText
-
 local bg = Material("vgui/hud/bar_bg.png")
 
 local ammoTypes = {
@@ -19,12 +16,9 @@ local ammoTypes = {
 
 local clamp = math.Clamp
 local remap = math.Remap
-
 local lerp = math.Approach
-
-local normal = Color(255,255,255)
-local red = Color(185,42,42)
-
+local normal = Color(255, 255, 255)
+local red = Color(185, 42, 42)
 local clip1Color = normal
 local ammo1Color = normal
 
@@ -33,15 +27,14 @@ local weaponAmmoIcons = {
     [5] = "q", -- revolver
     [4] = "r", -- smg
     [7] = "s" -- shotgun
+    
 }
 
 local function Paint(size)
     local wep = LocalPlayer():GetActiveWeapon()
     if not IsValid(wep) then return end
-
     local clip1 = LocalPlayer():GetActiveWeapon():Clip1()
     if clip1 == -1 then return end
-
     clip1 = clamp(clip1, 0, 9999)
     local maxClip = LocalPlayer():GetActiveWeapon():GetMaxClip1()
 
@@ -53,7 +46,7 @@ local function Paint(size)
 
     local ammo1 = LocalPlayer():GetAmmoCount(wep:GetPrimaryAmmoType())
     ammo1 = clamp(ammo1, 0, 99)
-    
+
     if ammo1 == 0 then
         ammo1Color = red
     else
@@ -61,11 +54,10 @@ local function Paint(size)
     end
 
     SetMaterial(bg)
-    
-    SetColor(255,255,255,255)
+    SetColor(255, 255, 255, 255)
     DrawTexture(size.x - size.y * 0.24, size.y - size.y * 0.08056, size.y * 0.22, size.y * 0.06)
 
-    if (weaponAmmoIcons[wep:GetPrimaryAmmoType()]) then
+    if weaponAmmoIcons[wep:GetPrimaryAmmoType()] then
         DrawText(weaponAmmoIcons[wep:GetPrimaryAmmoType()], "NH_AmmoIcon", size.x - size.x * 0.119, size.y - size.y * 0.05, color_white, TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
     end
 

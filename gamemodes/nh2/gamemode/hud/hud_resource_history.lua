@@ -1,37 +1,53 @@
 -- NIGHTMARE HOUSE 2 PORT TO GMOD
 -- Den Urakolouy
-
 local DrawTexture = surface.DrawTexturedRect
 local SetMaterial = surface.SetMaterial
 local SetColor = surface.SetDrawColor
 local SetAlpha = surface.SetAlphaMultiplier
 local GetAlpha = surface.GetAlphaMultiplier
 local lerp = math.Approach
-
 local PICKUPED_HISTORY = {}
 local offset = 0.5
 
 local PICKUP_ICONS = {
-    ["weapon_nh_hatchet"] = { Icon = Material("vgui/hud/slot1_icon.png"), W = 256 },
-    ["weapon_nh_pistol"] = { Icon = Material("vgui/hud/slot2_icon.png"), W = 256 },
-    ["weapon_nh_revolver"] = { Icon = Material("vgui/hud/slot3_icon.png"), W = 256 },
-    ["weapon_nh_smg"] = { Icon = Material("vgui/hud/slot4_icon.png"), W = 256 },
-    ["weapon_nh_shotgun"] = { Icon = Material("vgui/hud/slot5_icon.png"), W = 256 },
-    ["item_healthkit"] = { Icon = Material("vgui/hud/medkit.png"), W = 128 },
-    ["item_healthvial"] = { Icon = Material("vgui/hud/bandage.png"), W = 128 },
+    ["weapon_nh_hatchet"] = {
+        Icon = Material("vgui/hud/slot1_icon.png"),
+        W = 256
+    },
+    ["weapon_nh_pistol"] = {
+        Icon = Material("vgui/hud/slot2_icon.png"),
+        W = 256
+    },
+    ["weapon_nh_revolver"] = {
+        Icon = Material("vgui/hud/slot3_icon.png"),
+        W = 256
+    },
+    ["weapon_nh_smg"] = {
+        Icon = Material("vgui/hud/slot4_icon.png"),
+        W = 256
+    },
+    ["weapon_nh_shotgun"] = {
+        Icon = Material("vgui/hud/slot5_icon.png"),
+        W = 256
+    },
+    ["item_healthkit"] = {
+        Icon = Material("vgui/hud/medkit.png"),
+        W = 128
+    },
+    ["item_healthvial"] = {
+        Icon = Material("vgui/hud/bandage.png"),
+        W = 128
+    },
 }
 
 function HUDWeaponPickedUp(weapon)
     row = {}
     row.ShowTime = CurTime()
-
     if not PICKUP_ICONS[weapon:GetClass()] then return end
-
     row.Icon = PICKUP_ICONS[weapon:GetClass()].Icon
     row.IsDying = false
     row.SizeX = PICKUP_ICONS[weapon:GetClass()].W
     row.Alpha = 0
-
     table.insert(PICKUPED_HISTORY, 1, row)
 
     return false
@@ -41,12 +57,10 @@ function HUDItemPickedUp(item)
     row = {}
     row.ShowTime = CurTime()
     if not PICKUP_ICONS[item] then return end
-
     row.Icon = PICKUP_ICONS[item].Icon
     row.IsDying = false
     row.SizeX = PICKUP_ICONS[item].W
     row.Alpha = 0
-
     table.insert(PICKUPED_HISTORY, 1, row)
 
     return false
@@ -69,7 +83,6 @@ local function Paint(size)
 
     for i = 1, #PICKUPED_HISTORY do
         local row = PICKUPED_HISTORY[i]
-
         row.PosY = row.PosY or ScrH() * offset + (auto(128) * i)
         row.PosY = lerp(row.PosY, ScrH() * offset + (auto(128) * i), FrameTime() * auto(500))
 
