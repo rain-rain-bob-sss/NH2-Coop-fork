@@ -723,6 +723,19 @@ concommand.Add("nh2coop_getpos_as_table", function(ply)
     end
 end)
 
+concommand.Add("nh2coop_getaddons", function(ply)
+    local addons = engine.GetAddons()
+
+    MsgC(color_white, "Installed addons:\n")
+
+    for i = 1, #addons do
+        local addonInfo = addons[i]
+        if not addonInfo.mounted then continue end
+
+        MsgC(color_white, "\t" .. addonInfo.title .. " ( " .. addonInfo.wsid .. " )\n")
+    end
+end)
+
 --
 -- Make BaseClass available
 --
