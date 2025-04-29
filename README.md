@@ -5,15 +5,18 @@ Gamemode for Garry's Mod that ports Nightmare House 2 and allows play it with yo
 ## Requirements
 
 ### [VJ Base](https://steamcommunity.com/workshop/filedetails/?id=131759821)
-This base is used for main npcs in gamemode
+This base is used for NPCs in gamemode
 
-## How-to-install
+## How-to-install (STEAM)
+Download from [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3007651334)
 
-* Download repo by using green button.
+## How-to-install (GitHub)
+
+* Download repo by using green button **Code**.
 
 * Create folder in Garry's Mod's addons folder (for example `nh2coop`).
 
-* Place downloaded archive content here.
+* Place content of downloaded archive content here.
 
 * Launch game and choose "Nightmare House 2 Coop" gamemode from menu.
 
