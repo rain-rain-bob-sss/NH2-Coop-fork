@@ -45,7 +45,6 @@ if SERVER then
     ENT.SoundTbl_Pain = "nhzombie.Pain"
     ENT.SoundTbl_Death = "nhzombie.Die"
 
-    ENT.BloodParticle = NULL
     ENT.NoHeadBody = {1,0}
 
     ENT.IsTorso = false
@@ -165,10 +164,12 @@ if SERVER then
 end
 
 if CLIENT then
-    ENT.BloodParticle = NULL
-
     function ENT:StartBloodStream()
-        self.BloodParticle = CreateParticleSystem(self, "blood_advisor_puncture_withdraw", PATTACH_POINT_FOLLOW, 4)
+        if IsValid(self.BloodParticleHead) then
+            return
+        end
+
+        self.BloodParticleHead = CreateParticleSystem(self, "blood_advisor_puncture_withdraw", PATTACH_POINT_FOLLOW, 4)
     end
 
     net.Receive("_NH2_BaseZombie_BloodStream", function(len, ply)

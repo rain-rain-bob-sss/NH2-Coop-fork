@@ -953,7 +953,7 @@ local function StartScriptedSequences()
         for i, target in ipairs(targets) do
             timer.Simple(i / 10, function()
                 if string.StartWith(target:GetClass(), "npc_nh_") and bit.band(ent:GetInternalVariable("spawnflags"), 16) ~= 0 then
-                    target:VJ_SetSchedule(SCHED_AISCRIPT)
+                    target:SetSchedule(SCHED_AISCRIPT)
                 end
             end)
         end
@@ -1038,7 +1038,7 @@ function GM:AcceptInput(ent, input, activator, caller, value)
         for _, target in ipairs(targets) do
             if string.StartWith(target:GetClass(), "npc_nh_") then
                 --target:VJ_ACT_PLAYACTIVITY(sequence_name)
-                target:VJ_SetSchedule(SCHED_AISCRIPT) -- BUG: They can teleport to player sometimes
+                target:SetSchedule(SCHED_AISCRIPT) -- BUG: They can teleport to player sometimes
             end
         end
     end

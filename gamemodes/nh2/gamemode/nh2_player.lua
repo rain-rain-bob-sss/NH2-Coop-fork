@@ -5,7 +5,6 @@ NH2_Player = {}
 
 local this = NH2_Player
 
-util.AddNetworkString("_NH2_SendAntiSingleplayer")
 util.AddNetworkString("_NH2_Notify")
 
 local CHECKPOINT_INDEX = 0
@@ -54,11 +53,6 @@ function this.MoveToCheckpoint(force)
 end
 
 function this.SelectSpawnPoint(ply, isTransition)
-    if game.SinglePlayer() then
-        net.Start("_NH2_SendAntiSingleplayer")
-        net.Send(ply)
-    end
-
     local mapinfo = HARDCODED_CHECKPOINTS[game.GetMap()]
 
     if mapinfo == nil then

@@ -305,24 +305,6 @@ function GM:Think()
     end
 end
 
-net.Receive("_NH2_SendAntiSingleplayer", function()
-    local frame = vgui.Create("DFrame")
-    frame:SetTitle("Message")
-    frame:SetSize(500, 100)
-    frame:Center()
-    frame:MakePopup(true)
-    frame:SetDraggable(false)
-
-    function frame:OnClose()
-        RunConsoleCommand("disconnect")
-    end
-
-    local label = vgui.Create("DLabel", frame)
-    label:SetText("There's no sense in playing Nightmare House 2 Coop in Singleplayer mode!\nGo ahead and download mod from Moddb!")
-    label:SetPos(40, 40)
-    label:SizeToContents()
-end)
-
 --
 -- Used to control buttons of player and bot (same as server)
 --
