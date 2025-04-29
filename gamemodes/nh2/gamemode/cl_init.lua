@@ -192,7 +192,6 @@ local tohide = {
     ["CHudSecondaryAmmo"] = true,
     ["CHudCrosshair"] = true,
     ["CHudQuickInfo"] = true,
-    ["CHudCloseCaption"] = true,
     ["CHudSuitPower"] = true,
     ["CHudSquadStatus"] = true,
 }
@@ -386,3 +385,26 @@ function GM:Move(ply, mv)
         ply:ConCommand("nh2coop_teleport_swats")
     end
 end
+
+--
+--
+--
+net.Receive(NH2NET.CC, function(len, ply)
+    local name = net.ReadString()
+    local filen = net.ReadString()
+    local text = language.GetPhrase(name)
+
+    if text == name or text == '' or text == ' ' then return end
+    if string.find(text, "<sfx>") then return end
+
+    text = string.gsub(text, "<sfx>", "")
+
+    -- Extract duration from <len:DURATION>
+    local duration = SoundDuration(filen)
+    local lenTag = string.match(text, "<len:([%d%.]+)>")
+    if lenTag then
+        duration = tonumber(lenTag) or duration
+    end
+    
+    gui.AddCaption(text, duration, false)
+end)

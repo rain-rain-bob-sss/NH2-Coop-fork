@@ -79,21 +79,6 @@ function NH2_HUD.CreateFonts()
         extended = true
     })
 
-    surface.CreateFont("NH_CloseCaption", {
-        font = "Exo 2",
-        size = auto(35),
-        weight = 500,
-        extended = true
-    })
-
-    surface.CreateFont("NH_CloseCaptionItalic", {
-        font = "Exo 2",
-        size = auto(35),
-        italic = true,
-        weight = 500,
-        extended = true
-    })    
-
     surface.CreateFont("NH_NumbersSmaller", {
         font = "Bebas Neue Cyrillic",
         size = ScrH() * 0.041,
@@ -355,7 +340,6 @@ end)
 
 include("hud/hud_blur.lua")
 include("hud/hud_weins.lua")
-include("hud/hud_closecaption.lua")
 include("hud/hud_credits.lua")
 include("hud/hud_nh2video.lua")
 include("hud/hud_reference.lua")

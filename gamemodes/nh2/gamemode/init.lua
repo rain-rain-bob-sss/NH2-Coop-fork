@@ -24,7 +24,6 @@ include("spawnmenu/init.lua")
 -- Hud Files
 AddCSLuaFile("hud/hud_weins.lua")
 AddCSLuaFile("hud/hud_blur.lua")
-AddCSLuaFile("hud/hud_closecaption.lua")
 AddCSLuaFile("hud/hud_credits.lua")
 AddCSLuaFile("hud/hud_nh2video.lua")
 AddCSLuaFile("hud/hud_reference.lua")
@@ -899,13 +898,7 @@ function GM:EntityEmitSound(data)
     local pos = data.Pos
 
     if not IsValid(data.Entity) then return end
-
-    if data.Entity:GetClass() == "npc_citizen" then
-        if string.StartWith(name, "npc_citizen") or string.StartWith(name, "ep1_citizen") then
-            return false
-        end
-    end
-
+    
     net.Start(NH2NET.CC)
         net.WriteString(name)
         net.WriteString(filen)
