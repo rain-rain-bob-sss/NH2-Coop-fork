@@ -18,6 +18,7 @@ function this.Spawn(player, isTransition)
 
     player.GotC6Weapons = false
     player.NH2TakenWeps = {}
+    player:SetNoCollideWithTeammates(true)
 end
 
 function this.SetCheckpointIndex(index)

@@ -463,7 +463,7 @@ do
 		hook.Add("CalcViewModelView", "HL2ViewModelSway", doLag)
 	end
 
-	cvars.AddChangeCallback("cl_hlvms_enabled", function(var, old, new)
+	cvars.AddChangeCallback("cl_nh2hlvms_enabled", function(var, old, new)
 		if (tonumber(new) != 0) then
 			hook.Add("CalcViewModelView", "HL2ViewModelSway", doLag)
 		else
