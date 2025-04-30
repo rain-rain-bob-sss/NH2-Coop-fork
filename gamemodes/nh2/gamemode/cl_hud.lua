@@ -208,7 +208,7 @@ local NH2COOL_PLY_ICONS = {
 local male_placeholder = Material("vgui/hud/male_placeholder.png")
 
 local function ShowMOTD()
-    if GetConVar("nh2coop_cl_playermodel"):GetString() ~= "" then return end
+    --if GetConVar("nh2coop_cl_playermodel"):GetString() ~= "" then return end
 
     local frame = vgui.Create("DFrame")
     
@@ -332,7 +332,7 @@ local function ShowMOTD()
     end    
 end
 
---concommand.Add("nh2coop_test_motd", ShowMOTD)
+concommand.Add("nh2coop_motd", ShowMOTD)
 
 net.Receive("_NH2_MOTD", function(len, ply)
     ShowMOTD()

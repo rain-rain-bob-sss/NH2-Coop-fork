@@ -834,7 +834,7 @@ end
 function GM:PlayerInitialSpawn(ply, transiton)
     BaseClass.PlayerInitialSpawn(self, ply, transiton)
 
-    timer.Simple(0, function()
+    timer.Simple(1, function()
         if not transiton then
             net.Start("_NH2_MOTD")
             net.Send(ply)
@@ -1058,13 +1058,16 @@ function GM:AcceptInput(ent, input, activator, caller, value)
                     net.WriteBool(false)
                 net.Send(ply)
             end
+            --for _, ply in ipairs(player.GetAll()) do
+                --ply:SetLaggedMovementValue(value)
+            --end
+            SetGlobalFloat("NH2_SpeedModifier",value)
         else
             SetGlobalBool("IsSpeedModified", false) -- Don't care about >1 cases
             SetGlobalBool("IsSpeedModifiedSoNoAttack", false)
-            for _, ply in ipairs(player.GetAll()) do
-                ply:SetLaggedMovementValue(1)
-            end
+            SetGlobalFloat("NH2_SpeedModifier",1)
         end
+        return true -- Stop the orignal player_speedmod effects
     end
 
     if string.lower(input) == "setmodel" then
@@ -1110,6 +1113,44 @@ function GM:AcceptInput(ent, input, activator, caller, value)
         SetGlobal2Bool("AbleToBringSWAT", yes)
     end
 end
+
+hook.Add("PlayerCanPickupWeapon","NH2_SHAREWEPS",function(ply,wep)
+    local otherplyhas = true
+    for _,v in ipairs(player.GetAll())do 
+        if not v:HasWeapon(wep:GetClass()) and v ~= ply and v:Alive() then 
+            otherplyhas = false 
+            break
+        end
+    end
+    if (ply:KeyDown(IN_WALK) and ply:IsAdmin()) or (otherplyhas) then return end
+    if not ply.NH2TakenWeps then return end
+    if ply.NH2TakenWeps[wep] then return false end
+    if wep.NH2CSpawned then return false end
+    ply.NH2TakenWeps[wep] = true
+    local nwep = ents.Create(wep:GetClass())
+    nwep:SetPos(wep:GetPos())
+    nwep:SetAngles(wep:GetAngles())
+    nwep.NH2CSpawned = true
+    nwep:Spawn()
+    ply:PickupWeapon(nwep,ply:HasWeapon(nwep:GetClass()))
+    return false
+end)
+
+hook.Add("StartCommand","NH2_SpeedModifiedNoAttack",function(ply,cmd)
+    if GetGlobalBool("IsSpeedModifiedSoNoAttack") and ply:Alive() then
+        cmd:RemoveKey(IN_ATTACK)
+        cmd:RemoveKey(IN_ATTACK2)
+    end
+end)
+
+hook.Add("Move","NH2_SpeedModifier",function(ply,mv)
+    if GetGlobalFloat("NH2_SpeedModifier",1) ~= 1 then
+        local mod = GetGlobalFloat("NH2_SpeedModifier",1)
+        local speed = math.min(mv:GetMaxSpeed(),mv:GetMaxClientSpeed())
+        mv:SetMaxSpeed(speed * mod)
+        mv:SetMaxClientSpeed(speed * mod)
+    end
+end)
 
 ---
 --- Called when an entity takes damage.
@@ -1344,3 +1385,8 @@ function GM:SetupPlayerVisibility(ply, ent)
         end
     end
 end
+
+concommand.Add("nh2_dropweapon",function(ply)
+    if not IsValid(ply) then Msg("You can't drop console!") return end
+    ply:DropWeapon()
+end)

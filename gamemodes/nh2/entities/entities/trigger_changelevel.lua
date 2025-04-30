@@ -42,7 +42,7 @@ if SERVER then
         if not self.Enabled then return end
         
         if ent:IsPlayer() then
-            self.TouchedMe[1] = ent
+            self.TouchedMe[ent:EntIndex()] = ent
 
             if #self.TouchedMe == player.GetCount() then
                 Msg("Changing level to " .. self.NextMap .. " from custom trigger_changelevel\n")

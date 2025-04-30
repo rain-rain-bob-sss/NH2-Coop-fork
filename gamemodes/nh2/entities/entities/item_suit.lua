@@ -20,7 +20,7 @@ if SERVER then
             activator:SetNWBool("NH2COOP_SUITPICKUPED", true)
             activator:SetWalkSpeed(150)
             activator:SetRunSpeed(230)
-            self:Remove()
+            --self:Remove()
         end
     end
 end

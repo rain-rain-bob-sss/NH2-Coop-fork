@@ -408,3 +408,66 @@ net.Receive(NH2NET.CC, function(len, ply)
     
     gui.AddCaption(text, duration, false)
 end)
+
+
+--from https://steamcommunity.com/sharedfiles/filedetails/?id=2488617619
+--by STEAM_0:0:53045113
+--their profile link:http://steamcommunity.com/profiles/76561198066355954
+-- If anyone sees this message, I said I'd fixed it my DAMN self.
+
+local cl_hlvms_enabled = CreateClientConVar("cl_nh2hlvms_enabled", "1", true)
+local cl_hlvms_scale = CreateClientConVar("cl_nh2hlvms_scale", "1.5", true)
+
+local function VectorMA( start, scale, direction, dest )
+	dest.x = start.x + direction.x * scale
+	dest.y = start.y + direction.y * scale
+	dest.z = start.z + direction.z * scale
+end
+
+local function CalcViewModelLag(vm, origin, angles, original_angles)
+	local vOriginalOrigin = Vector(origin.x, origin.y, origin.z);
+	local vOriginalAngles = Angle(angles.x, angles.y, angles.z);
+
+	vm.m_vecLastFacing = vm.m_vecLastFacing or angles:Forward()
+
+	local forward = angles:Forward();
+
+	if (FrameTime() != 0.0) then
+		local vDifference = forward - vm.m_vecLastFacing;
+
+		local flSpeed = 10.0;
+
+		local flDiff = vDifference:Length();
+		if ( (flDiff > cl_hlvms_scale:GetFloat()) and (cl_hlvms_scale:GetFloat() > 0.0) ) then
+			local flScale = flDiff / cl_hlvms_scale:GetFloat();
+			flSpeed = flSpeed * flScale;
+		end
+
+		VectorMA(vm.m_vecLastFacing, flSpeed * FrameTime(), vDifference, vm.m_vecLastFacing);
+
+		vm.m_vecLastFacing:Normalize()
+		VectorMA(origin, 5.0, vDifference * -1.0, origin);
+	end
+end
+
+do
+	local function doLag(weapon, vm, oldPos, oldAng, pos, ang)
+		if (IsValid(weapon) and weapon.GetIronSights and weapon:GetIronSights()) then
+			vm.m_vecLastFacing = ang:Forward()
+		else
+			CalcViewModelLag(vm, pos, ang, oldAng)
+		end
+	end
+
+	if (cl_hlvms_enabled:GetInt() != 0) then
+		hook.Add("CalcViewModelView", "HL2ViewModelSway", doLag)
+	end
+
+	cvars.AddChangeCallback("cl_hlvms_enabled", function(var, old, new)
+		if (tonumber(new) != 0) then
+			hook.Add("CalcViewModelView", "HL2ViewModelSway", doLag)
+		else
+			hook.Remove("CalcViewModelView", "HL2ViewModelSway")
+		end
+	end)
+end

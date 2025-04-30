@@ -17,6 +17,7 @@ function this.Spawn(player, isTransition)
     player:SetNWBool("NH2COOP_FLASHLIGHT_ISON", false)
 
     player.GotC6Weapons = false
+    player.NH2TakenWeps = {}
 end
 
 function this.SetCheckpointIndex(index)
