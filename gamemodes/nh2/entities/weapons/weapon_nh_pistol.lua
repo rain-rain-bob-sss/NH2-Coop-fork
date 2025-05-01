@@ -3,26 +3,26 @@
 
 AddCSLuaFile()
 
-SWEP.Category           = "Nightmare House 2"
-SWEP.PrintName          = "#NH_Pistol"
-SWEP.Slot               = 1
-SWEP.SlotPos            = 1
-SWEP.Spawnable          = true
+SWEP.Category              = "Nightmare House 2"
+SWEP.PrintName             = "#NH_Pistol"
+SWEP.Slot                  = 1
+SWEP.SlotPos               = 1
+SWEP.Spawnable             = true
 
-SWEP.ViewModel			= "models/weapons/v_colt.mdl"
-SWEP.WorldModel			= "models/weapons/w_colt.mdl"
+SWEP.ViewModel             = "models/weapons/v_colt.mdl"
+SWEP.WorldModel            = "models/weapons/w_colt.mdl"
 
-SWEP.ViewModelFOV = 54
+SWEP.ViewModelFOV          = 54
 
-SWEP.Primary.ClipSize		= 9
-SWEP.Primary.DefaultClip	= 9
-SWEP.Primary.Automatic		= false
-SWEP.Primary.Ammo			= "Pistol"
+SWEP.Primary.ClipSize      = 9
+SWEP.Primary.DefaultClip   = 9
+SWEP.Primary.Automatic     = false
+SWEP.Primary.Ammo          = "Pistol"
 
-SWEP.Secondary.ClipSize		= -1
-SWEP.Secondary.DefaultClip	= -1
-SWEP.Secondary.Automatic	= false
-SWEP.Secondary.Ammo			= "none"
+SWEP.Secondary.ClipSize    = -1
+SWEP.Secondary.DefaultClip = -1
+SWEP.Secondary.Automatic   = false
+SWEP.Secondary.Ammo        = "none"
 
 function SWEP:Initialize()
     self:SetDeploySpeed(1)
@@ -35,11 +35,11 @@ function SWEP:PrimaryAttack()
     if SERVER then
         self:GetOwner():EmitSound("Weapon_NH_Pistol.Single")
         self:TakePrimaryAmmo(1)
-    
+
         self:SetNextPrimaryFire(CurTime() + 0.15)
-    
-        self:GetOwner():ViewPunch(Angle(math.Rand(0.25,0.5), math.Rand(-0.6,0.6), 0))
-    
+
+        self:GetOwner():ViewPunch(Angle(math.Rand(0.25, 0.5), math.Rand(-0.6, 0.6), 0))
+
         self:GetOwner():MuzzleFlash()
         self:GetOwner():SetAnimation(PLAYER_ATTACK1)
 
@@ -50,7 +50,7 @@ function SWEP:PrimaryAttack()
     local effectdata = EffectData()
     effectdata:SetOrigin(self:GetOwner():EyePos())
     effectdata:SetEntity(self)
-    util.Effect( "gun_light", effectdata)
+    util.Effect("gun_light", effectdata)
 end
 
 function SWEP:SecondaryAttack()

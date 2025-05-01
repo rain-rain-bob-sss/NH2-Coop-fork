@@ -39,6 +39,8 @@ AddCSLuaFile("hud/hud_crosshair.lua")
 AddCSLuaFile("hud/hud_notification.lua")
 AddCSLuaFile("hud/hud_spectator.lua")
 
+AddCSLuaFile("hud/hud_scoreboard.lua")
+
 -- NH2 Sound scripts
 include("soundscripts/announcer_soundfiles.lua")
 include("soundscripts/captionsample.lua")
@@ -1114,7 +1116,61 @@ function GM:AcceptInput(ent, input, activator, caller, value)
     end
 end
 
+hook.Add("EntityKeyValue","NH2_ENTITY KEYVALUE",function(ent,k,v)
+    if not ent.nh2_keyvalues then ent.nh2_keyvalues = {} end 
+    ent.nh2_keyvalues[k] = v
+
+    if k:lower():sub(1,2) == "on" then
+        local info = v
+        local rawData = string.Explode( "\x1B", info )
+        if ( #rawData < 2 ) then
+            rawData = string.Explode( ",", info )
+        end
+
+        local Output = {}
+        Output.entities = rawData[1] or ""
+        Output.input = rawData[2] or ""
+        Output.param = rawData[3] or ""
+        Output.delay = tonumber( rawData[4] ) or 0
+        Output.times = tonumber( rawData[5] ) or -1
+
+        ent.m_nh2tOutputs = ent.m_nh2tOutputs or {}
+        ent.m_nh2tOutputs[ k ] = ent.m_nh2tOutputs[ k ] or {}
+
+        table.insert( ent.m_nh2tOutputs[ k ], Output )
+    end
+end)
+
+local function FireSingleOutput( output, this, activator, data,ignoretime,caller )
+
+	if ( output.times == 0 and not ignoretime ) then return false end
+
+	local entitiesToFire = {}
+
+	if ( output.entities == "!activator" ) then
+		entitiesToFire = { activator }
+	elseif ( output.entities == "!self" ) then
+		entitiesToFire = { this }
+	elseif ( output.entities == "!player" ) then
+		entitiesToFire = player.GetAll()
+	else
+		entitiesToFire = ents.FindByName( output.entities )
+	end
+
+	for _, ent in ipairs( entitiesToFire ) do
+		ent:Fire( output.input, data or output.param, output.delay, activator, caller or this )
+	end
+
+	if ( output.times ~= -1 ) then
+		output.times = output.times - 1
+	end
+
+	return ( output.times > 0 ) || ( output.times == -1 )
+
+end
+
 hook.Add("PlayerCanPickupWeapon","NH2_SHAREWEPS",function(ply,wep)
+    --[[
     local otherplyhas = true
     for _,v in ipairs(player.GetAll())do 
         if not v:HasWeapon(wep:GetClass()) and v ~= ply and v:Alive() then 
@@ -1122,17 +1178,38 @@ hook.Add("PlayerCanPickupWeapon","NH2_SHAREWEPS",function(ply,wep)
             break
         end
     end
-    if (ply:KeyDown(IN_WALK) and ply:IsAdmin()) or (otherplyhas) then return end
+    ]]
+    if (ply:KeyDown(IN_WALK) and ply:IsAdmin()) then return end
+    
     if not ply.NH2TakenWeps then return end
     if ply.NH2TakenWeps[wep] then return false end
     if wep.NH2CSpawned then return false end
     ply.NH2TakenWeps[wep] = true
+    if not wep.NH2CalledOutput then 
+        for k,outputs in pairs(wep.m_nh2tOutputs or {})do 
+            if k:lower() == "onplayerpickup" then
+                for i,output in pairs(outputs) do
+                    if not FireSingleOutput(output,wep,ply,"") then 
+                        outputs[i] = nil
+                    end
+                end
+            end
+        end
+        wep.NH2CalledOutput = true
+    end
+
     local nwep = ents.Create(wep:GetClass())
     nwep:SetPos(wep:GetPos())
     nwep:SetAngles(wep:GetAngles())
     nwep.NH2CSpawned = true
     nwep:Spawn()
     ply:PickupWeapon(nwep,ply:HasWeapon(nwep:GetClass()))
+
+
+    local phy = wep:GetPhysicsObject()
+    if IsValid(phy) then 
+        phy:EnableMotion(false) -- Do not move it
+    end
     return false
 end)
 

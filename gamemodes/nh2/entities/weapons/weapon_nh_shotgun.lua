@@ -3,26 +3,26 @@
 
 AddCSLuaFile()
 
-SWEP.Category           = "Nightmare House 2"
-SWEP.PrintName          = "#NH_SHOTGUN"
-SWEP.Slot               = 3
-SWEP.SlotPos            = 0
-SWEP.Spawnable          = true
+SWEP.Category              = "Nightmare House 2"
+SWEP.PrintName             = "#NH_SHOTGUN"
+SWEP.Slot                  = 3
+SWEP.SlotPos               = 0
+SWEP.Spawnable             = true
 
-SWEP.ViewModel			= "models/weapons/v_shotgun1.mdl"
-SWEP.WorldModel			= "models/weapons/w_shotgun1.mdl"
+SWEP.ViewModel             = "models/weapons/v_shotgun1.mdl"
+SWEP.WorldModel            = "models/weapons/w_shotgun1.mdl"
 
-SWEP.ViewModelFOV = 54
+SWEP.ViewModelFOV          = 54
 
-SWEP.Primary.ClipSize		= 8
-SWEP.Primary.DefaultClip	= 8
-SWEP.Primary.Automatic		= false
-SWEP.Primary.Ammo			= "Buckshot"
+SWEP.Primary.ClipSize      = 8
+SWEP.Primary.DefaultClip   = 8
+SWEP.Primary.Automatic     = false
+SWEP.Primary.Ammo          = "Buckshot"
 
-SWEP.Secondary.ClipSize		= -1
-SWEP.Secondary.DefaultClip	= -1
-SWEP.Secondary.Automatic	= false
-SWEP.Secondary.Ammo			= "none"
+SWEP.Secondary.ClipSize    = -1
+SWEP.Secondary.DefaultClip = -1
+SWEP.Secondary.Automatic   = false
+SWEP.Secondary.Ammo        = "none"
 
 function SWEP:Initialize()
     self:SetDeploySpeed(1)
@@ -43,7 +43,7 @@ end
 function SWEP:PrimaryAttack()
     if self:GetOwner():IsPlayer() and GetGlobalBool("IsSpeedModifiedSoNoAttack", false) and not GetGlobal2Bool("OverrideCrosshairAndAttack", false) then return end
     if not self:CanPrimaryAttack() then return end
-    
+
     self:ShootBullet(15, 5, 0.1, self.Primary.Ammo)
 
     if SERVER then
@@ -72,7 +72,7 @@ function SWEP:PrimaryAttack()
             angles.y = angles.y + math.Rand(0, 2)
             angles.z = 0
 
-            self:GetOwner():ViewPunch(Angle(-6, math.Rand(-2,-2), 0))
+            self:GetOwner():ViewPunch(Angle(-6, math.Rand(-2, -2), 0))
             self:GetOwner():SetEyeAngles(angles)
         end
 
@@ -85,7 +85,7 @@ function SWEP:PrimaryAttack()
     local effectdata = EffectData()
     effectdata:SetOrigin(self:GetOwner():EyePos())
     effectdata:SetEntity(self)
-    util.Effect( "gun_light", effectdata)
+    util.Effect("gun_light", effectdata)
 end
 
 function SWEP:SecondaryAttack()
@@ -103,21 +103,20 @@ function SWEP:Reload()
 
         self:SetNWBool("ISRELOADING", true)
         local needed = math.abs(self:GetMaxClip1() - self:Clip1()) + 1
-    
+
         self:SetNextPrimaryFire(CurTime() + 1)
-    
+
         //self:EmitSound("Weapon_NH_Shotgun.Reload")
         self:SendWeaponAnim(ACT_SHOTGUN_RELOAD_START)
-        
-        timer.Simple(0.05, function() 
+
+        timer.Simple(0.05, function()
             -- Repeat inserting n-times
             for i = 1, needed do
-                    timer.Create("Weapon_Idle_ReloadAmmo_" .. self:EntIndex() .. i, i * 0.6, 1, function()
-                    
+                timer.Create("Weapon_Idle_ReloadAmmo_" .. self:EntIndex() .. i, i * 0.6, 1, function()
                     if not (self and IsValid(self) and IsValid(self:GetOwner())) then return end
                     self:SendWeaponAnim(ACT_VM_RELOAD)
                     self:SetNextPrimaryFire(CurTime() + 0.5)
-    
+
                     if i == needed then
                         self:SendWeaponAnim(ACT_SHOTGUN_RELOAD_FINISH)
                         self:SetNextPrimaryFire(CurTime() + self:SequenceDuration())
@@ -137,7 +136,7 @@ function SWEP:Reload()
                                     timer.Stop("Weapon_Idle_ReloadAmmo_" .. self:EntIndex() .. i)
                                     timer.Remove("Weapon_Idle_ReloadAmmo_" .. self:EntIndex() .. i)
                                 end
-                            end                            
+                            end
                         end
                     end
                 end)

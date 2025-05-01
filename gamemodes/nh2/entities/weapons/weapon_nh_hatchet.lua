@@ -3,35 +3,35 @@
 
 AddCSLuaFile()
 
-SWEP.Category           = "Nightmare House 2"
-SWEP.PrintName          = "#NH_Hatchet"
-SWEP.Slot               = 0
-SWEP.SlotPos            = 1
-SWEP.Spawnable          = true
+SWEP.Category              = "Nightmare House 2"
+SWEP.PrintName             = "#NH_Hatchet"
+SWEP.Slot                  = 0
+SWEP.SlotPos               = 1
+SWEP.Spawnable             = true
 
-SWEP.ViewModel			= "models/weapons/v_hatchet.mdl"
-SWEP.WorldModel			= "models/weapons/w_hatchet.mdl"
+SWEP.ViewModel             = "models/weapons/v_hatchet.mdl"
+SWEP.WorldModel            = "models/weapons/w_hatchet.mdl"
 
-SWEP.ViewModelFOV = 54
+SWEP.ViewModelFOV          = 54
 
-SWEP.Primary.ClipSize		= -1
-SWEP.Primary.DefaultClip	= -1
-SWEP.Primary.Automatic		= true
-SWEP.Primary.Ammo			= "none"
+SWEP.Primary.ClipSize      = -1
+SWEP.Primary.DefaultClip   = -1
+SWEP.Primary.Automatic     = true
+SWEP.Primary.Ammo          = "none"
 
-SWEP.Secondary.ClipSize		= -1
-SWEP.Secondary.DefaultClip	= -1
-SWEP.Secondary.Automatic	= true
-SWEP.Secondary.Ammo			= "none"
+SWEP.Secondary.ClipSize    = -1
+SWEP.Secondary.DefaultClip = -1
+SWEP.Secondary.Automatic   = true
+SWEP.Secondary.Ammo        = "none"
 
-local zero_vector = Vector(0, 0, 0)
+local zero_vector          = Vector(0, 0, 0)
 
-SWEP.AutoSwitchTo = true
-SWEP.AutoSwitchFrom = true
-SWEP.HasHitTarget = false
-SWEP.PerformingHeavySwing = false
+SWEP.AutoSwitchTo          = true
+SWEP.AutoSwitchFrom        = true
+SWEP.HasHitTarget          = false
+SWEP.PerformingHeavySwing  = false
 
-local HATCHET_RANGE = 40
+local HATCHET_RANGE        = 40
 
 function SWEP:SendIdleAnimation(delay)
     if not IsValid(self) then return end
@@ -47,25 +47,37 @@ function SWEP:SendIdleAnimation(delay)
     end)
 end
 
+
+local mins,maxs = Vector(-5,-5,-5),Vector(5,5,5)
 function SWEP:ValidateHitPos()
-    local tr = util.TraceLine( {
+    local tr = util.TraceLine({
         start = self:GetOwner():EyePos(),
         endpos = self:GetOwner():EyePos() + self:GetOwner():EyeAngles():Forward() * HATCHET_RANGE,
-        filter = function( ent ) return ent ~= self:GetOwner() end
-    } )
+        filter = function(ent) return ent ~= self:GetOwner() end
+    })
 
-    if tr.Hit and IsValid(tr.Entity) then 
+    local tr2 = util.TraceHull({
+        start = self:GetOwner():EyePos(),
+        endpos = self:GetOwner():EyePos() + self:GetOwner():EyeAngles():Forward() * HATCHET_RANGE,
+        filter = function(ent) return ent ~= self:GetOwner() end,
+        mins = mins,
+        maxs = maxs,
+    })
+
+    if not tr.Hit then tr = tr2 end
+
+    if tr.Hit and IsValid(tr.Entity) then
         return 2, tr.Entity
     elseif tr.Hit and not IsValid(tr.Entity) then
         return 1
     else
         return 0
     end
-end  
+end
 
 function SWEP:Initialize()
     self:SetHoldType("melee2")
-    self:SetDeploySpeed(1)   
+    self:SetDeploySpeed(1)
 
     if SERVER then
         self:SendIdleAnimation(1)
@@ -87,17 +99,17 @@ function SWEP:PrimaryAttack()
     self:GetOwner():DoAttackEvent()
 
     if status > 0 then
-        local HATCHET_BULLET = {}
-        HATCHET_BULLET.Num    = 1
-        HATCHET_BULLET.Spread = zero_vector
-        HATCHET_BULLET.Tracer = 0
-        HATCHET_BULLET.Force  = 10
-        HATCHET_BULLET.Hullsize = 0
+        local HATCHET_BULLET    = {}
+        HATCHET_BULLET.Num      = 1
+        HATCHET_BULLET.Spread   = zero_vector
+        HATCHET_BULLET.Tracer   = 0
+        HATCHET_BULLET.Force    = 10
+        HATCHET_BULLET.Hullsize = 10
         HATCHET_BULLET.Distance = HATCHET_RANGE
-        HATCHET_BULLET.Damage = 25  
-        HATCHET_BULLET.Src = self.Owner:GetShootPos()
-        HATCHET_BULLET.Dir = self:GetOwner():EyeAngles():Forward():GetNormalized()
-        
+        HATCHET_BULLET.Damage   = 25
+        HATCHET_BULLET.Src      = self.Owner:GetShootPos()
+        HATCHET_BULLET.Dir      = self:GetOwner():EyeAngles():Forward():GetNormalized()
+
         self:SetNextPrimaryFire(CurTime() + 0.75)
         self:SetNextSecondaryFire(CurTime() + 0.75)
         self:SendIdleAnimation(0.5)
@@ -105,14 +117,14 @@ function SWEP:PrimaryAttack()
         self:SendWeaponAnim(ACT_VM_HITCENTER)
         if SERVER then
             if status == 2 then
-                if (target:GetClass() == "func_breakable" 
-                or target:GetClass() == "func_physbox") and bit.band(target:GetInternalVariable("spawnflags"), 1) == 0 then
+                if (target:GetClass() == "func_breakable"
+                        or target:GetClass() == "func_physbox") and bit.band(target:GetInternalVariable("spawnflags"), 1) == 0 then
                     target:Fire("SetHealth", target:Health() - 25)
                 end
-                
+
                 if target:GetClass() == "prop_physics" then
                     HATCHET_BULLET.Damage = 1
-                    for k, v in pairs(util.KeyValuesToTable(util.GetModelInfo(target:GetModel()).KeyValues)) do                        
+                    for k, v in pairs(util.KeyValuesToTable(util.GetModelInfo(target:GetModel()).KeyValues)) do
                         if k == "break" then
                             local dmg = DamageInfo()
                             dmg:SetDamageType(DMG_SLASH)
@@ -123,11 +135,13 @@ function SWEP:PrimaryAttack()
                         end
                     end
                 end
-                self:GetOwner():EmitSound("Weapon_NH_Hatchet.Stab")           
+                self:GetOwner():EmitSound("Weapon_NH_Hatchet.Stab")
             else
                 self:GetOwner():EmitSound("Weapon_NH_Hatchet.Slash")
             end
         end
+
+        self.Owner:ViewPunch(Angle(3, 0, 2))
 
         self.Owner:FireBullets(HATCHET_BULLET)
     else
@@ -171,49 +185,49 @@ function SWEP:SecondaryAttack()
 
         timer.Create("Weapon_Attack2_Remove_Delay_" .. self:EntIndex(), 1.2, 1, function()
             self.PerformingHeavySwing = false
-        end)        
+        end)
     end
 end
 
 function SWEP:Think()
     if self.PerformingHeavySwing then
-        local status,target = self:ValidateHitPos()
+        local status, target = self:ValidateHitPos()
 
         if status > 0 then
             self:SetNextPrimaryFire(CurTime() + 0.75)
             self:SetNextSecondaryFire(CurTime() + 0.75)
-            self:SendIdleAnimation(0.5)
+            self:SendIdleAnimation(1)
 
             self:SendWeaponAnim(ACT_VM_HITCENTER)
-            
-            local HATCHET_BULLET = {}
-            HATCHET_BULLET.Num    = 1
-            HATCHET_BULLET.Spread = zero_vector
-            HATCHET_BULLET.Tracer = 0
-            HATCHET_BULLET.Force  = 10
-            HATCHET_BULLET.Hullsize = 0
+
+            local HATCHET_BULLET    = {}
+            HATCHET_BULLET.Num      = 1
+            HATCHET_BULLET.Spread   = zero_vector
+            HATCHET_BULLET.Tracer   = 0
+            HATCHET_BULLET.Force    = 10
+            HATCHET_BULLET.Hullsize = 10
             HATCHET_BULLET.Distance = HATCHET_RANGE
-            HATCHET_BULLET.Damage = 40
+            HATCHET_BULLET.Damage   = 40
             HATCHET_BULLET.Callback = function(att, tr, dmginfo)
                 if IsValid(tr.Entity) then
                     dmginfo:SetDamageForce(self:GetOwner():EyeAngles():Right() * -5555)
                 end
             end
-            HATCHET_BULLET.Src = self:GetOwner():GetShootPos()
-            HATCHET_BULLET.Dir = self:GetOwner():EyeAngles():Forward():GetNormalized()
+            HATCHET_BULLET.Src      = self:GetOwner():GetShootPos()
+            HATCHET_BULLET.Dir      = self:GetOwner():EyeAngles():Forward():GetNormalized()
 
             self.Owner:FireBullets(HATCHET_BULLET)
 
             if status == 2 then
-                if (target:GetClass() == "func_breakable" 
-                or target:GetClass() == "func_physbox") and bit.band(target:GetInternalVariable("spawnflags"), 1) == 0 then
+                if (target:GetClass() == "func_breakable"
+                        or target:GetClass() == "func_physbox") and bit.band(target:GetInternalVariable("spawnflags"), 1) == 0 then
                     target:Fire("SetHealth", target:Health() - 25)
                     return
                 end
-                
+
                 if target:GetClass() == "prop_physics" then
                     HATCHET_BULLET.Damage = 1
-                    for k, v in pairs(util.KeyValuesToTable(util.GetModelInfo(target:GetModel()).KeyValues)) do                        
+                    for k, v in pairs(util.KeyValuesToTable(util.GetModelInfo(target:GetModel()).KeyValues)) do
                         if k == "break" then
                             target:Fire("SetHealth", target:Health() - 25)
                             break
@@ -222,10 +236,12 @@ function SWEP:Think()
                 else
                     self.Owner:FireBullets(HATCHET_BULLET)
                 end
-                self:GetOwner():EmitSound("Weapon_NH_Hatchet.Stab") 
+                self:GetOwner():EmitSound("Weapon_NH_Hatchet.Stab")
             else
                 self:GetOwner():EmitSound("Weapon_NH_Hatchet.Slash")
             end
+
+            self.Owner:ViewPunch(Angle(4, 0, 4))
 
             self.PerformingHeavySwing = false
         end

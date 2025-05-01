@@ -34,7 +34,7 @@ DECLARE_HUD_ELEMENT = function(name, func, flags)
     element.flags = flags
 
     table.insert(NH2_HUD.HUD_ELEMENTS, 1, element)
-    --MsgC(Color(0,255,0), "Added and initialized element on screen \"" .. name .. "\"\n")
+    MsgC(Color(0,255,0), "Added and initialized element on screen \"" .. name .. "\"\n")
 end
 
 --
@@ -51,7 +51,7 @@ DECLARE_BACKGROUND_HUD_ELEMENT = function(name, func, flags)
     element.flags = flags
 
     table.insert(NH2_HUD.HUD_BG_ELEMENTS, 1, element)
-    --MsgC(Color(0,255,0), "Added and initialized background element on screen \"" .. name .. "\"\n")
+    MsgC(Color(0,255,0), "Added and initialized background element on screen \"" .. name .. "\"\n")
 end
 
 
@@ -122,6 +122,13 @@ function NH2_HUD.CreateFonts()
     surface.CreateFont("NH_BindSmall", {
         font = "Bebas Neue Cyrillic",
         size = auto(15),
+        weight = 500,
+        extended = true
+    })
+
+    surface.CreateFont("NH_ScoreBoard", {
+        font = "Bebas Neue Cyrillic",
+        size = auto(55),
         weight = 500,
         extended = true
     })
@@ -251,7 +258,7 @@ local function ShowMOTD()
 
     for i = 1, 3 do
         local model = NH2COOP_PLY_MODELS[i]
-        local mat = NH2COOL_PLY_ICONS[i]
+        local mat = NH2COOL_PLY_ICONS[i] or male_placeholder
 
         local button = vgui.Create("DButton", frame)
         button:SetText("")
@@ -354,3 +361,4 @@ include("hud/hud_squad.lua")
 include("hud/hud_crosshair.lua")
 include("hud/hud_notification.lua")
 include("hud/hud_spectator.lua")
+include("hud/hud_scoreboard.lua")

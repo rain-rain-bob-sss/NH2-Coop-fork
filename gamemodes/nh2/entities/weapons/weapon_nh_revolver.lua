@@ -3,26 +3,26 @@
 
 AddCSLuaFile()
 
-SWEP.Category           = "Nightmare House 2"
-SWEP.PrintName          = "#NH_Revolver"
-SWEP.Slot               = 1
-SWEP.SlotPos            = 2
-SWEP.Spawnable          = true
+SWEP.Category              = "Nightmare House 2"
+SWEP.PrintName             = "#NH_Revolver"
+SWEP.Slot                  = 1
+SWEP.SlotPos               = 2
+SWEP.Spawnable             = true
 
-SWEP.ViewModel			= "models/weapons/v_revolver.mdl"
-SWEP.WorldModel			= "models/weapons/w_revolver.mdl"
+SWEP.ViewModel             = "models/weapons/v_revolver.mdl"
+SWEP.WorldModel            = "models/weapons/w_revolver.mdl"
 
-SWEP.ViewModelFOV = 54
+SWEP.ViewModelFOV          = 54
 
-SWEP.Primary.ClipSize		= 6
-SWEP.Primary.DefaultClip	= 6
-SWEP.Primary.Automatic		= false
-SWEP.Primary.Ammo			= "357"
+SWEP.Primary.ClipSize      = 6
+SWEP.Primary.DefaultClip   = 6
+SWEP.Primary.Automatic     = false
+SWEP.Primary.Ammo          = "357"
 
-SWEP.Secondary.ClipSize		= -1
-SWEP.Secondary.DefaultClip	= -1
-SWEP.Secondary.Automatic	= false
-SWEP.Secondary.Ammo			= "none"
+SWEP.Secondary.ClipSize    = -1
+SWEP.Secondary.DefaultClip = -1
+SWEP.Secondary.Automatic   = false
+SWEP.Secondary.Ammo        = "none"
 
 function SWEP:Initialize()
     self:SetDeploySpeed(1)
@@ -31,7 +31,7 @@ end
 function SWEP:PrimaryAttack()
     if self:GetOwner():IsPlayer() and GetGlobalBool("IsSpeedModifiedSoNoAttack", false) and not GetGlobal2Bool("OverrideCrosshairAndAttack", false) then return end
     if not self:CanPrimaryAttack() then return end
-    
+
     if SERVER then
         self:GetOwner():EmitSound("Weapon_NH_Revolver.Single")
         self:TakePrimaryAmmo(1)
@@ -45,7 +45,7 @@ function SWEP:PrimaryAttack()
         angles.y = angles.y + math.Rand(-1, 1)
         angles.z = 0
 
-        self:GetOwner():ViewPunch(Angle(-6, math.Rand(-2,-2), 0))
+        self:GetOwner():ViewPunch(Angle(-6, math.Rand(-2, -2), 0))
 
         self:GetOwner():SetEyeAngles(angles)
 
@@ -58,7 +58,7 @@ function SWEP:PrimaryAttack()
     local effectdata = EffectData()
     effectdata:SetOrigin(self:GetOwner():EyePos())
     effectdata:SetEntity(self)
-    util.Effect( "gun_light", effectdata)
+    util.Effect("gun_light", effectdata)
 end
 
 function SWEP:SecondaryAttack()

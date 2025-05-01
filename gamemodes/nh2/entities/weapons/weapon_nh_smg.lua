@@ -3,26 +3,26 @@
 
 AddCSLuaFile()
 
-SWEP.Category           = "Nightmare House 2"
-SWEP.PrintName          = "#NH_SMG"
-SWEP.Slot               = 2
-SWEP.SlotPos            = 0
-SWEP.Spawnable          = true
+SWEP.Category              = "Nightmare House 2"
+SWEP.PrintName             = "#NH_SMG"
+SWEP.Slot                  = 2
+SWEP.SlotPos               = 0
+SWEP.Spawnable             = true
 
-SWEP.ViewModel			= "models/weapons/v_smg.mdl"
-SWEP.WorldModel			= "models/weapons/w_smg.mdl"
+SWEP.ViewModel             = "models/weapons/v_smg.mdl"
+SWEP.WorldModel            = "models/weapons/w_smg.mdl"
 
-SWEP.Primary.ClipSize		= 30
-SWEP.Primary.DefaultClip	= 30
-SWEP.Primary.Automatic		= true
-SWEP.Primary.Ammo			= "SMG1"
+SWEP.Primary.ClipSize      = 30
+SWEP.Primary.DefaultClip   = 30
+SWEP.Primary.Automatic     = true
+SWEP.Primary.Ammo          = "SMG1"
 
-SWEP.Secondary.ClipSize		= -1
-SWEP.Secondary.DefaultClip	= -1
-SWEP.Secondary.Automatic	= false
-SWEP.Secondary.Ammo			= "none"
+SWEP.Secondary.ClipSize    = -1
+SWEP.Secondary.DefaultClip = -1
+SWEP.Secondary.Automatic   = false
+SWEP.Secondary.Ammo        = "none"
 
-SWEP.ViewModelFOV = 54
+SWEP.ViewModelFOV          = 54
 
 if SERVER then
     SWEP.m_fFireDuration = 0
@@ -103,9 +103,9 @@ function SWEP:DoMachineGunKick(ply, dampEasy, maxVerticleKickAngle, fireDuration
 end
 
 function SWEP:AddViewKick()
-    local EASY_DAMPEN           = 0.5
-    local MAX_VERTICAL_KICK     = 1 -- Degrees
-    local SLIDE_LIMIT           = 2 -- Seconds
+    local EASY_DAMPEN       = 0.5
+    local MAX_VERTICAL_KICK = 1     -- Degrees
+    local SLIDE_LIMIT       = 2     -- Seconds
 
     self:DoMachineGunKick(self:GetOwner(), EASY_DAMPEN, MAX_VERTICAL_KICK, SLIDE_LIMIT, self.m_fFireDuration)
 end
@@ -113,7 +113,7 @@ end
 function SWEP:PrimaryAttack()
     if self:GetOwner():IsPlayer() and GetGlobalBool("IsSpeedModifiedSoNoAttack", false) and not GetGlobal2Bool("OverrideCrosshairAndAttack", false) then return end
     if not self:CanPrimaryAttack() then return end
-    
+
     if SERVER then
         self:GetOwner():EmitSound("Weapon_NH_SMG1.Single")
         self:TakePrimaryAmmo(1)
@@ -149,7 +149,7 @@ function SWEP:PrimaryAttack()
     local effectdata = EffectData()
     effectdata:SetOrigin(self:GetOwner():EyePos())
     effectdata:SetEntity(self)
-    util.Effect( "gun_light", effectdata)
+    util.Effect("gun_light", effectdata)
 end
 
 function SWEP:Reload()
@@ -157,7 +157,7 @@ function SWEP:Reload()
 
     self:DefaultReload(ACT_VM_RELOAD)
     self:EmitSound("Weapon_NH_SMG1.Reload")
-    
+
     if SERVER then
         self.Attacking = false
     end

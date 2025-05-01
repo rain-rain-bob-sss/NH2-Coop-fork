@@ -42,7 +42,14 @@ function GM:PlayerTick(ply, mv)
     
     if not ply:IsBot() and ply.CachedModel ~= "models/humans/nh2/" .. model .. ".mdl" then
         ply.CachedModel = "models/humans/nh2/" .. ply:GetInfo("nh2coop_cl_playermodel") .. ".mdl"
+        if not util.IsValidModel(ply.CachedModel) then 
+            ply.CachedModel = "models/humans/nh2/male_07.mdl"
+        end
 
+        ply:SetModel(ply.CachedModel)
+        ply:GetHands():SetModel("models/weapons/c_arms_citizen.mdl")
+    else
+        ply.CachedModel = "models/humans/nh2/male_07.mdl"
         ply:SetModel(ply.CachedModel)
         ply:GetHands():SetModel("models/weapons/c_arms_citizen.mdl")
     end
