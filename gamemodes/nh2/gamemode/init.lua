@@ -1209,6 +1209,7 @@ hook.Add("PlayerCanPickupWeapon","NH2_SHAREWEPS",function(ply,wep)
     local phy = wep:GetPhysicsObject()
     if IsValid(phy) then 
         phy:EnableMotion(false) -- Do not move it
+        wep:SetCollisionGroup(COLLISION_GROUP_DEBRIS) -- Do not make things stuck.
     end
     return false
 end)

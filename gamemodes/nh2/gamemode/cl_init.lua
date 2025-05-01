@@ -410,13 +410,11 @@ net.Receive(NH2NET.CC, function(len, ply)
 end)
 
 
---from https://steamcommunity.com/sharedfiles/filedetails/?id=2488617619
---by STEAM_0:0:53045113
---their profile link:http://steamcommunity.com/profiles/76561198066355954
--- If anyone sees this message, I said I'd fixed it my DAMN self.
+-- From:https://steamcommunity.com/sharedfiles/filedetails/?id=1146104662
+-- I edited it.
 
-local cl_hlvms_enabled = CreateClientConVar("cl_nh2hlvms_enabled", "1", true)
-local cl_hlvms_scale = CreateClientConVar("cl_nh2hlvms_scale", "1.5", true)
+local cl_vm_lag_enabled = CreateClientConVar("cl_nh2_vm_lag_enabled", "1", true)
+local cl_vm_lag_scale = CreateClientConVar("cl_nh2_vm_lag_scale", "1.5", true)
 
 local function VectorMA( start, scale, direction, dest )
 	dest.x = start.x + direction.x * scale
@@ -435,11 +433,11 @@ local function CalcViewModelLag(vm, origin, angles, original_angles)
 	if (FrameTime() != 0.0) then
 		local vDifference = forward - vm.m_vecLastFacing;
 
-		local flSpeed = 10.0;
+		local flSpeed = 5.0;
 
 		local flDiff = vDifference:Length();
-		if ( (flDiff > cl_hlvms_scale:GetFloat()) and (cl_hlvms_scale:GetFloat() > 0.0) ) then
-			local flScale = flDiff / cl_hlvms_scale:GetFloat();
+		if ( (flDiff > cl_vm_lag_scale:GetFloat()) and (cl_vm_lag_scale:GetFloat() > 0.0) ) then
+			local flScale = flDiff / cl_vm_lag_scale:GetFloat();
 			flSpeed = flSpeed * flScale;
 		end
 
@@ -448,7 +446,29 @@ local function CalcViewModelLag(vm, origin, angles, original_angles)
 		vm.m_vecLastFacing:Normalize()
 		VectorMA(origin, 5.0, vDifference * -1.0, origin);
 	end
+
+	local right, up;
+	right = original_angles:Right()
+	up = original_angles:Up()
+
+	local pitch = original_angles[1];
+
+	if (pitch > 180.0) then
+		pitch = pitch - 360.0;
+	elseif (pitch < -180.0) then
+		pitch = pitch + 360.0;
+	end
+
+	if (cl_vm_lag_scale:GetFloat() == 0.0) then
+		origin = vOriginalOrigin;
+		angles = vOriginalAngles;
+	end
+
+	VectorMA(origin, -pitch * 0.035, forward, origin);
+	VectorMA(origin, -pitch * 0.03, right,	origin);
+	VectorMA(origin, -pitch * 0.02, up, origin);
 end
+
 
 do
 	local function doLag(weapon, vm, oldPos, oldAng, pos, ang)
@@ -459,11 +479,11 @@ do
 		end
 	end
 
-	if (cl_hlvms_enabled:GetInt() != 0) then
+	if (cl_vm_lag_enabled:GetInt() != 0) then
 		hook.Add("CalcViewModelView", "HL2ViewModelSway", doLag)
 	end
 
-	cvars.AddChangeCallback("cl_nh2hlvms_enabled", function(var, old, new)
+	cvars.AddChangeCallback("cl_nh2_vm_lag_enabled", function(var, old, new)
 		if (tonumber(new) != 0) then
 			hook.Add("CalcViewModelView", "HL2ViewModelSway", doLag)
 		else

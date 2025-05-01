@@ -18,13 +18,24 @@ end
 local barbg = Material("vgui/hud/bar_bg.png")
 local barfgwhite = Material("vgui/hud/bar_fg_white.png")
 
+local ChapterNames = {
+    ["nh1remake1_v2"] = "#NH2COOP.Chapter0",
+    ["nh2c1_v2"] = "#NH2COOP.Chapter1",
+    ["nh2c2_v2"] = "#NH2COOP.Chapter2",
+    ["nh2c3_v2"] = "#NH2COOP.Chapter3",
+    ["nh2c4_v2"] = "#NH2COOP.Chapter4",
+    ["nh2c5_v2"] = "#NH2COOP.Chapter5",
+    ["nh2c6_v2"] = "#NH2COOP.Chapter6",
+    ["nh2c7_v2"] = "#NH2COOP.Chapter7"
+}
+
 local function Paint(size)
     if not GAMEMODE.ScoreboardOn then return end
 
     SetColor(0,0,0,127)
     DrawBox(0,0,size.x,size.y)
 
-    local centerx,centery = size.x * 0.1,size.y * 0.08
+    local centerx,centery = size.x * 0.1,size.y * 0.12
     local x,y = centerx,centery
     local biggestw,biggesth = 0,0
     local font = "NH_ScoreBoard"
@@ -46,7 +57,10 @@ local function Paint(size)
         }
     end
     
-    local maxcol = math.floor(ScrH() * (0.92 - 0.27) / biggesth)
+    SetColor(255,255,255,255)
+    DrawText(ChapterNames[game.GetMap()] or "UNKNOWN","NH_MapTitle",size.x * 0.1,size.y * 0.02,color_white,TEXT_ALIGN_CENTER,TEXT_ALIGN_TOP)
+
+    local maxcol = math.floor(ScrH() * (0.88 - 0.27) / biggesth)
     local ccol = 0
     for _,d in ipairs(renders) do 
         ccol = ccol + 1
