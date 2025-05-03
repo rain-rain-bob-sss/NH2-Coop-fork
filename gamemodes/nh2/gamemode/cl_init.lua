@@ -433,7 +433,7 @@ local function CalcViewModelLag(vm, origin, angles, original_angles)
 	if (FrameTime() != 0.0) then
 		local vDifference = forward - vm.m_vecLastFacing;
 
-		local flSpeed = 5.0;
+		local flSpeed = 2.5;
 
 		local flDiff = vDifference:Length();
 		if ( (flDiff > cl_vm_lag_scale:GetFloat()) and (cl_vm_lag_scale:GetFloat() > 0.0) ) then
