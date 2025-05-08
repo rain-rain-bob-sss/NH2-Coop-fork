@@ -6,7 +6,7 @@ AddCSLuaFile()
 ENT.Base = "npc_vj_creature_base"
 ENT.Type = "ai"
 
-ENT.Spawnable       = false
+ENT.Spawnable       = true
 
 if SERVER then
     ENT.Model = { "models/nh2zombies/security01.mdl" }

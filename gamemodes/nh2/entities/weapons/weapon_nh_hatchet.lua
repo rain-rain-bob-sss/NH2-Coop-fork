@@ -31,6 +31,10 @@ SWEP.AutoSwitchFrom        = true
 SWEP.HasHitTarget          = false
 SWEP.PerformingHeavySwing  = false
 
+function SWEP:Active()
+    return self:GetOwner():GetActiveWeapon() == self
+end
+
 local HATCHET_RANGE        = 40
 
 function SWEP:SendIdleAnimation(delay)

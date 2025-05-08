@@ -4,7 +4,7 @@
 AddCSLuaFile()
 
 ENT.Base 			= "npc_zombie"
-ENT.Spawnable       = false
+ENT.Spawnable       = true
 
 ENT.MeleeAttackDamage = 32
 ENT.SlowPlayerOnMeleeAttack = true

@@ -4,7 +4,7 @@
 AddCSLuaFile()
 
 ENT.Base 			= "npc_nh_demon"
-ENT.Spawnable       = false
+ENT.Spawnable       = true
 
 ENT.StartHealth = 50
 

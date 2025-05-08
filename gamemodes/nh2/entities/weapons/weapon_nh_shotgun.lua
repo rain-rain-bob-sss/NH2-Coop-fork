@@ -24,6 +24,10 @@ SWEP.Secondary.DefaultClip = -1
 SWEP.Secondary.Automatic   = false
 SWEP.Secondary.Ammo        = "none"
 
+function SWEP:Active()
+    return self:GetOwner():GetActiveWeapon() == self
+end
+
 function SWEP:Initialize()
     self:SetDeploySpeed(1)
     self:SetHoldType("shotgun")
@@ -110,10 +114,20 @@ function SWEP:Reload()
         self:SendWeaponAnim(ACT_SHOTGUN_RELOAD_START)
 
         timer.Simple(0.05, function()
+            if not self:Active() then return end
             -- Repeat inserting n-times
             for i = 1, needed do
                 timer.Create("Weapon_Idle_ReloadAmmo_" .. self:EntIndex() .. i, i * 0.6, 1, function()
                     if not (self and IsValid(self) and IsValid(self:GetOwner())) then return end
+                    if not self:Active() then
+                        for i = 1, 8 do
+                            if timer.Exists("Weapon_Idle_ReloadAmmo_" .. self:EntIndex() .. i) then
+                                timer.Stop("Weapon_Idle_ReloadAmmo_" .. self:EntIndex() .. i)
+                                timer.Remove("Weapon_Idle_ReloadAmmo_" .. self:EntIndex() .. i)
+                            end
+                        end
+                        return
+                    end
                     self:SendWeaponAnim(ACT_VM_RELOAD)
                     self:SetNextPrimaryFire(CurTime() + 0.5)
 

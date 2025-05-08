@@ -4,7 +4,7 @@
 AddCSLuaFile()
 
 ENT.Base = "npc_vj_creature_base"
-ENT.Spawnable       = false
+ENT.Spawnable       = true
 
 if SERVER then
     ENT.RestoredTargetName = ""

@@ -989,6 +989,20 @@ util.AddNetworkString("_NH2_StartCredits")
 ---
 --- Called when entity gets an input
 ---
+
+concommand.Add("nh2_playvideo",function(ply,_,strs)
+    local str = strs[1]
+    if IsValid(ply) and not ply:IsAdmin() then 
+        net.Start("_NH2_StartPlayingVideo")
+        net.WriteString(str)
+        net.Send(ply)
+    else
+        net.Start("_NH2_StartPlayingVideo")
+        net.WriteString(str)
+        net.Broadcast()
+    end
+end)
+
 function GM:AcceptInput(ent, input, activator, caller, value)
     if ent:GetClass() == "point_clientcommand" and input == "Command" then
         if value == "give item_suit" then
@@ -1010,6 +1024,7 @@ function GM:AcceptInput(ent, input, activator, caller, value)
             net.Start("_NH2_StartPlayingVideo")
                 net.WriteString(vid)
             net.Broadcast()
+            return true
         elseif value == "enable_godmod 1" then
             for _, ply in ipairs(player.GetAll()) do
                 ply:GodEnable()

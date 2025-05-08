@@ -24,6 +24,10 @@ SWEP.Secondary.DefaultClip = -1
 SWEP.Secondary.Automatic   = false
 SWEP.Secondary.Ammo        = "none"
 
+function SWEP:Active()
+    return self:GetOwner():GetActiveWeapon() == self
+end
+
 function SWEP:Initialize()
     self:SetDeploySpeed(1)
 end

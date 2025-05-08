@@ -4,7 +4,7 @@
 AddCSLuaFile()
 
 ENT.Base 			= "npc_zombie"
-ENT.Spawnable       = false
+ENT.Spawnable       = true
 
 if SERVER then
     ENT.IsTorso = true

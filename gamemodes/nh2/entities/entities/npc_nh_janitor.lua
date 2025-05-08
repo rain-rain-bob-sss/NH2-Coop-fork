@@ -4,7 +4,7 @@
 AddCSLuaFile()
 
 ENT.Base = "npc_nh_basezombie"
-ENT.Spawnable = false
+ENT.Spawnable       = true
 
 if SERVER then
     local GENDER_MALE = 1

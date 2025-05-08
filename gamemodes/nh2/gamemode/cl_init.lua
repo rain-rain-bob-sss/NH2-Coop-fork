@@ -491,3 +491,72 @@ do
 		end
 	end)
 end
+
+spawnmenu.AddContentType("nh2_video",function(container,obj)
+    if not obj.text then return end
+    if not obj.vidname then return end
+    
+    if not NH2_CACHED_VIDEOS[obj.vidname] then return end
+    local frames = NH2_CACHED_VIDEOS[obj.vidname]
+    if not frames[1] then return end
+	local image = vgui.Create("ContentIcon",container)
+    image:SetWide(128)
+    image:SetTall(128)
+    image:InvalidateLayout( true )
+    image.DoClick = function( s )
+		RunConsoleCommand("nh2_playvideo",obj.vidname)
+	end
+
+    image.Image:SetMaterial(frames[1])
+
+    local frame = 1
+    local frametime = 0
+    local midframe = math.floor(#frames / 2)
+    local h = false
+    function image:Think()
+        if self:IsHovered() then 
+            if not h then frame = 1 h = true end
+            if frame < #frames then
+                if CurTime() > frametime then 
+                    frame = frame + 1
+                    frametime = CurTime() + 0.03
+                end
+            else 
+                frame = 1
+            end
+        else
+            h = false
+            frame = midframe
+        end
+        
+        self.Image:SetMaterial(frames[frame])
+    end
+
+    image:SetName(obj.text)
+
+    container:Add(image)
+
+    return image
+end)
+
+
+hook.Add("PopulatePropMenu", "nh2_video", function()
+
+    local contents = {}
+    local addvid = function(vid,name)
+        table.insert(contents,{
+            type = "nh2_video",
+            text = name,
+            vidname = vid
+        })
+    end
+
+
+    addvid("flashback_ceiling","FLASHBACK CEILING")
+    addvid("flashback_cell","FLASHBACK CELL")
+    addvid("flashback_ceilclose","FLASHBACK CELL CLOSE")
+    addvid("flashback_core","FLASHBACK THE CORE")
+    addvid("flashback_hang","FLASHBACK HANG")
+    addvid("flashback_house","FLASHBACK HOUSE")
+	spawnmenu.AddPropCategory( "nh2_videos", "NH2 Videos", contents, "icon16/box.png" )
+end )

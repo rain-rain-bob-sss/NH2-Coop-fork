@@ -30,6 +30,10 @@ if SERVER then
     SWEP.Attacking = false
 end
 
+function SWEP:Active()
+    return self:GetOwner():GetActiveWeapon() == self
+end
+
 function SWEP:Initialize()
     self:SetDeploySpeed(1)
     self:SetHoldType("smg")

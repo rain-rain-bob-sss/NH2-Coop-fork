@@ -4,7 +4,7 @@
 AddCSLuaFile()
 
 ENT.Base 			= "npc_nh_basezombie"
-ENT.Spawnable       = false
+ENT.Spawnable       = true
 
 if SERVER then
     ENT.Model = {"models/nh2zombies/surgeon01.mdl", "models/nh2zombies/surgeon02.mdl"}

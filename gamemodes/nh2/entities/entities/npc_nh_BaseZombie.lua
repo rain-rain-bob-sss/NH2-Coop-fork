@@ -6,7 +6,7 @@ AddCSLuaFile()
 ENT.Base = "npc_vj_creature_base"
 ENT.Type = "ai"
 
-ENT.Spawnable       = false
+ENT.Spawnable       = true
 
 if SERVER then
     util.AddNetworkString("_NH2_BaseZombie_BloodStream")

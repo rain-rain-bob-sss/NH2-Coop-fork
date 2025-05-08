@@ -26,7 +26,12 @@ local ChapterNames = {
     ["nh2c4_v2"] = "#NH2COOP.Chapter4",
     ["nh2c5_v2"] = "#NH2COOP.Chapter5",
     ["nh2c6_v2"] = "#NH2COOP.Chapter6",
-    ["nh2c7_v2"] = "#NH2COOP.Chapter7"
+    ["nh2c7_v2"] = "#NH2COOP.Chapter7",
+    ["nightmare_house1"] = "NH1",
+    ["nightmare_house2"] = "NH1",
+    ["nightmare_house3"] = "NH1",
+    ["nightmare_house4"] = "NH1",
+    ["gm_flatgrass"] = "FLATGRASS",
 }
 
 local function Paint(size)

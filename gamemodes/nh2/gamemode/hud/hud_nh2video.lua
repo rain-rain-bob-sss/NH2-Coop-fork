@@ -3,6 +3,7 @@
 -- Video hud element for fake "nh2_playvideo" command
 -- Current playing frame
 local CACHED_VIDEOS = {}
+NH2_CACHED_VIDEOS = CACHED_VIDEOS
 local frame = 1
 local frameTime = CurTime()
 local audio = NULL
@@ -44,7 +45,7 @@ net.Receive("_NH2_StartPlayingVideo", function(len, ply)
             ScreenHeight = ScrH()
         end
 
-        local audioName = "materials/media/" .. vidName .. audioExtension
+        local audioName = "media/" .. vidName .. audioExtension
         audio = CreateSound(LocalPlayer(), audioName)
         currentVideo = vidName
         isPlayingVideo = true
