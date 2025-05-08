@@ -21,3 +21,6 @@ Download from [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetail
 * Launch game and choose "Nightmare House 2 Coop" gamemode from menu.
 
 * Create multiplayer server on `nh1remake1_v2` or `nh2c1_v2`.
+* or map 'nightmare_house1',it is not supported though.
+
+
