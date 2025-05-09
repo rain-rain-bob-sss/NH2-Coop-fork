@@ -694,6 +694,29 @@ HARDCODED_CHECKPOINTS = {
             [3] = { Vector(-246.33801269531, -249.03651428223, 711.64910888672), Angle(90, 90, 0) },
             [4] = { Vector(-246.33801269531, -249.03651428223, 711.64910888672), Angle(90, 90, 0) },
         }
+    },
+    ["nightmare_house2"] = {
+        [0] = {
+            Suit = true,
+            Weapons = {
+                "weapon_crowbar"
+            },
+        },
+        [1] = {
+            Vector(397.765289, -187.579819 ,-477.968750),Angle(0,0,0)
+        }
+    },
+    ["nightmare_house3"] = {
+        [0] = {
+            Suit = true,
+            Weapons = {
+                "weapon_crowbar",
+                "weapon_pistol"
+            },
+        },
+        [1] = {
+            Vector(397.765289, -187.579819 ,-477.968750),Angle(0,0,0)
+        }
     }
 }
 

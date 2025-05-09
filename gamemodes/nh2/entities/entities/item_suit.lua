@@ -23,4 +23,6 @@ if SERVER then
             --self:Remove()
         end
     end
+else
+    function ENT:Draw() return end
 end

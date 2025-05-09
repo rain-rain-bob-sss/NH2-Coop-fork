@@ -75,12 +75,14 @@ function this.SelectSpawnPoint(ply, isTransition)
     local weps = info.Weapons
     local hasSuit = info.Suit
 
-    if (info[ply:EntIndex()]) then
-        ply:SetPos(info[ply:EntIndex()][1])
-        ply:SetEyeAngles(info[ply:EntIndex()][2])
-    else
-        ply:SetPos(info[1][1])
-        ply:SetEyeAngles(info[1][2])
+    if info[1] then
+        if (info[ply:EntIndex()]) then
+            ply:SetPos(info[ply:EntIndex()][1])
+            ply:SetEyeAngles(info[ply:EntIndex()][2])
+        else
+            ply:SetPos(info[1][1])
+            ply:SetEyeAngles(info[1][2])
+        end
     end
 
     if weps then

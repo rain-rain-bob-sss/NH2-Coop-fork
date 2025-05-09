@@ -3,7 +3,7 @@
 	"base"			"base"
 	"title"			"Nightmare House 2"
 	"category"		"other"
-	"maps"			"^nh2c|^nh1remake1_v2|^4_1_22_5"
+	"maps"			"^nh2c|^nh1remake1_v2|^4_1_22_5|^nightmare_house"
 	"menusystem"	"1"
 
 	"settings"

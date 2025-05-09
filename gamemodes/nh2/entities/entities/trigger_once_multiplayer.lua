@@ -15,7 +15,7 @@ if SERVER then
         if ent:IsPlayer() then
             if not self.TouchedMe[ent] then self.TouchedMe[ent] = true end
 
-            if #self.TouchedMe == game.MaxPlayers() then
+            if #self.TouchedMe >= player.GetCount() then
                 self:TriggerOutput("OnStartTouch")
                 self:TriggerOutput("OnTrigger")
             end

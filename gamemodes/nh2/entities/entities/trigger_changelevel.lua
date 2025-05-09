@@ -17,6 +17,7 @@ if SERVER then
     function ENT:KeyValue(k,v)
         if k == "map" then
             self.NextMap = v
+            if v == "" then self:Remove() return end
         end
 
         if k == "StartDisabled" then
@@ -44,7 +45,7 @@ if SERVER then
         if ent:IsPlayer() then
             self.TouchedMe[ent:EntIndex()] = ent
 
-            if #self.TouchedMe == player.GetCount() then
+            if #self.TouchedMe >= player.GetCount() then
                 Msg("Changing level to " .. self.NextMap .. " from custom trigger_changelevel\n")
                 RunConsoleCommand("changelevel", self.NextMap)
             end
