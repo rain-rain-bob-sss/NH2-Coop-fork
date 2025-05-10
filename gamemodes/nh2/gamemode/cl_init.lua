@@ -234,6 +234,10 @@ net.Receive("_NH2_Flashlight", function()
     if state_light == false then
         forceflicker:SetBool(false)
     end
+
+    if IsValid(_HEADLIGHT) then
+        _HEADLIGHT:SetAngles(LocalPlayer():EyeAngles())
+    end
 end)
 
 net.Receive("_NH2_ForceFlicker", function()

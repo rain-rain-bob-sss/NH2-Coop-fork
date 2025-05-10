@@ -701,22 +701,24 @@ HARDCODED_CHECKPOINTS = {
             Weapons = {
                 "weapon_crowbar"
             },
+            [1] = {
+                Vector(397.765289, -187.579819 ,-477.968750),Angle(0,180,0)
+            }
         },
-        [1] = {
-            Vector(397.765289, -187.579819 ,-477.968750),Angle(0,0,0)
-        }
+        
     },
     ["nightmare_house3"] = {
         [0] = {
             Suit = true,
             Weapons = {
                 "weapon_crowbar",
-                "weapon_pistol"
+                "weapon_pistol",
+                "weapon_357"
             },
+            [1] = {
+                Vector(230.65, 739.76 ,-563.61),Angle(0,180,0)
+            }
         },
-        [1] = {
-            Vector(397.765289, -187.579819 ,-477.968750),Angle(0,0,0)
-        }
     }
 }
 
@@ -1206,8 +1208,9 @@ local function FireSingleOutput( output, this, activator, data,ignoretime,caller
 	return ( output.times > 0 ) || ( output.times == -1 )
 
 end
-
-hook.Add("PlayerCanPickupWeapon","NH2_SHAREWEPS",function(ply,wep)
+local NOINFLOOP = false
+hook.Add("PlayerCanPickupWeapon","NH2_SHAREWEPS",function(ply,wep,...)
+    if NOINFLOOP then return end
     --[[
     local otherplyhas = true
     for _,v in ipairs(player.GetAll())do 
@@ -1217,6 +1220,9 @@ hook.Add("PlayerCanPickupWeapon","NH2_SHAREWEPS",function(ply,wep)
         end
     end
     ]]
+    NOINFLOOP = true
+    if hook.Call("PlayerCanPickupWeapon",_,ply,wep,...) == false then return end
+    NOINFLOOP = false
     if (ply:KeyDown(IN_WALK) and ply:IsAdmin()) then return end
     
     if not ply.NH2TakenWeps then return end

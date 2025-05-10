@@ -4,6 +4,12 @@
 ENT.Type = "brush"
 ENT.Spawnable = false
 
+local StopBacktracking = {
+    nightmare_house2 = "nightmare_house1",
+    nightmare_house3 = "nightmare_house2",
+    nightmare_house4 = "nightmare_house3"
+}
+
 if SERVER then
     ENT.TouchedMe = {}
 
@@ -17,7 +23,7 @@ if SERVER then
     function ENT:KeyValue(k,v)
         if k == "map" then
             self.NextMap = v
-            if v == "" then self:Remove() return end
+            if v == StopBacktracking[game.GetMap()] then self:Remove() return end
         end
 
         if k == "StartDisabled" then
